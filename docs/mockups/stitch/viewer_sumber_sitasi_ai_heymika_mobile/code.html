@@ -1,0 +1,334 @@
+<!DOCTYPE html><html lang="id"><head><meta charset="utf-8"><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" name="viewport"><meta content="mobile_stack" name="shell-type"><link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@400;600;700;800;900&amp;display=swap" rel="stylesheet"><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { "colors": { "tertiary-container": "#007dab", "inverse-primary": "#aac7ff", "surface-container": "#e7eeff", "inverse-on-surface": "#ecf1ff", "on-primary-fixed": "#001b3e", "on-primary-container": "#fefcff", "inverse-surface": "#113059", "text-muted": "#5868A4", "tertiary-fixed": "#c5e7ff", "primary-container": "#0072e3", "on-secondary-fixed": "#2f1500", "secondary-fixed": "#ffdcc4", "canvas-bg": "#F8FCFF", "surface-container-lowest": "#ffffff", "surface-tint": "#005cba", "on-primary-fixed-variant": "#00458e", "on-secondary-container": "#613100", "outline-variant": "#c1c6d6", "background": "#f9f9ff", "surface": "#FFFFFF", "surface-container-high": "#dee8ff", "on-tertiary-container": "#fcfcff", "on-secondary-fixed-variant": "#6f3900", "secondary-container": "#ff8a00", "error": "#ba1a1a", "on-secondary": "#ffffff", "ribbon-red": "#EF3E36", "on-tertiary-fixed-variant": "#004c6a", "primary-fixed": "#d7e3ff", "danger-bg": "#FFF0F2", "error-container": "#ffdad6", "tertiary": "#006388", "surface-container-low": "#f0f3ff", "on-primary": "#ffffff", "brand-sky": "#16B5F5", "surface-variant": "#d6e3ff", "surface-container-highest": "#d6e3ff", "primary-fixed-dim": "#aac7ff", "on-surface": "#001b3c", "surface-bright": "#f9f9ff", "on-background": "#001b3c", "on-surface-variant": "#414754", "primary": "#005ab5", "on-error": "#ffffff", "success": "#167549", "secondary-fixed-dim": "#ffb77f", "on-error-container": "#93000a", "surface-dim": "#c8dbff", "on-tertiary": "#ffffff", "danger": "#BC2535", "tertiary-fixed-dim": "#7fd0ff", "secondary": "#914c00", "badge-cyan": "#C5EFFF", "outline": "#717785", "brand-yellow": "#FFD34E", "on-tertiary-fixed": "#001e2d", "border-muted": "#D8DDF4" }, "borderRadius": { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" }, "spacing": { "space-lg": "1.5rem", "space-xs": "0.25rem", "space-md": "1rem", "space-xl": "2rem", "gutter": "1.5rem", "space-sm": "0.5rem", "margin": "1.5rem" }, "fontFamily": { "body-md": ["Nunito Sans"], "caption": ["Nunito Sans"], "headline-md": ["Nunito Sans"], "label-lg": ["Nunito Sans"], "label-md": ["Nunito Sans"], "display-hero": ["Nunito Sans"], "headline-sm": ["Nunito Sans"], "label-sm": ["Nunito Sans"], "headline-lg-mobile": ["Nunito Sans"], "display-hero-mobile": ["Nunito Sans"], "body-sm": ["Nunito Sans"], "headline-lg": ["Nunito Sans"], "body-lg": ["Nunito Sans"] }, "fontSize": { "body-md": ["16px", { "lineHeight": "24px", "fontWeight": "400" }], "caption": ["12px", { "lineHeight": "16px", "fontWeight": "500" }], "headline-md": ["24px", { "lineHeight": "32px", "fontWeight": "800" }], "label-lg": ["16px", { "lineHeight": "22px", "fontWeight": "700" }], "label-md": ["14px", { "lineHeight": "18px", "letterSpacing": "0.02em", "fontWeight": "700" }], "display-hero": ["48px", { "lineHeight": "56px", "letterSpacing": "-0.02em", "fontWeight": "900" }], "headline-sm": ["20px", { "lineHeight": "28px", "fontWeight": "700" }], "label-sm": ["12px", { "lineHeight": "16px", "letterSpacing": "0.05em", "fontWeight": "700" }], "headline-lg-mobile": ["26px", { "lineHeight": "34px", "letterSpacing": "-0.01em", "fontWeight": "800" }], "display-hero-mobile": ["32px", { "lineHeight": "40px", "letterSpacing": "-0.01em", "fontWeight": "900" }], "body-sm": ["14px", { "lineHeight": "20px", "fontWeight": "400" }], "headline-lg": ["36px", { "lineHeight": "44px", "letterSpacing": "-0.015em", "fontWeight": "800" }], "body-lg": ["18px", { "lineHeight": "28px", "fontWeight": "400" }] } } } }</script><style>@layer base { html, body { width: 100vw; margin: 0; padding: 0; } body { overscroll-behavior: none; } .pb-safe { padding-bottom: env(safe-area-inset-bottom, 0px); } .pt-safe { padding-top: env(safe-area-inset-top, 0px); } main > :first-child { margin-top: 0 !important; } main > :last-child { margin-bottom: 0 !important; } } ::-webkit-scrollbar { display: none; }</style></head><body class="bg-canvas-bg font-body-md text-on-surface flex flex-col min-h-screen"><header class="fixed top-0 w-full z-50 bg-surface/85 backdrop-blur-xl pt-safe shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><div class="h-16 px-space-sm flex items-center justify-between"><div class="flex items-center gap-space-xs min-w-0"><button aria-label="Kembali" class="w-11 h-11 rounded-full flex items-center justify-center text-on-surface hover:text-primary transition-colors" onclick="history.back()"><span class="material-symbols-outlined text-[24px]">arrow_back</span></button><img alt="HeyMika Kitten Logo with Manga Accents.png" class="h-7 w-auto object-contain flex-shrink-0" src="https://lh3.googleusercontent.com/aida/AEtjO1XjkJzza4bh8-PD-iTCEmSiHpgBUv0XJmC061RJPMWTt4w00Ai5fxMsrIRCYd1WLkyzPsYIs-u6UjNJPZP2VhwlkVu7pB2XM18aZcVfPmyc77Us3weH3dJceN6SZY7xfq8ea7BS5G3sMue7rVme6Pww3SI8xU40ZwwF4Z9OLJS-f7lTsKQA98XPyTSJ9mTDIVUdFTBeliq0pCPLSOqm_ze0h6Q5y_gGR5667iAj8YbjpLbR7x-jcOndeyFeEIRweQzn12fuzmQJqIk"><h1 class="font-headline-sm text-headline-sm text-on-surface truncate tracking-tight ml-1">Detail Materi</h1></div><div class="flex items-center gap-space-xs"><button aria-label="Mika Bantuan" class="w-11 h-11 rounded-full flex items-center justify-center text-primary bg-surface-container-low transition-transform active:scale-95"><span class="material-symbols-outlined text-2xl">chat_spark</span></button><div class="flex items-center justify-center p-0.5 ml-1"><img alt="Profile" class="w-8 h-8 rounded-full object-cover" src="https://lh3.googleusercontent.com/aida/AEtjO1VPvQVnyPJLB80v6HVS532yNRqj0NFh3C_F3OS8ad37-vntzZgwVL8Q2ndCLbbbsWvxyW_Ry8r-Rbqkx7xZgyUZkhvuba92RnhILL-v1O_f6olX7FfzWJLq9uO8npMXWhuFUUfpNgteSSuaLFHBXituVXc58tb6PA9UzzMppPyI9SViDONQ_FC4f_p1NC2dyz2CgswgobmrJV07ksPGL5iijMumSn6Ploo_0FStV3bRfFFUpREJmyUBWv3n4EfzVq6ogw52UMAl"></div></div></div></header><main class="flex flex-col relative w-full pt-16 bg-canvas-bg min-h-screen"><div class="flex flex-col w-full pb-24">
+<!-- Top Document Identity & Source Meta Bar -->
+<div class="px-4 py-3 bg-surface-container-low flex flex-col gap-2">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-2 min-w-0">
+<span class="inline-flex items-center gap-1 px-2.5 py-1 rounded-full bg-success/15 text-success font-label-sm text-label-sm shrink-0">
+<span class="w-1.5 h-1.5 rounded-full bg-success animate-pulse"></span>
+          Terindeks 100%
+        </span>
+<span class="font-caption text-caption text-text-muted truncate">Biologi Sel &amp; Kedokteran</span>
+</div>
+<div class="flex items-center gap-1.5 shrink-0">
+<button aria-label="Cari Sitasi" class="w-8 h-8 rounded-full bg-surface text-on-surface flex items-center justify-center shadow-sm active:scale-90 transition-transform" id="search-btn">
+<span class="material-symbols-outlined text-[18px]">search</span>
+</button>
+<button aria-label="Ganti Sumber" class="w-8 h-8 rounded-full bg-surface text-on-surface flex items-center justify-center shadow-sm active:scale-90 transition-transform" id="switch-doc-btn">
+<span class="material-symbols-outlined text-[18px]">sync_alt</span>
+</button>
+<button aria-label="Menu Lainnya" class="w-8 h-8 rounded-full bg-surface text-on-surface flex items-center justify-center shadow-sm active:scale-90 transition-transform" id="more-menu-btn">
+<span class="material-symbols-outlined text-[18px]">more_vert</span>
+</button>
+</div>
+</div>
+<div class="flex items-baseline justify-between gap-2">
+<h2 class="font-headline-sm text-headline-sm text-on-surface leading-tight truncate">
+        Bab 4: Metabolisme Karbohidrat
+      </h2>
+<span class="font-label-sm text-label-sm text-text-muted shrink-0">18 Halaman (PDF Asli)</span>
+</div>
+</div>
+<!-- Sticky Document Control & Stepper Strip -->
+<div class="sticky top-16 z-30 bg-surface/95 backdrop-blur-md px-4 py-2.5 shadow-sm flex flex-col gap-2">
+<div class="flex items-center justify-between gap-2">
+<!-- Page Stepper -->
+<div class="flex items-center bg-surface-container-high rounded-full p-0.5 shadow-inner">
+<button aria-label="Halaman Sebelumnya" class="w-7 h-7 rounded-full flex items-center justify-center text-on-surface active:bg-surface transition-colors" id="prev-page-btn">
+<span class="material-symbols-outlined text-[16px]">chevron_left</span>
+</button>
+<div class="px-2 flex items-center gap-1">
+<span class="font-label-sm text-label-sm text-on-surface">Hal 5</span>
+<span class="font-caption text-caption text-text-muted">/ 18</span>
+</div>
+<button aria-label="Halaman Selanjutnya" class="w-7 h-7 rounded-full flex items-center justify-center text-on-surface active:bg-surface transition-colors" id="next-page-btn">
+<span class="material-symbols-outlined text-[16px]">chevron_right</span>
+</button>
+</div>
+<!-- PDF / AI Mode Switcher Pill -->
+<div class="flex items-center bg-surface-container rounded-full p-1 gap-1">
+<button class="px-2.5 py-1 rounded-full bg-primary text-on-primary font-label-sm text-label-sm shadow-sm transition-all" id="mode-pdf">
+          PDF Asli
+        </button>
+<button class="px-2.5 py-1 rounded-full text-on-surface font-label-sm text-label-sm hover:bg-surface/50 transition-all" id="mode-text">
+          Teks OCR
+        </button>
+</div>
+<!-- Quick Zoom Pill -->
+<button class="flex items-center gap-1 px-2.5 py-1 rounded-full bg-surface-container text-on-surface font-label-sm text-label-sm shrink-0">
+<span class="material-symbols-outlined text-[14px]">fit_screen</span>
+        100%
+      </button>
+</div>
+<!-- Active Citing Counter Strip -->
+<div class="flex items-center justify-between text-on-surface-variant font-caption text-caption">
+<div class="flex items-center gap-1.5">
+<span class="w-2 h-2 rounded-full bg-secondary-container"></span>
+<span class="font-label-sm text-label-sm text-on-surface">3 Sitasi</span>
+<span>di halaman ini (Cetak Hal 84)</span>
+</div>
+<span class="text-tertiary font-label-sm text-label-sm flex items-center gap-0.5">
+<span class="material-symbols-outlined text-[14px]">verified</span>
+        Bukti Sinkron
+      </span>
+</div>
+</div>
+<div class="px-4 pt-3 flex flex-col gap-3">
+<!-- Companion Manga Speech Card (Mika Assistant) -->
+<div class="bg-surface-container-lowest rounded-xl p-3.5 shadow-md flex items-start gap-3 relative overflow-hidden">
+<div class="relative shrink-0">
+<img alt="Mika the AI Cat Companion waving paw" class="w-14 h-14 object-contain drop-shadow-sm" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI0MDAiIGhlaWdodD0iMzAwIj48cmVjdCB3aWR0aD0iNDAwIiBoZWlnaHQ9IjMwMCIgcng9IjgiIGZpbGw9IiNlOGVhZWQiLz48cGF0aCBkPSJNMTcwIDEzMCBsMzAgNDAgbDIwLTE1IGw0MCA1NSBIMTQweiIgZmlsbD0iI2JkYzFjNiIvPjxjaXJjbGUgY3g9IjI1MCIgY3k9IjEyMCIgcj0iMTgiIGZpbGw9IiNiZGMxYzYiLz48L3N2Zz4=">
+<div class="absolute -bottom-1 -right-1 bg-brand-yellow text-on-secondary-container font-label-sm text-[9px] px-1.5 py-0.2 rounded-full shadow-sm font-black">
+          MIKA
+        </div>
+</div>
+<div class="flex-1 min-w-0">
+<div class="flex items-center justify-between gap-1 mb-1">
+<div class="flex items-center gap-1">
+<span class="font-label-md text-label-md text-on-surface">Inspektur Sitasi Mika</span>
+<span class="material-symbols-outlined text-secondary-container text-[16px]">auto_awesome</span>
+</div>
+<span class="px-2 py-0.5 rounded-full bg-badge-cyan text-tertiary-container font-label-sm text-label-sm shrink-0">
+            100% Akurat
+          </span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant leading-snug">
+          Mika membaca kalimat ini langsung dari <strong class="text-on-surface">Hal 5 paragraf 2</strong> lho! Periksa buktinya biar makin yakin dan paham! 🐾✨
+        </p>
+</div>
+</div>
+<!-- Citation Tag Filter Tabs -->
+<div class="flex items-center gap-1.5 overflow-x-auto pb-1 scrollbar-none">
+<button class="px-3 py-1.5 rounded-full bg-on-surface text-surface font-label-sm text-label-sm shadow-sm shrink-0">
+        Semua (6)
+      </button>
+<button class="px-3 py-1.5 rounded-full bg-surface-container text-on-surface font-label-sm text-label-sm shrink-0 flex items-center gap-1 hover:bg-surface-container-high transition-colors">
+<span class="w-2 h-2 rounded-full bg-secondary-container"></span>
+        Catatan (3)
+      </button>
+<button class="px-3 py-1.5 rounded-full bg-surface-container text-on-surface font-label-sm text-label-sm shrink-0 flex items-center gap-1 hover:bg-surface-container-high transition-colors">
+<span class="w-2 h-2 rounded-full bg-brand-sky"></span>
+        Flashcard (2)
+      </button>
+<button class="px-3 py-1.5 rounded-full bg-surface-container text-on-surface font-label-sm text-label-sm shrink-0 flex items-center gap-1 hover:bg-surface-container-high transition-colors">
+<span class="w-2 h-2 rounded-full bg-success"></span>
+        Kuis (1)
+      </button>
+</div>
+<!-- Reading Pane: High Legibility Document Card -->
+<article class="bg-surface rounded-xl p-4 shadow-md flex flex-col gap-3 relative">
+<!-- Document Header Stamp -->
+<div class="pb-3 flex flex-col gap-1 bg-surface-container-low/60 -mx-4 -mt-4 p-4 rounded-t-xl">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm text-text-muted tracking-wider uppercase">
+            Biokimia Kedokteran Dasar
+          </span>
+<span class="font-label-sm text-label-sm text-on-surface-variant bg-surface px-2 py-0.5 rounded shadow-sm">
+            Halaman 84
+          </span>
+</div>
+<span class="font-caption text-caption text-primary tracking-wide uppercase">
+          Bab 4: Jalur Katabolisme Energi • Bagian 4.2
+        </span>
+<h3 class="font-headline-sm text-headline-sm text-on-surface leading-tight mt-0.5">
+          Glikolisis: Konversi Glukosa Menjadi Piruvat &amp; Pembentukan ATP Sitosol
+        </h3>
+</div>
+<!-- Academic Paragraph Context -->
+<p class="font-body-md text-body-md text-on-surface leading-relaxed text-justify">
+        Pada kondisi aerobik normal, metabolisme glukosa dalam sitosol sel mamalia beroperasi melalui serangkaian transformasi fosforilasi berantai. Reaksi ini mendegradasi satu heksosa netral menjadi intermediat metabolik berenergi tinggi yang siap didegradasi lebih lanjut di dalam mitokondria.
+      </p>
+<!-- Highlighted Citation #1 (Catatan / Summary Context) -->
+<div class="relative rounded-lg p-3.5 bg-secondary-container/10 shadow-sm flex flex-col gap-2 transition-all" id="citation-card-1">
+<div class="flex items-center justify-between">
+<div class="inline-flex items-center gap-1 px-2 py-0.5 rounded-full bg-secondary-container text-on-secondary font-label-sm text-label-sm shadow-sm">
+<span class="material-symbols-outlined text-[14px]">local_library</span>
+            Rujukan Mika #1
+          </div>
+<span class="font-caption text-caption text-secondary font-bold flex items-center gap-1">
+<span class="material-symbols-outlined text-[13px]">check_circle</span>
+            Verbatim Valid
+          </span>
+</div>
+<blockquote class="font-body-md text-body-md text-on-surface font-semibold pl-2.5 py-0.5 italic leading-relaxed">
+          “Glikolisis menghasilkan 2 ATP netto dan 2 NADH per molekul glukosa melalui 10 tahap enzimatik di sitoplasma.”
+        </blockquote>
+<div class="flex items-center justify-between pt-1 gap-2">
+<span class="font-caption text-caption text-text-muted truncate">
+            Dikutip di Rangkuman Bab 4
+          </span>
+<button class="px-2.5 py-1 rounded bg-secondary text-on-secondary font-label-sm text-label-sm flex items-center gap-1 shrink-0 active:scale-95 transition-transform shadow-sm">
+            Konteks AI
+            <span class="material-symbols-outlined text-[14px]">arrow_forward</span>
+</button>
+</div>
+</div>
+<!-- Biochemical Scheme Diagram Bento Tile -->
+<div class="p-3 bg-surface-container rounded-lg flex flex-col gap-2 shadow-inner">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm text-on-surface flex items-center gap-1">
+<span class="material-symbols-outlined text-primary text-[16px]">schema</span>
+            Skema 4-2: Aliran Stoikiometri Fosforilasi
+          </span>
+<span class="font-caption text-caption text-text-muted">Netto +2 ATP</span>
+</div>
+<!-- Clean Inline Vector Diagram -->
+<div class="bg-surface rounded p-3 flex flex-col items-center justify-center gap-2">
+<div class="w-full flex items-center justify-between text-center font-label-sm text-label-sm">
+<div class="flex flex-col items-center p-1.5 rounded bg-surface-container-high w-24">
+<span class="text-on-surface font-bold">Glukosa</span>
+<span class="font-caption text-caption text-text-muted">(C₆H₁₂O₆)</span>
+</div>
+<div class="flex-1 flex flex-col items-center px-1">
+<span class="text-danger font-caption text-[11px] font-bold">-2 ATP (Investasi)</span>
+<div class="w-full h-1 bg-outline-variant relative my-1 rounded-full overflow-hidden">
+<div class="w-3/4 h-full bg-primary rounded-full"></div>
+</div>
+<span class="text-success font-caption text-[11px] font-bold">+4 ATP &amp; +2 NADH</span>
+</div>
+<div class="flex flex-col items-center p-1.5 rounded bg-surface-container-high w-24">
+<span class="text-on-surface font-bold">2 Piruvat</span>
+<span class="font-caption text-caption text-text-muted">(2x C₃H₄O₃)</span>
+</div>
+</div>
+<p class="font-caption text-caption text-text-muted text-center pt-1">
+            Substrat sitosolik glukosa dikatalisis tanpa membutuhkan oksigen molekuler langsung.
+          </p>
+</div>
+</div>
+<!-- Highlighted Citation #2 (Flashcard Context) -->
+<div class="relative rounded-lg p-3.5 bg-tertiary-fixed/40 shadow-sm flex flex-col gap-2 transition-all" id="citation-card-2">
+<div class="flex items-center justify-between">
+<div class="inline-flex items-center gap-1 px-2 py-0.5 rounded-full bg-tertiary text-on-tertiary font-label-sm text-label-sm shadow-sm">
+<span class="material-symbols-outlined text-[14px]">style</span>
+            Rujukan Flashcard #4
+          </div>
+<span class="font-caption text-caption text-tertiary-container font-bold flex items-center gap-1">
+<span class="material-symbols-outlined text-[13px]">lightbulb</span>
+            Enzim Kunci
+          </span>
+</div>
+<blockquote class="font-body-md text-body-md text-on-surface font-semibold pl-2.5 py-0.5 italic leading-relaxed">
+          “Fosfofruktokinase-1 (PFK-1) bertindak sebagai enzim penentu laju utama (rate-limiting enzyme) yang dihambat oleh kadar ATP tinggi serta diinhibisi oleh ion sitrat berlebih.”
+        </blockquote>
+<div class="flex items-center justify-between pt-1 gap-2">
+<span class="font-caption text-caption text-text-muted truncate">
+            Dipakai di Flashcard: Regulator Glikolisis
+          </span>
+<button class="px-2.5 py-1 rounded bg-tertiary text-on-tertiary font-label-sm text-label-sm flex items-center gap-1 shrink-0 active:scale-95 transition-transform shadow-sm">
+            Buka Kartu
+            <span class="material-symbols-outlined text-[14px]">open_in_new</span>
+</button>
+</div>
+</div>
+<!-- Subsequent Document Body Text -->
+<p class="font-body-md text-body-md text-on-surface leading-relaxed text-justify">
+        Bila suplai oksigen jaringan terbatas (kondisi hipoksia seluler), regenerasi koenzim NAD⁺ dari NADH tidak dapat berlangsung melalui rantai transport elektron mitokondria. Pada skenario ini, piruvat segera dialihkan menjadi asam laktat oleh enzim laktat dehidrogenase demi mempertahankan siklus glikolisis sitosol tetap aktif.
+      </p>
+<!-- Document Page Footer Metadata -->
+<div class="pt-2 flex items-center justify-between text-on-surface-variant font-caption text-caption bg-surface-container-low -mx-4 -mb-4 p-3 rounded-b-xl">
+<span class="flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">description</span>
+          Biokimia Dasar Bab 4.pdf
+        </span>
+<span class="font-bold">Halaman 84 dari 412</span>
+</div>
+</article>
+<!-- Inspection Bottom Drawer / Active Sheet Card -->
+<div class="bg-surface rounded-xl p-4 shadow-lg flex flex-col gap-3">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-2">
+<span class="w-3 h-3 rounded-full bg-secondary-container"></span>
+<span class="font-label-md text-label-md text-on-surface">Sitasi #1 Aktif Terpilih</span>
+</div>
+<span class="px-2 py-0.5 rounded bg-surface-container-high text-on-surface font-caption text-caption">
+          PDF Hal 5 • Cetak 84
+        </span>
+</div>
+<div class="p-3 rounded-lg bg-surface-container-low flex items-start gap-2.5">
+<span class="material-symbols-outlined text-secondary-container text-[20px] shrink-0">format_quote</span>
+<p class="font-body-sm text-body-sm text-on-surface leading-snug">
+          “Glikolisis menghasilkan 2 ATP netto dan 2 NADH per molekul glukosa melalui 10 tahap enzimatik di sitoplasma.”
+        </p>
+</div>
+<div class="grid grid-cols-3 gap-2">
+<button class="py-2.5 px-2 rounded-lg bg-surface-container text-on-surface font-label-sm text-label-sm flex flex-col items-center justify-center gap-1 active:bg-surface-container-highest transition-colors" id="focus-btn">
+<span class="material-symbols-outlined text-[18px]">center_focus_strong</span>
+          Fokuskan
+        </button>
+<button class="py-2.5 px-2 rounded-lg bg-surface-container text-on-surface font-label-sm text-label-sm flex flex-col items-center justify-center gap-1 active:bg-surface-container-highest transition-colors" id="copy-btn">
+<span class="material-symbols-outlined text-[18px]">content_copy</span>
+          Salin Kutipan
+        </button>
+<button class="py-2.5 px-2 rounded-lg bg-primary-container text-on-primary-container font-label-sm text-label-sm flex flex-col items-center justify-center gap-1 active:scale-95 transition-transform shadow-sm" id="flashcard-link-btn">
+<span class="material-symbols-outlined text-[18px]">style</span>
+          Ke Flashcard
+        </button>
+</div>
+<div class="flex items-center justify-between pt-1">
+<div class="flex items-center gap-1 text-success font-caption text-caption font-bold">
+<span class="material-symbols-outlined text-[15px]">verified_user</span>
+          SHA-256 Integritas Valid
+        </div>
+<button class="font-caption text-caption text-text-muted hover:text-danger flex items-center gap-0.5">
+<span class="material-symbols-outlined text-[13px]">flag</span>
+          Laporkan Teks Blur
+        </button>
+</div>
+</div>
+</div>
+<!-- Sticky Bottom Quick Action Strip for Mika AI Inquiry -->
+<div class="fixed bottom-0 left-0 right-0 p-3 bg-surface/90 backdrop-blur-md shadow-[0_-4px_16px_rgba(0,0,0,0.08)] z-40 flex items-center gap-2 max-w-lg mx-auto">
+<button class="flex-1 py-3 px-4 rounded-xl bg-secondary-container text-on-secondary font-label-lg text-label-lg shadow-md flex items-center justify-center gap-2 active:scale-98 transition-all" id="ask-mika-sentence-btn">
+<span class="material-symbols-outlined text-[20px]">pets</span>
+      Tanya Mika Tentang Kalimat Ini
+    </button>
+<button aria-label="Pindai Ulang OCR" class="w-12 h-12 rounded-xl bg-surface-container text-on-surface flex items-center justify-center shrink-0 active:scale-95 transition-transform shadow-sm" id="ocr-rescan-btn">
+<span class="material-symbols-outlined text-[22px]">document_scanner</span>
+</button>
+</div>
+</div>
+<script>
+  (function() {
+    // Mode toggling (PDF Asli vs Teks OCR)
+    const pdfBtn = document.getElementById('mode-pdf');
+    const textBtn = document.getElementById('mode-text');
+    
+    if (pdfBtn && textBtn) {
+      pdfBtn.addEventListener('click', () => {
+        pdfBtn.className = 'px-2.5 py-1 rounded-full bg-primary text-on-primary font-label-sm text-label-sm shadow-sm transition-all';
+        textBtn.className = 'px-2.5 py-1 rounded-full text-on-surface font-label-sm text-label-sm hover:bg-surface/50 transition-all';
+      });
+      textBtn.addEventListener('click', () => {
+        textBtn.className = 'px-2.5 py-1 rounded-full bg-primary text-on-primary font-label-sm text-label-sm shadow-sm transition-all';
+        pdfBtn.className = 'px-2.5 py-1 rounded-full text-on-surface font-label-sm text-label-sm hover:bg-surface/50 transition-all';
+      });
+    }
+
+    // Interactive copy quotation
+    const copyBtn = document.getElementById('copy-btn');
+    if (copyBtn) {
+      copyBtn.addEventListener('click', () => {
+        const textToCopy = "Glikolisis menghasilkan 2 ATP netto dan 2 NADH per molekul glukosa melalui 10 tahap enzimatik di sitoplasma.";
+        navigator.clipboard?.writeText(textToCopy).catch(() => {});
+        const originalText = copyBtn.innerHTML;
+        copyBtn.innerHTML = '<span class="material-symbols-outlined text-[18px] text-success">check</span> Tersalin!';
+        setTimeout(() => {
+          copyBtn.innerHTML = originalText;
+        }, 1800);
+      });
+    }
+
+    // Focus scroll to citation card
+    const focusBtn = document.getElementById('focus-btn');
+    const citation1 = document.getElementById('citation-card-1');
+    if (focusBtn && citation1) {
+      focusBtn.addEventListener('click', () => {
+        citation1.scrollIntoView({ behavior: 'smooth', block: 'center' });
+        citation1.classList.add('scale-102');
+        setTimeout(() => citation1.classList.remove('scale-102'), 600);
+      });
+    }
+  })();
+</script></main></body></html>

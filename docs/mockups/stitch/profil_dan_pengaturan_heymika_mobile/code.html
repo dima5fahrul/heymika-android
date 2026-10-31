@@ -1,0 +1,568 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" name="viewport"><meta content="mobile_tab" name="shell-type"><link href="https://fonts.googleapis.com" rel="preconnect"><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"><link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&amp;display=swap" rel="stylesheet"><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"><style>@layer base{html,body{width:100vw;margin:0;padding:0;}body{overscroll-behavior:none;}.pb-safe{padding-bottom:env(safe-area-inset-bottom,0px);}.pt-safe{padding-top:env(safe-area-inset-top,0px);}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { "colors": { "on-primary": "#ffffff", "on-secondary-container": "#613100", "on-error": "#ffffff", "tertiary": "#006388", "on-surface": "#001b3c", "on-background": "#001b3c", "inverse-on-surface": "#ecf1ff", "text-muted": "#5868A4", "error": "#ba1a1a", "badge-cyan": "#C5EFFF", "secondary-container": "#ff8a00", "primary-container": "#0072e3", "border-muted": "#D8DDF4", "error-container": "#ffdad6", "background": "#f9f9ff", "surface-container": "#e7eeff", "on-primary-fixed-variant": "#00458e", "on-tertiary-fixed": "#001e2d", "tertiary-container": "#007dab", "secondary-fixed-dim": "#ffb77f", "surface-container-high": "#dee8ff", "primary": "#005ab5", "surface-dim": "#c8dbff", "tertiary-fixed": "#c5e7ff", "on-tertiary-fixed-variant": "#004c6a", "canvas-bg": "#F8FCFF", "outline-variant": "#c1c6d6", "inverse-surface": "#113059", "surface-tint": "#005cba", "surface-container-highest": "#d6e3ff", "on-tertiary-container": "#fcfcff", "brand-sky": "#16B5F5", "on-error-container": "#93000a", "surface-variant": "#d6e3ff", "tertiary-fixed-dim": "#7fd0ff", "on-surface-variant": "#414754", "on-primary-fixed": "#001b3e", "surface-container-low": "#f0f3ff", "primary-fixed": "#d7e3ff", "secondary-fixed": "#ffdcc4", "on-primary-container": "#fefcff", "secondary": "#914c00", "on-secondary-fixed": "#2f1500", "inverse-primary": "#aac7ff", "on-secondary": "#ffffff", "on-secondary-fixed-variant": "#6f3900", "danger-bg": "#FFF0F2", "on-tertiary": "#ffffff", "surface-container-lowest": "#ffffff", "success": "#167549", "brand-yellow": "#FFD34E", "danger": "#BC2535", "surface-bright": "#f9f9ff", "ribbon-red": "#EF3E36", "primary-fixed-dim": "#aac7ff", "surface": "#FFFFFF", "outline": "#717785" }, "borderRadius": { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" }, "spacing": { "space-sm": "0.5rem", "space-lg": "1.5rem", "margin": "1.5rem", "space-xl": "2rem", "space-md": "1rem", "gutter": "1.5rem", "space-xs": "0.25rem" }, "fontFamily": { "caption": ["Nunito Sans"], "headline-lg": ["Nunito Sans"], "body-sm": ["Nunito Sans"], "label-md": ["Nunito Sans"], "headline-md": ["Nunito Sans"], "display-hero": ["Nunito Sans"], "body-lg": ["Nunito Sans"], "headline-lg-mobile": ["Nunito Sans"], "display-hero-mobile": ["Nunito Sans"], "headline-sm": ["Nunito Sans"], "body-md": ["Nunito Sans"], "label-lg": ["Nunito Sans"], "label-sm": ["Nunito Sans"] }, "fontSize": { "caption": ["12px", {"lineHeight": "16px", "fontWeight": "500"}], "headline-lg": ["36px", {"lineHeight": "44px", "letterSpacing": "-0.015em", "fontWeight": "800"}], "body-sm": ["14px", {"lineHeight": "20px", "fontWeight": "400"}], "label-md": ["14px", {"lineHeight": "18px", "letterSpacing": "0.02em", "fontWeight": "700"}], "headline-md": ["24px", {"lineHeight": "32px", "fontWeight": "800"}], "display-hero": ["48px", {"lineHeight": "56px", "letterSpacing": "-0.02em", "fontWeight": "900"}], "body-lg": ["18px", {"lineHeight": "28px", "fontWeight": "400"}], "headline-lg-mobile": ["26px", {"lineHeight": "34px", "letterSpacing": "-0.01em", "fontWeight": "800"}], "display-hero-mobile": ["32px", {"lineHeight": "40px", "letterSpacing": "-0.01em", "fontWeight": "900"}], "headline-sm": ["20px", {"lineHeight": "28px", "fontWeight": "700"}], "body-md": ["16px", {"lineHeight": "24px", "fontWeight": "400"}], "label-lg": ["16px", {"lineHeight": "22px", "fontWeight": "700"}], "label-sm": ["12px", {"lineHeight": "16px", "letterSpacing": "0.05em", "fontWeight": "700"}] } } } };</script></head><body class="bg-background font-body-md text-body-md text-on-surface antialiased flex flex-col min-h-screen"><header class="fixed top-0 w-full z-50 pt-safe bg-surface/85 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,27,60,0.04)]"><div class="h-16 px-space-md flex items-center justify-between"><div class="flex items-center gap-space-sm"><img alt="HeyMika Kitten Logo with Manga Accents.png" class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/AEtjO1XjkJzza4bh8-PD-iTCEmSiHpgBUv0XJmC061RJPMWTt4w00Ai5fxMsrIRCYd1WLkyzPsYIs-u6UjNJPZP2VhwlkVu7pB2XM18aZcVfPmyc77Us3weH3dJceN6SZY7xfq8ea7BS5G3sMue7rVme6Pww3SI8xU40ZwwF4Z9OLJS-f7lTsKQA98XPyTSJ9mTDIVUdFTBeliq0pCPLSOqm_ze0h6Q5y_gGR5667iAj8YbjpLbR7x-jcOndeyFeEIRweQzn12fuzmQJqIk"><div class="flex flex-col"><div class="flex items-center gap-1"><span class="font-label-lg text-label-lg text-primary leading-none tracking-tight">HeyMika!</span><span class="px-1.5 py-0.5 rounded-full bg-badge-cyan text-on-surface font-caption text-caption text-[10px] uppercase font-extrabold">Lv. 12</span></div><span class="font-caption text-caption text-text-muted mt-0.5">Pengaturan Akun</span></div></div><div class="flex items-center gap-space-sm"><div class="flex items-center gap-1 px-2.5 py-1 rounded-full bg-surface-container-low shadow-[0_1px_4px_rgba(0,0,0,0.03)]"><span class="material-symbols-outlined text-secondary-container text-lg">local_fire_department</span><span class="font-label-sm text-label-sm text-on-surface font-black">7 Hari</span></div><button aria-label="Profile" class="w-11 h-11 flex items-center justify-center rounded-full hover:bg-surface-container-high transition-colors" type="button"><img alt="Profile" class="w-8 h-8 rounded-full object-cover" src="https://lh3.googleusercontent.com/aida/AEtjO1VPvQVnyPJLB80v6HVS532yNRqj0NFh3C_F3OS8ad37-vntzZgwVL8Q2ndCLbbbsWvxyW_Ry8r-Rbqkx7xZgyUZkhvuba92RnhILL-v1O_f6olX7FfzWJLq9uO8npMXWhuFUUfpNgteSSuaLFHBXituVXc58tb6PA9UzzMppPyI9SViDONQ_FC4f_p1NC2dyz2CgswgobmrJV07ksPGL5iijMumSn6Ploo_0FStV3bRfFFUpREJmyUBWv3n4EfzVq6ogw52UMAl"></button></div></div></header><main class="flex-1 flex flex-col relative w-full pt-16 pb-24 bg-background"><div class="flex flex-col w-full pb-32">
+<!-- Top Banner & Title Section -->
+<section class="px-space-md pt-space-md flex flex-col gap-space-sm">
+<div class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-badge-cyan w-fit shadow-[0_2px_0px_#082A52]">
+<span class="text-[12px] leading-none">⚡</span>
+<span class="font-label-sm text-label-sm text-on-surface uppercase tracking-wider font-extrabold text-[11px]">PUSAT KENDALI AKUN HEYMIKA</span>
+</div>
+<div class="flex flex-col gap-1">
+<h1 class="font-headline-lg-mobile text-headline-lg-mobile text-on-surface font-extrabold tracking-tight">Profil &amp; Pengaturan Akun</h1>
+<p class="font-body-sm text-body-sm text-text-muted">Kelola preferensi akun, gaya bimbingan Mika AI, serta kontrol privasi dan data belajarmu di satu tempat.</p>
+</div>
+<!-- Cute Mascot Speech Bubble Banner -->
+<div class="mt-2 bg-surface rounded-2xl p-space-md shadow-[4px_4px_0px_#FF8A00] flex items-center gap-space-md relative overflow-hidden">
+<div class="relative shrink-0 w-16 h-16 rounded-xl bg-badge-cyan flex items-center justify-center overflow-hidden">
+<img alt="Mika, the waving learning kitten" class="w-14 h-14 object-contain" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBET-wQVpG0Zp-pdf18wzh4ueDcbmZa6NOM3e49YN99wvwwt8g0jSQJKiN5JEwnafsbZ-xnjr2jV4t3pua5DiUk2hMbq0bQruKpVu1BeaQX3h28EOC4j5miZ9ILl1r_ZBZykD6w78--51o5RvLst16qSawxXS0mmliOW9ZkKiroDRU0dlymcQLuCaRLwXSFsueZwFCsLGhnVQc-OOwSn6Dg-ORszIvX4Vpj6iHjbvjji30613ClJDylalgHlYKOUl7ohqM">
+<span class="absolute -bottom-1 -right-1 bg-secondary-container text-on-primary text-[10px] font-extrabold px-1.5 py-0.2 rounded-full">AI</span>
+</div>
+<div class="flex flex-col flex-1 min-w-0">
+<div class="flex items-center gap-1.5">
+<span class="font-label-md text-label-md text-primary font-black">Mika Pembimbing</span>
+<span class="px-2 py-0.5 rounded-full bg-surface-container-high text-on-surface-variant font-caption text-caption text-[10px] font-bold">Online</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface italic mt-0.5 line-clamp-2">"Semangat terus, Kak! Mika selalu siap menyesuaikan gayamu belajar!"</p>
+</div>
+</div>
+</section>
+<!-- Segmented Category Navigation (Scrollable Pill Tabs) -->
+<div class="sticky top-16 z-30 bg-background/95 backdrop-blur-md pt-space-md pb-space-sm px-space-md">
+<div class="flex items-center gap-2 overflow-x-auto no-scrollbar py-1">
+<a class="shrink-0 px-3.5 py-2 rounded-full bg-primary text-on-primary font-label-sm text-label-sm shadow-[0_2px_0px_#00458e] flex items-center gap-1.5 transition-transform active:translate-y-0.5" href="#section-profile">
+<span class="material-symbols-outlined text-[16px]">account_circle</span>
+<span>1. Profil Pengguna</span>
+</a>
+<a class="shrink-0 px-3.5 py-2 rounded-full bg-surface text-on-surface font-label-sm text-label-sm shadow-[0_2px_0px_#D8DDF4] hover:bg-surface-container flex items-center gap-1.5 transition-transform active:translate-y-0.5" href="#section-ai-tutor">
+<span class="material-symbols-outlined text-[16px] text-primary">psychology</span>
+<span>2. Belajar &amp; Mika AI</span>
+</a>
+<a class="shrink-0 px-3.5 py-2 rounded-full bg-surface text-on-surface font-label-sm text-label-sm shadow-[0_2px_0px_#D8DDF4] hover:bg-surface-container flex items-center gap-1.5 transition-transform active:translate-y-0.5" href="#section-notifications">
+<span class="material-symbols-outlined text-[16px] text-primary">notifications</span>
+<span>3. Notifikasi &amp; Tampilan</span>
+</a>
+<a class="shrink-0 px-3.5 py-2 rounded-full bg-surface text-on-surface font-label-sm text-label-sm shadow-[0_2px_0px_#D8DDF4] hover:bg-surface-container flex items-center gap-1.5 transition-transform active:translate-y-0.5" href="#section-security">
+<span class="material-symbols-outlined text-[16px] text-primary">lock</span>
+<span>4. Keamanan &amp; Sandi</span>
+</a>
+<a class="shrink-0 px-3.5 py-2 rounded-full bg-surface text-on-surface font-label-sm text-label-sm shadow-[0_2px_0px_#D8DDF4] hover:bg-surface-container flex items-center gap-1.5 transition-transform active:translate-y-0.5" href="#section-billing">
+<span class="material-symbols-outlined text-[16px] text-primary">verified</span>
+<span>5. Paket &amp; Data</span>
+</a>
+</div>
+</div>
+<!-- Content Stack Container -->
+<div class="px-space-md flex flex-col gap-space-lg mt-2">
+<!-- Section 01: Avatar & Identitas Profil -->
+<section class="bg-surface rounded-2xl p-space-md shadow-[4px_4px_0px_#FF8A00] flex flex-col gap-space-md" id="section-profile">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-2">
+<span class="w-7 h-7 rounded-lg bg-surface-container-high flex items-center justify-center text-primary font-black font-label-sm text-label-sm">01</span>
+<h2 class="font-headline-sm text-headline-sm text-on-surface font-extrabold">Identitas Profil</h2>
+</div>
+<span class="px-2.5 py-1 rounded-full bg-badge-cyan text-on-surface font-label-sm text-label-sm font-bold flex items-center gap-1 shadow-[0_1px_0px_#082A52]">
+<span>⭐</span> Level 14
+        </span>
+</div>
+<div class="bg-surface-container-low rounded-xl p-space-md flex flex-col sm:flex-row items-center gap-space-md">
+<div class="relative shrink-0 w-24 h-24 rounded-2xl bg-white shadow-[0_3px_0px_#082A52] flex items-center justify-center overflow-hidden">
+<img alt="Budi Avatar Mika" class="w-20 h-20 object-contain" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBET-wQVpG0Zp-pdf18wzh4ueDcbmZa6NOM3e49YN99wvwwt8g0jSQJKiN5JEwnafsbZ-xnjr2jV4t3pua5DiUk2hMbq0bQruKpVu1BeaQX3h28EOC4j5miZ9ILl1r_ZBZykD6w78--51o5RvLst16qSawxXS0mmliOW9ZkKiroDRU0dlymcQLuCaRLwXSFsueZwFCsLGhnVQc-OOwSn6Dg-ORszIvX4Vpj6iHjbvjji30613ClJDylalgHlYKOUl7ohqM">
+<button aria-label="Ganti Avatar" class="absolute bottom-1 right-1 w-7 h-7 rounded-full bg-primary text-on-primary flex items-center justify-center shadow-[0_2px_0px_#00458e] active:scale-95" type="button">
+<span class="material-symbols-outlined text-[15px]">photo_camera</span>
+</button>
+</div>
+<div class="flex flex-col items-center sm:items-start text-center sm:text-left flex-1 min-w-0">
+<div class="flex items-center gap-2">
+<span class="font-label-lg text-label-lg text-on-surface font-black">Budi Pratama</span>
+<span class="px-2 py-0.5 rounded-full bg-badge-cyan text-on-surface font-caption text-caption text-[11px] font-bold">Pelajar Aktif</span>
+</div>
+<span class="font-body-sm text-body-sm text-text-muted mt-0.5">Siswa Angkatan 2024 • Kampus ID</span>
+<div class="flex items-center gap-2 mt-3 w-full">
+<button class="flex-1 py-2 px-3 rounded-xl bg-surface text-primary font-label-sm text-label-sm shadow-[0_2px_0px_#0072e3] flex items-center justify-center gap-1 hover:bg-surface-container-lowest active:translate-y-0.5" type="button">
+<span class="material-symbols-outlined text-[16px]">upload</span>
+<span>Ganti Foto</span>
+</button>
+<button class="flex-1 py-2 px-3 rounded-xl bg-surface text-secondary font-label-sm text-label-sm shadow-[0_2px_0px_#ff8a00] flex items-center justify-center gap-1 hover:bg-secondary-fixed active:translate-y-0.5" type="button">
+<span>🎭</span>
+<span>Stiker Mika</span>
+</button>
+</div>
+</div>
+</div>
+<div class="flex flex-col gap-space-sm">
+<div class="flex flex-col gap-1">
+<label class="font-label-sm text-label-sm text-on-surface font-bold">Nama Lengkap</label>
+<div class="h-12 px-3.5 rounded-xl bg-surface-container-lowest shadow-[0_2px_0px_#D8DDF4] flex items-center gap-2 focus-within:shadow-[0_2px_0px_#0072e3]">
+<span class="material-symbols-outlined text-text-muted text-[18px]">person</span>
+<input class="flex-1 bg-transparent font-body-md text-body-md text-on-surface outline-none" type="text" value="Budi Pratama">
+</div>
+</div>
+<div class="flex flex-col gap-1">
+<label class="font-label-sm text-label-sm text-on-surface font-bold">Username Pengenal</label>
+<div class="h-12 px-3.5 rounded-xl bg-surface-container-lowest shadow-[0_2px_0px_#D8DDF4] flex items-center gap-2 focus-within:shadow-[0_2px_0px_#0072e3]">
+<span class="material-symbols-outlined text-text-muted text-[18px]">alternate_email</span>
+<input class="flex-1 bg-transparent font-body-md text-body-md text-on-surface outline-none" type="text" value="budipratama_id">
+</div>
+<span class="font-caption text-caption text-text-muted">Tampil pada peringkat kelas dan sesi belajar kelompok bersama Mika.</span>
+</div>
+<div class="flex flex-col gap-1">
+<label class="font-label-sm text-label-sm text-on-surface font-bold">Biodata &amp; Catatan Target Belajar</label>
+<textarea class="p-3 rounded-xl bg-surface-container-lowest shadow-[0_2px_0px_#D8DDF4] font-body-sm text-body-sm text-on-surface outline-none focus:shadow-[0_2px_0px_#0072e3] resize-none" rows="3">Mahasiswa Informatika yang sedang berjuang menaklukkan Struktur Data &amp; Algoritma!</textarea>
+</div>
+</div>
+</section>
+<!-- Section 02: Email Akun & Verifikasi -->
+<section class="bg-surface rounded-2xl p-space-md shadow-[4px_4px_0px_#FF8A00] flex flex-col gap-space-md">
+<div class="flex items-center gap-2">
+<span class="w-7 h-7 rounded-lg bg-surface-container-high flex items-center justify-center text-primary font-black font-label-sm text-label-sm">02</span>
+<h2 class="font-headline-sm text-headline-sm text-on-surface font-extrabold">Email &amp; Autentikasi</h2>
+</div>
+<div class="p-3.5 rounded-xl bg-surface-container-low flex flex-col gap-1.5 shadow-[0_2px_0px_#D8DDF4]">
+<div class="flex items-center justify-between">
+<span class="font-caption text-caption text-text-muted">Email Aktif Terdaftar</span>
+<span class="px-2 py-0.5 rounded-full bg-success text-on-primary font-caption text-caption text-[11px] font-bold flex items-center gap-1">
+<span class="material-symbols-outlined text-[13px]">verified</span> Terverifikasi
+          </span>
+</div>
+<span class="font-label-lg text-label-lg text-on-surface font-bold break-all">budi.pratama@kampus.ac.id</span>
+<span class="font-caption text-caption text-text-muted">Diperbarui 3 bulan lalu via SSO Kampus</span>
+</div>
+<div class="flex flex-col gap-1">
+<label class="font-label-sm text-label-sm text-on-surface font-bold">Ganti Alamat Email Baru</label>
+<div class="h-12 px-3.5 rounded-xl bg-surface-container-lowest shadow-[0_2px_0px_#D8DDF4] flex items-center gap-2 focus-within:shadow-[0_2px_0px_#0072e3]">
+<span class="material-symbols-outlined text-text-muted text-[18px]">mail</span>
+<input class="flex-1 bg-transparent font-body-md text-body-md text-on-surface outline-none" placeholder="contoh: budi.baru@email.com" type="email">
+</div>
+</div>
+<div class="p-3 rounded-xl bg-secondary-fixed flex items-start gap-2.5">
+<span class="material-symbols-outlined text-secondary text-[20px] shrink-0 mt-0.5">vpn_key</span>
+<p class="font-body-sm text-body-sm text-on-secondary-container">Email baru wajib diverifikasi melalui tautan konfirmasi sebelum dapat digunakan untuk login.</p>
+</div>
+<button class="w-full py-3 px-4 rounded-xl bg-surface-container-high text-primary font-label-md text-label-md font-bold shadow-[0_2px_0px_#005ab5] hover:bg-surface-container flex items-center justify-center gap-2 active:translate-y-0.5" type="button">
+<span class="material-symbols-outlined text-[18px]">send</span>
+<span>Simpan &amp; Kirim Tautan Verifikasi</span>
+</button>
+</section>
+<!-- Section 03: Target Belajar & Komitmen Harian -->
+<section class="bg-surface rounded-2xl p-space-md shadow-[4px_4px_0px_#FF8A00] flex flex-col gap-space-md">
+<div class="flex items-center gap-2">
+<span class="w-7 h-7 rounded-lg bg-surface-container-high flex items-center justify-center text-primary font-black font-label-sm text-label-sm">03</span>
+<h2 class="font-headline-sm text-headline-sm text-on-surface font-extrabold">Komitmen &amp; Ritme Belajar</h2>
+</div>
+<div class="flex flex-col gap-1">
+<span class="font-label-md text-label-md text-on-surface font-bold">Target Belajar Harian</span>
+<span class="font-caption text-caption text-text-muted">Mika akan menyusun porsi latihan kuis dan materi sesuai ritmemu.</span>
+</div>
+<div class="flex flex-col gap-2.5">
+<!-- Option 1 -->
+<label class="flex items-center justify-between p-3.5 rounded-xl bg-surface-container-lowest shadow-[0_2px_0px_#D8DDF4] cursor-pointer hover:bg-surface-container-low transition-colors">
+<div class="flex items-center gap-3">
+<input class="w-4 h-4 accent-primary" name="daily_target" type="radio">
+<div class="flex flex-col">
+<span class="font-label-md text-label-md text-on-surface font-bold">15 Menit / Hari</span>
+<span class="font-caption text-caption text-text-muted">Santai &amp; Ringan (Review kilat 5 kartu)</span>
+</div>
+</div>
+<span class="text-xl">🌱</span>
+</label>
+<!-- Option 2 (Selected) -->
+<label class="flex items-center justify-between p-3.5 rounded-xl bg-primary-fixed text-on-primary-fixed shadow-[0_3px_0px_#005ab5] cursor-pointer">
+<div class="flex items-center gap-3">
+<input checked="" class="w-4 h-4 accent-primary" name="daily_target" type="radio">
+<div class="flex flex-col">
+<div class="flex items-center gap-1.5">
+<span class="font-label-md text-label-md font-black">30 Menit / Hari</span>
+<span class="px-2 py-0.2 rounded-full bg-secondary-container text-on-primary text-[10px] font-extrabold">Rekomendasi ⭐</span>
+</div>
+<span class="font-caption text-caption text-on-primary-fixed-variant">Konsisten &amp; Ideal untuk pemahaman mendalam</span>
+</div>
+</div>
+<span class="text-xl">⚡</span>
+</label>
+<!-- Option 3 -->
+<label class="flex items-center justify-between p-3.5 rounded-xl bg-surface-container-lowest shadow-[0_2px_0px_#D8DDF4] cursor-pointer hover:bg-surface-container-low transition-colors">
+<div class="flex items-center gap-3">
+<input class="w-4 h-4 accent-primary" name="daily_target" type="radio">
+<div class="flex flex-col">
+<span class="font-label-md text-label-md text-on-surface font-bold">60 Menit / Hari</span>
+<span class="font-caption text-caption text-text-muted">Ambisius &amp; Kejar Ujian Semester 🔥</span>
+</div>
+</div>
+<span class="text-xl">🚀</span>
+</label>
+</div>
+<!-- Hari Belajar Aktif -->
+<div class="flex flex-col gap-2 pt-2">
+<span class="font-label-sm text-label-sm text-on-surface font-bold">Hari Belajar Aktif</span>
+<div class="grid grid-cols-7 gap-1.5 text-center">
+<button class="py-2.5 rounded-xl bg-primary text-on-primary font-label-sm text-label-sm font-black shadow-[0_2px_0px_#00458e]" type="button">Sen</button>
+<button class="py-2.5 rounded-xl bg-primary text-on-primary font-label-sm text-label-sm font-black shadow-[0_2px_0px_#00458e]" type="button">Sel</button>
+<button class="py-2.5 rounded-xl bg-primary text-on-primary font-label-sm text-label-sm font-black shadow-[0_2px_0px_#00458e]" type="button">Rab</button>
+<button class="py-2.5 rounded-xl bg-primary text-on-primary font-label-sm text-label-sm font-black shadow-[0_2px_0px_#00458e]" type="button">Kam</button>
+<button class="py-2.5 rounded-xl bg-primary text-on-primary font-label-sm text-label-sm font-black shadow-[0_2px_0px_#00458e]" type="button">Jum</button>
+<button class="py-2.5 rounded-xl bg-surface-container-low text-text-muted font-label-sm text-label-sm font-bold shadow-[0_2px_0px_#D8DDF4]" type="button">Sab</button>
+<button class="py-2.5 rounded-xl bg-surface-container-low text-text-muted font-label-sm text-label-sm font-bold shadow-[0_2px_0px_#D8DDF4]" type="button">Min</button>
+</div>
+<span class="font-caption text-caption text-text-muted">Streak harian dihitung pada 5 hari aktif yang kamu tentukan.</span>
+</div>
+<!-- Bidang Minat & Topik Utama -->
+<div class="flex flex-col gap-2 pt-2">
+<span class="font-label-sm text-label-sm text-on-surface font-bold">Bidang Minat &amp; Topik Utama</span>
+<div class="flex flex-wrap gap-2">
+<span class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-badge-cyan text-on-surface font-label-sm text-label-sm font-bold shadow-[0_1px_0px_#082A52]">
+            Struktur Data <span class="material-symbols-outlined text-[14px] cursor-pointer hover:opacity-75">close</span>
+</span>
+<span class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-badge-cyan text-on-surface font-label-sm text-label-sm font-bold shadow-[0_1px_0px_#082A52]">
+            Pemrograman Web <span class="material-symbols-outlined text-[14px] cursor-pointer hover:opacity-75">close</span>
+</span>
+<span class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-badge-cyan text-on-surface font-label-sm text-label-sm font-bold shadow-[0_1px_0px_#082A52]">
+            Kalkulus <span class="material-symbols-outlined text-[14px] cursor-pointer hover:opacity-75">close</span>
+</span>
+<span class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-badge-cyan text-on-surface font-label-sm text-label-sm font-bold shadow-[0_1px_0px_#082A52]">
+            Basis Data <span class="material-symbols-outlined text-[14px] cursor-pointer hover:opacity-75">close</span>
+</span>
+<button class="inline-flex items-center gap-1 px-3 py-1.5 rounded-full bg-surface-container text-primary font-label-sm text-label-sm font-black shadow-[0_1px_0px_#0072e3] active:translate-y-0.5" type="button">
+<span class="material-symbols-outlined text-[15px]">add</span> Tambah Topik
+          </button>
+</div>
+</div>
+</section>
+<!-- Section 04: Kustomisasi Mika AI Tutor (Personality & Tone) -->
+<section class="bg-surface rounded-2xl p-space-md shadow-[4px_4px_0px_#FF8A00] flex flex-col gap-space-md" id="section-ai-tutor">
+<div class="flex items-center gap-2">
+<span class="w-7 h-7 rounded-lg bg-surface-container-high flex items-center justify-center text-primary font-black font-label-sm text-label-sm">04</span>
+<h2 class="font-headline-sm text-headline-sm text-on-surface font-extrabold">Kepribadian Mika AI Tutor</h2>
+</div>
+<p class="font-body-sm text-body-sm text-text-muted">Atur kepribadian, gaya tutur, dan cara Mika mendampingimu dalam setiap sesi bimbingan.</p>
+<div class="flex flex-col gap-3">
+<!-- Persona 1 (Active) -->
+<label class="p-3.5 rounded-2xl bg-secondary-fixed text-on-secondary-fixed shadow-[0_3px_0px_#ff8a00] flex flex-col gap-2 cursor-pointer">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-2">
+<input checked="" class="w-4 h-4 accent-secondary-container" name="ai_persona" type="radio">
+<span class="font-label-lg text-label-lg font-black text-on-surface">Penyemangat Ceria (Socratic &amp; Ramah)</span>
+</div>
+<span class="px-2 py-0.5 rounded-full bg-secondary-container text-on-primary font-caption text-caption text-[10px] font-bold">Terpilih</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-secondary-fixed-variant pl-6">
+            "Mika banyak memberikan analogi kehidupan nyata, humor ringan, dan kalimat pujian khas anime shonen saat kamu berhasil!"
+          </p>
+</label>
+<!-- Persona 2 -->
+<label class="p-3.5 rounded-2xl bg-surface-container-lowest shadow-[0_2px_0px_#D8DDF4] flex flex-col gap-2 cursor-pointer hover:bg-surface-container-low transition-colors">
+<div class="flex items-center gap-2">
+<input class="w-4 h-4 accent-primary" name="ai_persona" type="radio">
+<span class="font-label-lg text-label-lg font-black text-on-surface">Ringkas &amp; To-The-Point</span>
+</div>
+<p class="font-body-sm text-body-sm text-text-muted pl-6">
+            "Langsung fokus pada esensi materi, rumus praktis, dan jawaban to-the-point tanpa obrolan panjang."
+          </p>
+</label>
+<!-- Persona 3 -->
+<label class="p-3.5 rounded-2xl bg-surface-container-lowest shadow-[0_2px_0px_#D8DDF4] flex flex-col gap-2 cursor-pointer hover:bg-surface-container-low transition-colors">
+<div class="flex items-center gap-2">
+<input class="w-4 h-4 accent-primary" name="ai_persona" type="radio">
+<span class="font-label-lg text-label-lg font-black text-on-surface">Tutor Akademis Mendalam</span>
+</div>
+<p class="font-body-sm text-body-sm text-text-muted pl-6">
+            "Penjelasan komprehensif berbasis studi literatur, disertai penalaran ilmiah mendalam."
+          </p>
+</label>
+</div>
+<!-- Analogy Complexity Level -->
+<div class="flex flex-col gap-2 pt-2">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm text-on-surface font-bold">Tingkat Kompleksitas Analogi</span>
+<span class="font-caption text-caption text-primary font-black">Menengah (Ilustratif)</span>
+</div>
+<div class="grid grid-cols-3 gap-2">
+<button class="py-2 rounded-xl bg-surface-container-low text-text-muted font-label-sm text-label-sm font-bold shadow-[0_2px_0px_#D8DDF4]" type="button">Sederhana</button>
+<button class="py-2 rounded-xl bg-primary text-on-primary font-label-sm text-label-sm font-black shadow-[0_2px_0px_#00458e]" type="button">Seimbang</button>
+<button class="py-2 rounded-xl bg-surface-container-low text-text-muted font-label-sm text-label-sm font-bold shadow-[0_2px_0px_#D8DDF4]" type="button">Teknis</button>
+</div>
+</div>
+<!-- Specific Form Inputs -->
+<div class="grid grid-cols-1 gap-3 pt-2">
+<div class="flex flex-col gap-1">
+<label class="font-label-sm text-label-sm text-on-surface font-bold">Sapaan Mika ke Kamu</label>
+<div class="h-12 px-3.5 rounded-xl bg-surface-container-lowest shadow-[0_2px_0px_#D8DDF4] flex items-center gap-2">
+<span class="material-symbols-outlined text-text-muted text-[18px]">waving_hand</span>
+<input class="flex-1 bg-transparent font-body-md text-body-md text-on-surface outline-none" type="text" value="Kak Budi">
+</div>
+<span class="font-caption text-caption text-text-muted">Pilihan populer: 'Kak Budi', 'Senpai', 'Budi-kun'.</span>
+</div>
+<div class="flex flex-col gap-1">
+<label class="font-label-sm text-label-sm text-on-surface font-bold">Bahasa Respons Mika</label>
+<div class="h-12 px-3.5 rounded-xl bg-surface-container-lowest shadow-[0_2px_0px_#D8DDF4] flex items-center justify-between">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-text-muted text-[18px]">translate</span>
+<span class="font-body-md text-body-md text-on-surface">Bahasa Indonesia Santun &amp; Ramah</span>
+</div>
+<span class="material-symbols-outlined text-text-muted text-[20px]">expand_more</span>
+</div>
+</div>
+</div>
+</section>
+<!-- Section 05: Notifikasi & Aksesibilitas -->
+<section class="bg-surface rounded-2xl p-space-md shadow-[4px_4px_0px_#FF8A00] flex flex-col gap-space-md" id="section-notifications">
+<div class="flex items-center gap-2">
+<span class="w-7 h-7 rounded-lg bg-surface-container-high flex items-center justify-center text-primary font-black font-label-sm text-label-sm">05</span>
+<h2 class="font-headline-sm text-headline-sm text-on-surface font-extrabold">Notifikasi &amp; Aksesibilitas</h2>
+</div>
+<div class="flex flex-col gap-3">
+<!-- Toggle 1 -->
+<div class="flex items-center justify-between p-3.5 rounded-xl bg-surface-container-lowest shadow-[0_2px_0px_#D8DDF4]">
+<div class="flex flex-col pr-3">
+<span class="font-label-md text-label-md text-on-surface font-bold">Push Notifikasi Aplikasi &amp; HP</span>
+<span class="font-caption text-caption text-text-muted">Info jadwal flashcard dan streak harian</span>
+</div>
+<button aria-label="Toggle Push Notification" class="w-12 h-7 rounded-full bg-primary p-0.5 flex items-center justify-end shadow-inner transition-colors" type="button">
+<span class="w-6 h-6 rounded-full bg-surface shadow-md"></span>
+</button>
+</div>
+<!-- Toggle 2 -->
+<div class="flex items-center justify-between p-3.5 rounded-xl bg-surface-container-lowest shadow-[0_2px_0px_#D8DDF4]">
+<div class="flex flex-col pr-3">
+<span class="font-label-md text-label-md text-on-surface font-bold">Pengingat Sesi Belajar Harian</span>
+<span class="font-caption text-caption text-text-muted">Setiap hari pukul 19:00 WIB</span>
+</div>
+<button aria-label="Toggle Reminder" class="w-12 h-7 rounded-full bg-primary p-0.5 flex items-center justify-end shadow-inner transition-colors" type="button">
+<span class="w-6 h-6 rounded-full bg-surface shadow-md"></span>
+</button>
+</div>
+<!-- Toggle 3 -->
+<div class="flex items-center justify-between p-3.5 rounded-xl bg-surface-container-lowest shadow-[0_2px_0px_#D8DDF4]">
+<div class="flex flex-col pr-3">
+<span class="font-label-md text-label-md text-on-surface font-bold">Hasil Analisis Kemajuan AI</span>
+<span class="font-caption text-caption text-text-muted">Laporan grafik kekuatan &amp; kelemahan materi</span>
+</div>
+<button aria-label="Toggle AI Analysis" class="w-12 h-7 rounded-full bg-primary p-0.5 flex items-center justify-end shadow-inner transition-colors" type="button">
+<span class="w-6 h-6 rounded-full bg-surface shadow-md"></span>
+</button>
+</div>
+</div>
+<!-- Jam Tenang Box -->
+<div class="p-3.5 rounded-xl bg-surface-container-low flex items-center justify-between shadow-[0_2px_0px_#D8DDF4]">
+<div class="flex items-center gap-2.5">
+<span class="material-symbols-outlined text-primary text-[20px]">bedtime</span>
+<div class="flex flex-col">
+<span class="font-label-md text-label-md text-on-surface font-bold">Jam Tenang (Quiet Hours)</span>
+<span class="font-caption text-caption text-text-muted">Tidak ada pop-up &amp; dengungan suara</span>
+</div>
+</div>
+<span class="px-2.5 py-1 rounded-lg bg-surface text-on-surface font-label-sm text-label-sm font-bold shadow-[0_1px_0px_#D8DDF4]">22:00 - 07:00</span>
+</div>
+<!-- Kenyamanan Visual & Font Size -->
+<div class="flex flex-col gap-2 pt-2">
+<span class="font-label-sm text-label-sm text-on-surface font-bold">Ukuran Huruf Antarmuka</span>
+<div class="grid grid-cols-3 gap-2">
+<button class="py-2 rounded-xl bg-surface-container-low text-text-muted font-label-sm text-label-sm font-bold shadow-[0_2px_0px_#D8DDF4]" type="button">Kecil</button>
+<button class="py-2 rounded-xl bg-primary text-on-primary font-label-sm text-label-sm font-black shadow-[0_2px_0px_#00458e]" type="button">Normal (Aktif)</button>
+<button class="py-2 rounded-xl bg-surface-container-low text-text-muted font-label-sm text-label-sm font-bold shadow-[0_2px_0px_#D8DDF4]" type="button">Besar</button>
+</div>
+</div>
+</section>
+<!-- Section 06: Keamanan & Sandi -->
+<section class="bg-surface rounded-2xl p-space-md shadow-[4px_4px_0px_#FF8A00] flex flex-col gap-space-md" id="section-security">
+<div class="flex items-center gap-2">
+<span class="w-7 h-7 rounded-lg bg-surface-container-high flex items-center justify-center text-primary font-black font-label-sm text-label-sm">06</span>
+<h2 class="font-headline-sm text-headline-sm text-on-surface font-extrabold">Keamanan Akun &amp; Sandi</h2>
+</div>
+<div class="flex flex-col gap-space-sm">
+<div class="flex flex-col gap-1">
+<label class="font-label-sm text-label-sm text-on-surface font-bold">Kata Sandi Saat Ini</label>
+<div class="h-12 px-3.5 rounded-xl bg-surface-container-lowest shadow-[0_2px_0px_#D8DDF4] flex items-center justify-between">
+<input class="bg-transparent font-body-md text-body-md text-on-surface outline-none flex-1" type="password" value="secretpassword123">
+<span class="material-symbols-outlined text-text-muted text-[20px] cursor-pointer">visibility_off</span>
+</div>
+</div>
+<div class="flex flex-col gap-1">
+<label class="font-label-sm text-label-sm text-on-surface font-bold">Kata Sandi Baru</label>
+<div class="h-12 px-3.5 rounded-xl bg-surface-container-lowest shadow-[0_2px_0px_#D8DDF4] flex items-center justify-between">
+<input class="bg-transparent font-body-md text-body-md text-on-surface outline-none flex-1" placeholder="Minimal 8 karakter unik" type="password">
+<span class="material-symbols-outlined text-text-muted text-[20px] cursor-pointer">visibility</span>
+</div>
+<!-- Password strength meter -->
+<div class="flex items-center gap-1.5 mt-1">
+<div class="flex-1 h-1.5 rounded-full bg-success"></div>
+<div class="flex-1 h-1.5 rounded-full bg-success"></div>
+<div class="flex-1 h-1.5 rounded-full bg-success"></div>
+<div class="flex-1 h-1.5 rounded-full bg-surface-container"></div>
+<span class="font-caption text-caption text-success font-black pl-1">Kuat 💪</span>
+</div>
+</div>
+<div class="flex flex-col gap-1">
+<label class="font-label-sm text-label-sm text-on-surface font-bold">Konfirmasi Kata Sandi Baru</label>
+<div class="h-12 px-3.5 rounded-xl bg-surface-container-lowest shadow-[0_2px_0px_#D8DDF4] flex items-center justify-between">
+<input class="bg-transparent font-body-md text-body-md text-on-surface outline-none flex-1" placeholder="Ulangi kata sandi baru" type="password">
+<span class="material-symbols-outlined text-text-muted text-[20px] cursor-pointer">visibility</span>
+</div>
+</div>
+</div>
+<div class="p-3 rounded-xl bg-surface-container-low flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-[18px]">devices</span>
+<span class="font-caption text-caption text-text-muted flex-1">
+          Terakhir masuk: <strong class="text-on-surface">Chrome Android (Jakarta)</strong> • 2 jam lalu
+        </span>
+</div>
+<button class="w-full py-3 px-4 rounded-xl bg-primary text-on-primary font-label-md text-label-md font-bold shadow-[0_3px_0px_#00458e] active:translate-y-0.5" type="button">
+        Perbarui Kata Sandi
+      </button>
+</section>
+<!-- Section 07: Paket & Kuota Mika -->
+<section class="bg-surface rounded-2xl p-space-md shadow-[4px_4px_0px_#FF8A00] flex flex-col gap-space-md" id="section-billing">
+<div class="flex items-center gap-2">
+<span class="w-7 h-7 rounded-lg bg-surface-container-high flex items-center justify-center text-primary font-black font-label-sm text-label-sm">07</span>
+<h2 class="font-headline-sm text-headline-sm text-on-surface font-extrabold">Paket &amp; Kuota Mika</h2>
+</div>
+<div class="p-space-md rounded-2xl bg-primary text-on-primary shadow-[0_4px_0px_#00458e] flex flex-col gap-2 relative overflow-hidden">
+<div class="flex items-center justify-between">
+<div class="flex flex-col">
+<span class="font-label-lg text-label-lg font-black">HeyMika Pro (Tahunan)</span>
+<span class="font-caption text-caption text-primary-fixed mt-0.5">Aktif s/d 24 Nov 2025</span>
+</div>
+<span class="px-3 py-1 rounded-full bg-badge-cyan text-on-surface font-label-sm text-label-sm font-black shadow-[0_2px_0px_#082A52]">
+            PRO PELAJAR
+          </span>
+</div>
+</div>
+<!-- Quota progress bars -->
+<div class="flex flex-col gap-3">
+<div class="flex flex-col gap-1">
+<div class="flex justify-between font-label-sm text-label-sm">
+<span class="text-on-surface font-bold">Koleksi Dokumen &amp; Materi</span>
+<span class="text-primary font-black">42 / 100 Materi</span>
+</div>
+<div class="w-full h-2.5 rounded-full bg-surface-container overflow-hidden">
+<div class="h-full bg-primary rounded-full" style="width: 42%;"></div>
+</div>
+</div>
+<div class="flex flex-col gap-1">
+<div class="flex justify-between font-label-sm text-label-sm">
+<span class="text-on-surface font-bold">Mika AI Chat &amp; Tutor</span>
+<span class="text-secondary font-black flex items-center gap-0.5">Tanpa Batas ⚡</span>
+</div>
+<div class="w-full h-2.5 rounded-full bg-surface-container overflow-hidden">
+<div class="h-full bg-secondary-container rounded-full" style="width: 100%;"></div>
+</div>
+</div>
+<div class="flex flex-col gap-1">
+<div class="flex justify-between font-label-sm text-label-sm">
+<span class="text-on-surface font-bold">Generator Flashcard &amp; Kuis</span>
+<span class="text-primary font-black">85 / 200 Set</span>
+</div>
+<div class="w-full h-2.5 rounded-full bg-surface-container overflow-hidden">
+<div class="h-full bg-primary rounded-full" style="width: 42.5%;"></div>
+</div>
+</div>
+</div>
+<div class="grid grid-cols-2 gap-2 pt-1">
+<button class="py-2.5 px-3 rounded-xl bg-surface-container-high text-primary font-label-sm text-label-sm font-black shadow-[0_2px_0px_#005ab5] active:translate-y-0.5" type="button">
+          Kelola Tagihan
+        </button>
+<button class="py-2.5 px-3 rounded-xl bg-surface-container-low text-on-surface font-label-sm text-label-sm font-bold shadow-[0_2px_0px_#D8DDF4] active:translate-y-0.5" type="button">
+          Riwayat Invoice
+        </button>
+</div>
+</section>
+<!-- Section 08: Ekspor Data Belajar -->
+<section class="bg-surface rounded-2xl p-space-md shadow-[4px_4px_0px_#FF8A00] flex flex-col gap-space-md">
+<div class="flex items-center gap-2">
+<span class="w-7 h-7 rounded-lg bg-surface-container-high flex items-center justify-center text-primary font-black font-label-sm text-label-sm">08</span>
+<h2 class="font-headline-sm text-headline-sm text-on-surface font-extrabold">Ekspor Data Belajar</h2>
+</div>
+<p class="font-body-sm text-body-sm text-text-muted">
+        Hak kendali privasi data GDPR &amp; UU PDP. Kamu berhak mengunduh seluruh arsip catatan workspace, bank kesalahan, riwayat kuis, dan interaksi bimbingan Mika AI.
+      </p>
+<div class="grid grid-cols-2 gap-2">
+<label class="p-3 rounded-xl bg-primary-fixed text-on-primary-fixed shadow-[0_2px_0px_#005ab5] flex items-center gap-2 cursor-pointer">
+<input checked="" class="w-4 h-4 accent-primary" name="export_format" type="radio">
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm font-black">JSON Lengkap</span>
+<span class="font-caption text-caption text-[11px] text-on-primary-fixed-variant">Arsip Database</span>
+</div>
+</label>
+<label class="p-3 rounded-xl bg-surface-container-lowest shadow-[0_2px_0px_#D8DDF4] flex items-center gap-2 cursor-pointer">
+<input class="w-4 h-4 accent-primary" name="export_format" type="radio">
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm font-bold text-on-surface">ZIP Arsip</span>
+<span class="font-caption text-caption text-[11px] text-text-muted">Markdown &amp; CSV</span>
+</div>
+</label>
+</div>
+<button class="w-full py-3 px-4 rounded-xl bg-surface text-primary font-label-md text-label-md font-black shadow-[0_3px_0px_#0072e3] flex items-center justify-center gap-2 active:translate-y-0.5" type="button">
+<span class="material-symbols-outlined text-[18px]">download</span>
+<span>Minta Unduh Cadangan Data</span>
+</button>
+</section>
+<!-- Section 09: Zona Bahaya Akun (Danger Zone) -->
+<section class="bg-danger-bg rounded-2xl p-space-md shadow-[4px_4px_0px_#BC2535] flex flex-col gap-space-md">
+<div class="flex items-center gap-2">
+<span class="w-7 h-7 rounded-lg bg-error text-on-error flex items-center justify-center font-black font-label-sm text-label-sm">09</span>
+<h2 class="font-headline-sm text-headline-sm text-danger font-extrabold">Zona Bahaya Akun</h2>
+</div>
+<div class="flex flex-col gap-2">
+<span class="font-label-md text-label-md text-danger font-black">Hapus Akun HeyMika Selamanya</span>
+<p class="font-body-sm text-body-sm text-on-surface">
+          Tindakan ini tidak dapat dibatalkan. Menghapus akun akan mengakibatkan:
+        </p>
+<ul class="flex flex-col gap-1.5 pl-2 font-caption text-caption text-text-muted">
+<li class="flex items-center gap-2">
+<span class="w-1.5 h-1.5 rounded-full bg-danger"></span>
+<span>Semua workspace, rangkuman, dan materi terhapus permanen.</span>
+</li>
+<li class="flex items-center gap-2">
+<span class="w-1.5 h-1.5 rounded-full bg-danger"></span>
+<span>Sisa kuota langganan Pro Pelajar akan langsung hangus.</span>
+</li>
+<li class="flex items-center gap-2">
+<span class="w-1.5 h-1.5 rounded-full bg-danger"></span>
+<span>Riwayat bimbingan percakapan Mika AI tidak dapat dipulihkan.</span>
+</li>
+</ul>
+</div>
+<button class="w-full py-3 px-4 rounded-xl bg-danger text-on-error font-label-md text-label-md font-black shadow-[0_3px_0px_#6f3900] flex items-center justify-center gap-2 active:translate-y-0.5" type="button">
+<span class="material-symbols-outlined text-[18px]">delete_forever</span>
+<span>Hapus Akun Saya</span>
+</button>
+<div class="grid grid-cols-2 gap-2 pt-2">
+<button class="py-2.5 px-3 rounded-xl bg-surface text-on-surface font-label-sm text-label-sm font-bold shadow-[0_2px_0px_#D8DDF4] active:translate-y-0.5" type="button">
+          Keluar dari Sesi
+        </button>
+<button class="py-2.5 px-3 rounded-xl bg-surface text-danger font-label-sm text-label-sm font-black shadow-[0_2px_0px_#ffdad6] active:translate-y-0.5" type="button">
+          Keluar Semua Device
+        </button>
+</div>
+</section>
+</div>
+<!-- Bottom Floating Save Action Banner -->
+<aside aria-label="Simpan Pengaturan" class="fixed bottom-20 left-0 w-full px-space-md z-40">
+<div class="max-w-md mx-auto bg-surface/95 backdrop-blur-xl rounded-2xl p-3 shadow-[0_8px_24px_rgba(0,27,60,0.12),4px_4px_0px_#FF8A00] flex items-center justify-between gap-2">
+<div class="flex items-center gap-2 min-w-0 flex-1">
+<span class="w-2.5 h-2.5 rounded-full bg-secondary-container shrink-0 animate-ping"></span>
+<span class="font-caption text-caption text-on-surface font-bold truncate">Ada perubahan belum disimpan?</span>
+</div>
+<div class="flex items-center gap-2 shrink-0">
+<button class="px-3 py-2 rounded-xl text-text-muted font-label-sm text-label-sm hover:text-on-surface active:scale-95" type="button">
+          Batal
+        </button>
+<button class="px-4 py-2.5 rounded-xl bg-primary text-on-primary font-label-sm text-label-sm font-black shadow-[0_3px_0px_#00458e] active:translate-y-0.5 flex items-center gap-1.5" type="button">
+<span class="material-symbols-outlined text-[16px]">save</span>
+<span>Simpan</span>
+</button>
+</div>
+</div>
+</aside>
+</div>
+<script>
+  // Simple micro-interaction for mobile tab feedback
+  document.querySelectorAll('a[href^="#section-"]').forEach(anchor => {
+    anchor.addEventListener('click', function (e) {
+      e.preventDefault();
+      const targetId = this.getAttribute('href');
+      const targetEl = document.querySelector(targetId);
+      if (targetEl) {
+        targetEl.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      }
+    });
+  });
+</script></main><nav class="fixed bottom-0 w-full z-50 pb-safe bg-surface/90 backdrop-blur-xl shadow-[0_-1px_12px_rgba(0,27,60,0.05)]" data-active-classes="text-primary font-bold"><div class="h-20 px-space-xs flex items-center justify-around"><a class="flex flex-col items-center justify-center min-w-[56px] min-h-[44px] py-1 text-on-surface-variant hover:text-on-surface transition-colors group" data-path="beranda" href="#"><span class="material-symbols-outlined text-[24px] mb-0.5 group-hover:scale-110 transition-transform">home</span><span class="font-caption text-caption text-[11px]">Beranda</span></a><a class="flex flex-col items-center justify-center min-w-[56px] min-h-[44px] py-1 text-on-surface-variant hover:text-on-surface transition-colors group" data-path="materimu" href="#"><span class="material-symbols-outlined text-[24px] mb-0.5 group-hover:scale-110 transition-transform">auto_stories</span><span class="font-caption text-caption text-[11px]">Materimu</span></a><a class="flex flex-col items-center justify-center min-w-[56px] min-h-[44px] py-1 text-on-surface-variant hover:text-on-surface transition-colors group" data-path="tanya-mika" href="#"><div class="relative flex items-center justify-center"><span class="material-symbols-outlined text-[26px] mb-0.5 text-primary group-hover:scale-110 transition-transform">chat_bubble</span><span class="absolute top-0 right-0 w-2 h-2 rounded-full bg-secondary-container"></span></div><span class="font-caption text-caption text-[11px]">Tanya Mika</span></a><a class="flex flex-col items-center justify-center min-w-[56px] min-h-[44px] py-1 text-on-surface-variant hover:text-on-surface transition-colors group" data-path="flashcard-kuis" href="#"><span class="material-symbols-outlined text-[24px] mb-0.5 group-hover:scale-110 transition-transform">style</span><span class="font-caption text-caption text-[11px]">Kuis</span></a><a aria-current="page" class="flex flex-col items-center justify-center min-w-[56px] min-h-[44px] py-1 transition-colors group text-primary font-bold" data-path="pengaturan-akun" href="#"><span class="material-symbols-outlined text-[24px] mb-0.5 group-hover:scale-110 transition-transform">manage_accounts</span><span class="font-caption text-caption text-[11px]">Akun</span></a></div></nav></body></html>

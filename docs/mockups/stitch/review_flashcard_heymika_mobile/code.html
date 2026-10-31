@@ -1,0 +1,292 @@
+<!DOCTYPE html><html lang="id"><head><meta charset="utf-8"><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" name="viewport"><meta content="mobile_stack" name="shell-type"><link href="https://fonts.googleapis.com" rel="preconnect"><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"><link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@400;500;700;800;900&amp;display=swap" rel="stylesheet"><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: 'class', theme: { extend: { colors: { 'danger-bg': '#FFF0F2', 'success': '#167549', 'on-surface-variant': '#414754', 'tertiary': '#006388', 'surface': '#FFFFFF', 'secondary-container': '#ff8a00', 'primary': '#005ab5', 'danger': '#BC2535', 'on-tertiary-fixed-variant': '#004c6a', 'background': '#f9f9ff', 'tertiary-container': '#007dab', 'primary-fixed-dim': '#aac7ff', 'brand-sky': '#16B5F5', 'primary-container': '#0072e3', 'on-surface': '#001b3c', 'surface-container': '#e7eeff', 'surface-container-highest': '#d6e3ff', 'outline-variant': '#c1c6d6', 'secondary-fixed-dim': '#ffb77f', 'on-error-container': '#93000a', 'primary-fixed': '#d7e3ff', 'border-muted': '#D8DDF4', 'on-tertiary': '#ffffff', 'canvas-bg': '#F8FCFF', 'text-muted': '#5868A4', 'outline': '#717785', 'surface-container-high': '#dee8ff', 'on-error': '#ffffff', 'surface-tint': '#005cba', 'surface-variant': '#d6e3ff', 'surface-container-low': '#f0f3ff', 'tertiary-fixed-dim': '#7fd0ff', 'surface-dim': '#c8dbff', 'secondary': '#914c00', 'on-primary-fixed-variant': '#00458e', 'ribbon-red': '#EF3E36', 'on-secondary-fixed': '#2f1500', 'badge-cyan': '#C5EFFF', 'surface-container-lowest': '#ffffff', 'tertiary-fixed': '#c5e7ff', 'surface-bright': '#f9f9ff', 'on-tertiary-container': '#fcfcff', 'inverse-primary': '#aac7ff', 'on-tertiary-fixed': '#001e2d', 'error-container': '#ffdad6', 'brand-yellow': '#FFD34E', 'on-secondary-fixed-variant': '#6f3900', 'on-background': '#001b3c', 'on-secondary-container': '#613100', 'on-primary-container': '#fefcff', 'inverse-on-surface': '#ecf1ff', 'error': '#ba1a1a', 'on-secondary': '#ffffff', 'inverse-surface': '#113059', 'on-primary': '#ffffff', 'secondary-fixed': '#ffdcc4', 'on-primary-fixed': '#001b3e' }, borderRadius: { 'DEFAULT': '0.25rem', 'lg': '0.5rem', 'xl': '0.75rem', 'full': '9999px' }, spacing: { 'space-xl': '2rem', 'margin': '1.5rem', 'gutter': '1.5rem', 'space-xs': '0.25rem', 'space-sm': '0.5rem', 'space-lg': '1.5rem', 'space-md': '1rem' }, fontFamily: { 'label-md': ['Nunito Sans'], 'label-sm': ['Nunito Sans'], 'headline-sm': ['Nunito Sans'], 'label-lg': ['Nunito Sans'], 'headline-lg-mobile': ['Nunito Sans'], 'body-md': ['Nunito Sans'], 'display-hero-mobile': ['Nunito Sans'], 'caption': ['Nunito Sans'], 'display-hero': ['Nunito Sans'], 'body-sm': ['Nunito Sans'], 'body-lg': ['Nunito Sans'], 'headline-md': ['Nunito Sans'], 'headline-lg': ['Nunito Sans'] }, fontSize: { 'label-md': ['14px', { lineHeight: '18px', letterSpacing: '0.02em', fontWeight: '700' }], 'label-sm': ['12px', { lineHeight: '16px', letterSpacing: '0.05em', fontWeight: '700' }], 'headline-sm': ['20px', { lineHeight: '28px', fontWeight: '700' }], 'label-lg': ['16px', { lineHeight: '22px', fontWeight: '700' }], 'headline-lg-mobile': ['26px', { lineHeight: '34px', letterSpacing: '-0.01em', fontWeight: '800' }], 'body-md': ['16px', { lineHeight: '24px', fontWeight: '400' }], 'display-hero-mobile': ['32px', { lineHeight: '40px', letterSpacing: '-0.01em', fontWeight: '900' }], 'caption': ['12px', { lineHeight: '16px', fontWeight: '500' }], 'display-hero': ['48px', { lineHeight: '56px', letterSpacing: '-0.02em', fontWeight: '900' }], 'body-sm': ['14px', { lineHeight: '20px', fontWeight: '400' }], 'body-lg': ['18px', { lineHeight: '28px', fontWeight: '400' }], 'headline-md': ['24px', { lineHeight: '32px', fontWeight: '800' }], 'headline-lg': ['36px', { lineHeight: '44px', letterSpacing: '-0.015em', fontWeight: '800' }] } } } };</script><style>@layer base{html,body{width:100%;margin:0;padding:0;min-height:100vh;}body{overscroll-behavior-y:none;-webkit-tap-highlight-color:transparent;}.pb-safe{padding-bottom:env(safe-area-inset-bottom,0px);}.pt-safe{padding-top:env(safe-area-inset-top,0px);}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style></head><body class="bg-canvas-bg font-body-md text-on-surface antialiased flex flex-col min-h-screen"><header class="fixed top-0 w-full z-50 pt-safe bg-surface/90 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><div class="h-16 px-3 flex items-center justify-between"><div class="flex items-center gap-2 overflow-hidden pr-2"><button class="min-w-[44px] min-h-[44px] flex items-center justify-center text-on-surface rounded-full hover:bg-surface-container-low transition-colors" onclick="history.back()"><span class="material-symbols-outlined text-[24px]">arrow_back</span></button><img alt="HeyMika Kitten Logo with Manga Accents.png" class="h-8 w-auto object-contain flex-shrink-0" src="https://lh3.googleusercontent.com/aida/AEtjO1XjkJzza4bh8-PD-iTCEmSiHpgBUv0XJmC061RJPMWTt4w00Ai5fxMsrIRCYd1WLkyzPsYIs-u6UjNJPZP2VhwlkVu7pB2XM18aZcVfPmyc77Us3weH3dJceN6SZY7xfq8ea7BS5G3sMue7rVme6Pww3SI8xU40ZwwF4Z9OLJS-f7lTsKQA98XPyTSJ9mTDIVUdFTBeliq0pCPLSOqm_ze0h6Q5y_gGR5667iAj8YbjpLbR7x-jcOndeyFeEIRweQzn12fuzmQJqIk"><h1 class="font-headline-sm text-headline-sm text-on-surface truncate tracking-tight">Review Flashcard</h1></div><div class="flex items-center gap-1 flex-shrink-0"><button class="min-w-[44px] min-h-[44px] flex items-center justify-center text-on-surface-variant hover:text-on-surface rounded-full transition-colors"><span class="material-symbols-outlined text-[22px]">bookmark_border</span></button><button class="min-w-[44px] min-h-[44px] flex items-center justify-center p-1.5"><img alt="Profile" class="w-8 h-8 rounded-full object-cover" src="https://lh3.googleusercontent.com/aida/AEtjO1VPvQVnyPJLB80v6HVS532yNRqj0NFh3C_F3OS8ad37-vntzZgwVL8Q2ndCLbbbsWvxyW_Ry8r-Rbqkx7xZgyUZkhvuba92RnhILL-v1O_f6olX7FfzWJLq9uO8npMXWhuFUUfpNgteSSuaLFHBXituVXc58tb6PA9UzzMppPyI9SViDONQ_FC4f_p1NC2dyz2CgswgobmrJV07ksPGL5iijMumSn6Ploo_0FStV3bRfFFUpREJmyUBWv3n4EfzVq6ogw52UMAl"></button></div></div></header><main class="flex-1 flex flex-col relative w-full pt-16 pb-safe bg-canvas-bg"><div class="flex flex-col w-full px-4 pb-12 pt-2">
+<!-- Ambient Manga Screentone & Speed Dot Elements (Decorative Background) -->
+<div class="relative w-full flex flex-col gap-3">
+<!-- Top Sub-Header & Status Cluster -->
+<div class="flex items-center justify-between gap-2 bg-surface rounded-xl p-3 shadow-sm">
+<button class="flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-surface-container-low text-primary hover:bg-surface-container transition-all" type="button">
+<span class="material-symbols-outlined text-[18px]">arrow_back</span>
+<span class="font-label-sm text-label-sm">Selesai &amp; Simpan</span>
+</button>
+<div class="flex items-center gap-2">
+<!-- Streak Chip with Mika Flame Icon -->
+<div class="flex items-center gap-1 px-2.5 py-1 rounded-full bg-secondary-fixed text-on-secondary-fixed">
+<span class="material-symbols-outlined text-[16px] text-secondary-container" style="font-variation-settings: 'FILL' 1;">local_fire_department</span>
+<span class="font-label-sm text-label-sm">5 Hari</span>
+</div>
+<!-- Timer Chip -->
+<div class="flex items-center gap-1 px-2.5 py-1 rounded-full bg-surface-container text-on-surface-variant">
+<span class="material-symbols-outlined text-[16px]">timer</span>
+<span class="font-label-sm text-label-sm font-mono tracking-tight" id="session-timer">08:42</span>
+</div>
+<!-- Zen Mode Toggle -->
+<button class="w-8 h-8 rounded-full bg-surface-container-low flex items-center justify-center text-text-muted hover:text-primary transition-colors" id="zen-btn" title="Mode Fokus Zen" type="button">
+<span class="material-symbols-outlined text-[18px]">self_improvement</span>
+</button>
+</div>
+</div>
+<!-- Deck Title & Spaced Repetition Indicator -->
+<div class="flex flex-col px-1">
+<div class="flex items-center gap-2">
+<span class="font-caption text-caption text-text-muted">DECK SPATIAL REPETITION</span>
+<span class="px-2 py-0.5 rounded-full bg-surface-container text-tertiary font-label-sm text-[10px]">FSRS v4.5</span>
+</div>
+<h2 class="font-headline-sm text-headline-sm text-on-surface truncate">
+        Struktur Data &amp; Algoritma Graf
+      </h2>
+</div>
+<!-- Progress Tracker & Mastery Counters -->
+<div class="flex flex-col gap-2 p-3.5 bg-surface rounded-xl shadow-sm">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm text-on-surface">
+          Kartu <span class="text-primary font-bold">7</span> dari 15
+        </span>
+<span class="font-label-sm text-label-sm text-text-muted">46% Selesai</span>
+</div>
+<!-- Segmented Visual Bar -->
+<div class="w-full h-2.5 bg-surface-container-low rounded-full overflow-hidden flex">
+<div class="h-full bg-danger" style="width: 14%;"></div>
+<div class="h-full bg-secondary-container" style="width: 20%;"></div>
+<div class="h-full bg-success" style="width: 14%;"></div>
+<div class="h-full bg-primary" style="width: 8%;"></div>
+<div class="h-full bg-surface-container-high flex-1"></div>
+</div>
+<!-- Stat Badges Row -->
+<div class="grid grid-cols-3 gap-2 pt-1 text-center">
+<div class="flex flex-col items-center py-1 rounded-lg bg-danger-bg">
+<span class="font-headline-sm text-headline-sm text-danger leading-none">2</span>
+<span class="font-caption text-[11px] text-danger">Ulangi</span>
+</div>
+<div class="flex flex-col items-center py-1 rounded-lg bg-secondary-fixed">
+<span class="font-headline-sm text-headline-sm text-secondary leading-none">3</span>
+<span class="font-caption text-[11px] text-secondary">Sulit</span>
+</div>
+<div class="flex flex-col items-center py-1 rounded-lg bg-surface-container-low">
+<span class="font-headline-sm text-headline-sm text-success leading-none">2</span>
+<span class="font-caption text-[11px] text-success">Terkuasai</span>
+</div>
+</div>
+</div>
+<!-- INTERACTIVE FLASHCARD CONTAINER (Manga Neo-Brutalist Frame) -->
+<div class="relative w-full mt-2">
+<!-- Orange Drop Block (Manga Physical Offset Shadow Simulation) -->
+<div class="absolute inset-0 translate-x-1.5 translate-y-1.5 rounded-2xl bg-secondary-container"></div>
+<!-- Main Flip Card Shell -->
+<div class="relative w-full bg-surface rounded-2xl p-5 shadow-lg flex flex-col gap-4">
+<!-- Header Ribbon inside Card -->
+<div class="flex items-center justify-between gap-2 pb-2">
+<div class="flex items-center gap-1.5 px-3 py-1 rounded-full bg-badge-cyan text-on-surface">
+<span class="material-symbols-outlined text-[15px] text-primary" style="font-variation-settings: 'FILL' 1;">auto_awesome</span>
+<span class="font-label-sm text-label-sm">KONSEP INTI • GRAF</span>
+<span class="font-caption text-text-muted">| Menengah</span>
+</div>
+<div class="flex items-center gap-1">
+<button class="w-8 h-8 rounded-full bg-surface-container flex items-center justify-center text-on-surface hover:text-primary transition-colors" id="tts-btn" title="Dengarkan Pertanyaan" type="button">
+<span class="material-symbols-outlined text-[18px]">volume_up</span>
+</button>
+<button class="w-8 h-8 rounded-full bg-surface-container flex items-center justify-center text-text-muted hover:text-secondary-container transition-colors" id="fav-btn" title="Bintangi Kartu" type="button">
+<span class="material-symbols-outlined text-[18px]" id="fav-icon">star_border</span>
+</button>
+</div>
+</div>
+<!-- Question Face -->
+<div class="flex flex-col gap-3 py-2">
+<span class="font-caption text-[11px] text-text-muted uppercase tracking-wider">Pertanyaan Analitis</span>
+<h3 class="font-headline-md text-headline-md text-on-surface leading-snug">
+            Jelaskan prinsip kerja <span class="text-primary font-black">Algoritma Dijkstra</span> dan dalam kondisi apa algoritma ini gagal menghasilkan jalur terpendek yang valid?
+          </h3>
+</div>
+<!-- Mika Mascot Hint Bubble (Comic Style) -->
+<div class="flex flex-col gap-2">
+<button class="w-full flex items-center justify-between px-3.5 py-2.5 rounded-xl bg-surface-container-low hover:bg-surface-container transition-colors text-left" id="toggle-hint-btn" type="button">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-secondary-container text-[20px]">lightbulb</span>
+<span class="font-label-md text-label-md text-on-surface">Butuh petunjuk dari Mika?</span>
+</div>
+<span class="material-symbols-outlined text-on-surface-variant text-[20px] transition-transform duration-200" id="hint-caret">expand_more</span>
+</button>
+<!-- Hidden Mascot Hint Callout -->
+<div class="hidden flex items-start gap-3 p-3 bg-surface-container rounded-xl" id="mika-hint-drawer">
+<img class="w-11 h-11 rounded-full object-cover flex-shrink-0 bg-secondary-fixed" data-alt="Chibi anime orange cat mascot Mika wearing red sailor scarf smiling playfully and winking while pointing at a whiteboard with cat paw, vibrant manga style, soft studio lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCEu1PzoUCcgQbhpWImzDRRhCIBTJM7QP1lFJQ7cl0idoIwUdAAsb431O5uSXCT_XjA1uUCGd2za0VhLlmg29IBHScqdtHS7alhfTAOLXg4h_rBVs5bl2yH1prRvE7pIAxb2LbGqSVuzaKQdN3GnT1Z9iiU0onFluVUxlggguORUpM0vYfNIhV5l90bxQV2lcWjiboIlMEJ6YbhODfdyM_fc-KDkfVd5_Qvd6GW4i70igRXL2rOiJAAyQ">
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm text-primary font-bold">Mika berbisik:</span>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+                "Pikirkan tentang sifat <em>greedy</em> Dijkstra! Apakah ia pernah mengevaluasi ulang simpul yang sudah dikunjungi jika ada <strong class="text-danger">bobot sisi negatif</strong> (negative edge)?"
+              </p>
+</div>
+</div>
+</div>
+<!-- Flip Trigger Action -->
+<div class="pt-2" id="cta-flip-section">
+<button class="w-full h-14 rounded-xl bg-primary text-on-primary font-label-lg text-label-lg flex items-center justify-center gap-2.5 shadow-md hover:bg-primary-container active:translate-y-0.5 transition-all" id="reveal-answer-btn" type="button">
+<span class="material-symbols-outlined text-[22px]">visibility</span>
+<span>Buka Jawaban Lengkap</span>
+<span class="text-xs px-2 py-0.5 rounded-full bg-on-primary/20 font-mono">Spasi / Tap</span>
+</button>
+</div>
+<!-- REVEALED ANSWER PANEL (Initially Hidden) -->
+<div class="hidden flex flex-col gap-4 pt-2" id="answer-card-panel">
+<!-- Answer Content Card -->
+<div class="p-4 rounded-xl bg-surface-container-low flex flex-col gap-3">
+<div class="flex items-center gap-2">
+<span class="w-2 h-2 rounded-full bg-success"></span>
+<span class="font-label-sm text-label-sm text-success uppercase">Kunci Solusi Verifikasi</span>
+</div>
+<div class="font-body-md text-body-md text-on-surface space-y-2 leading-relaxed">
+<p>
+<strong>1. Prinsip Kerja:</strong> Dijkstra memakai strategi <em>Greedy BFS</em> dengan <strong>Priority Queue</strong> (Min-Heap). Algoritma memilih simpul dengan jarak terakumulasi terkecil saat ini, lalu melakukan relaksasi sisi tetangga.
+              </p>
+<p>
+<strong>2. Kondisi Gagal:</strong> Algoritma gagal jika terdapat <strong>bobot negatif (Negative Edge Weight)</strong> atau siklus negatif (Negative Cycle). Dijkstra mengasumsikan sekali simpul dikunjungi, jalurnya sudah optimal mutlak. Solusi untuk kasus ini adalah <em>Bellman-Ford</em> atau <em>SPFA</em>.
+              </p>
+</div>
+<div class="flex items-center justify-between pt-2">
+<span class="font-caption text-caption text-text-muted">Kompleksitas: O((V + E) log V)</span>
+<span class="font-caption text-caption text-tertiary">Algoritma Greedy</span>
+</div>
+</div>
+<!-- Spaced Repetition (FSRS-4.5) Rating System -->
+<div class="flex flex-col gap-2.5 pt-1">
+<div class="flex items-center justify-between px-1">
+<span class="font-label-sm text-label-sm text-on-surface font-bold">Seberapa baik kamu mengingat kartu ini?</span>
+<span class="font-caption text-[11px] text-text-muted">Formula FSRS-4.5</span>
+</div>
+<!-- 4 Touch Rating Buttons with Next Review Schedule -->
+<div class="grid grid-cols-2 gap-2.5">
+<!-- 1. Ulangi -->
+<button class="rating-choice-btn flex flex-col items-center justify-center p-3 rounded-xl bg-danger-bg text-danger hover:brightness-95 active:scale-95 transition-all text-center gap-0.5" type="button">
+<span class="font-label-md text-label-md leading-tight">Ulangi</span>
+<span class="font-caption text-[11px] text-on-surface-variant">&lt; 10 Menit</span>
+<span class="font-caption text-[10px] text-danger/80">Lupa / Gagal</span>
+</button>
+<!-- 2. Sulit -->
+<button class="rating-choice-btn flex flex-col items-center justify-center p-3 rounded-xl bg-secondary-fixed text-secondary hover:brightness-95 active:scale-95 transition-all text-center gap-0.5" type="button">
+<span class="font-label-md text-label-md leading-tight">Sulit</span>
+<span class="font-caption text-[11px] text-on-surface-variant">1 Hari Lagi</span>
+<span class="font-caption text-[10px] text-secondary/80">Ragu-ragu</span>
+</button>
+<!-- 3. Baik -->
+<button class="rating-choice-btn flex flex-col items-center justify-center p-3 rounded-xl bg-surface-container text-primary hover:brightness-95 active:scale-95 transition-all text-center gap-0.5" type="button">
+<span class="font-label-md text-label-md leading-tight">Baik</span>
+<span class="font-caption text-[11px] text-on-surface-variant">3 Hari Lagi</span>
+<span class="font-caption text-[10px] text-primary/80">Ingat Benar</span>
+</button>
+<!-- 4. Mudah -->
+<button class="rating-choice-btn flex flex-col items-center justify-center p-3 rounded-xl bg-surface-container-high text-success hover:brightness-95 active:scale-95 transition-all text-center gap-0.5" type="button">
+<span class="font-label-md text-label-md leading-tight">Mudah</span>
+<span class="font-caption text-[11px] text-on-surface-variant">7 Hari Lagi</span>
+<span class="font-caption text-[10px] text-success/80">Sangat Mahir</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Mika Encouragement Banner (Moments of Delight) -->
+<div class="flex items-center gap-3 p-3.5 mt-2 bg-surface rounded-xl shadow-sm">
+<img class="w-12 h-12 rounded-full object-cover bg-secondary-fixed flex-shrink-0" data-alt="Energetic manga kitten Mika with cheerful blue eyes, orange fur, white paws, dressed in a red neckerchief holding a blue pencil high, shonen manga speedlines in background" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBFYdo3RKqq0-7IxF7Xu1-KB8jKo1OwQ6aiuxGQ0v8i3M9d-wU6nh1aXp85g3FzfJvAkWC8nY2OMjyXBoyYV6usl4oUgViMvwGFv114vabngLmJJKAs9L42Lg-ZIYAfvABrJ_3f7Gd5OCStPciDGLRfPcCZN9aU1VhKNrgnDqWMk-39N4qb1ChSBh4n0SwRM8QQygmh7NHCJabwqzGkm-IdwdQTtwQNQ-o0MR403FvY8a1pam5XWdkv5g">
+<div class="flex flex-col min-w-0">
+<div class="flex items-center gap-1.5">
+<span class="font-label-sm text-label-sm text-on-surface">Mika Menyemangati</span>
+<span class="px-1.5 py-0.2 rounded bg-badge-cyan text-[10px] font-bold text-primary">Lv. 4</span>
+</div>
+<p class="font-body-sm text-body-sm text-text-muted truncate">
+          "Mantap! Tinggal 8 kartu lagi sebelum jatah latihan harianmu beres!"
+        </p>
+</div>
+</div>
+<!-- Bottom Utility Menu -->
+<div class="flex flex-col gap-2 pt-2">
+<div class="grid grid-cols-3 gap-2">
+<button class="flex items-center justify-center gap-1 py-2 px-2 rounded-lg bg-surface hover:bg-surface-container-low text-on-surface-variant text-center transition-colors" type="button">
+<span class="material-symbols-outlined text-[16px]">edit</span>
+<span class="font-caption text-caption truncate">Edit Kartu</span>
+</button>
+<button class="flex items-center justify-center gap-1 py-2 px-2 rounded-lg bg-surface hover:bg-surface-container-low text-on-surface-variant text-center transition-colors" type="button">
+<span class="material-symbols-outlined text-[16px]">bookmark_add</span>
+<span class="font-caption text-caption truncate">Bookmark</span>
+</button>
+<button class="flex items-center justify-center gap-1 py-2 px-2 rounded-lg bg-surface hover:bg-surface-container-low text-on-surface-variant text-center transition-colors" type="button">
+<span class="material-symbols-outlined text-[16px]">flag</span>
+<span class="font-caption text-caption truncate">Laporkan</span>
+</button>
+</div>
+<div class="flex items-center justify-center gap-1.5 py-1 text-center">
+<span class="material-symbols-outlined text-[14px] text-text-muted">history</span>
+<span class="font-caption text-caption text-text-muted">Terakhir dipelajari: 4 hari lalu (FSRS S=1.8, D=4.2)</span>
+</div>
+</div>
+</div>
+</div>
+<script>
+  // Flashcard Interactive Behaviors
+  const hintToggleBtn = document.getElementById('toggle-hint-btn');
+  const hintDrawer = document.getElementById('mika-hint-drawer');
+  const hintCaret = document.getElementById('hint-caret');
+
+  const revealBtn = document.getElementById('reveal-answer-btn');
+  const ctaSection = document.getElementById('cta-flip-section');
+  const answerPanel = document.getElementById('answer-card-panel');
+
+  const favBtn = document.getElementById('fav-btn');
+  const favIcon = document.getElementById('fav-icon');
+
+  // Toggle Mika Hint Drawer
+  if (hintToggleBtn && hintDrawer && hintCaret) {
+    hintToggleBtn.addEventListener('click', () => {
+      const isClosed = hintDrawer.classList.contains('hidden');
+      if (isClosed) {
+        hintDrawer.classList.remove('hidden');
+        hintCaret.classList.add('rotate-180');
+      } else {
+        hintDrawer.classList.add('hidden');
+        hintCaret.classList.remove('rotate-180');
+      }
+    });
+  }
+
+  // Reveal Answer Card & Rating UI
+  if (revealBtn && answerPanel && ctaSection) {
+    revealBtn.addEventListener('click', () => {
+      ctaSection.classList.add('hidden');
+      answerPanel.classList.remove('hidden');
+    });
+  }
+
+  // Favorite Toggle
+  let isStarred = false;
+  if (favBtn && favIcon) {
+    favBtn.addEventListener('click', () => {
+      isStarred = !isStarred;
+      favIcon.textContent = isStarred ? 'star' : 'star_border';
+      if (isStarred) {
+        favIcon.style.fontVariationSettings = "'FILL' 1";
+        favBtn.classList.add('text-secondary-container');
+        favBtn.classList.remove('text-text-muted');
+      } else {
+        favIcon.style.fontVariationSettings = "'FILL' 0";
+        favBtn.classList.remove('text-secondary-container');
+        favBtn.classList.add('text-text-muted');
+      }
+    });
+  }
+
+  // Keyboard shortcut (Space to reveal)
+  window.addEventListener('keydown', (e) => {
+    if (e.code === 'Space' && !revealBtn.closest('.hidden')) {
+      e.preventDefault();
+      revealBtn.click();
+    }
+  });
+
+  // Sound Icon Mock Feedback
+  const ttsBtn = document.getElementById('tts-btn');
+  if (ttsBtn) {
+    ttsBtn.addEventListener('click', () => {
+      ttsBtn.classList.add('bg-primary', 'text-on-primary');
+      setTimeout(() => {
+        ttsBtn.classList.remove('bg-primary', 'text-on-primary');
+      }, 700);
+    });
+  }
+</script></main></body></html>

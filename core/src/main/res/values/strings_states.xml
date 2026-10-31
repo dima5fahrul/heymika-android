@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- core/ui/component/mascot (owned by the mascot-states builder) -->
+    <string name="mascot_pose_waving">Mika melambaikan tangan</string>
+    <string name="mascot_pose_waving_pencil">Mika melambai sambil memegang pensil</string>
+    <string name="mascot_pose_envelope">Mika membawa surat</string>
+    <string name="mascot_pose_happy">Mika tersenyum senang</string>
+    <string name="mascot_pose_worried">Mika terlihat khawatir</string>
+    <string name="mascot_pose_thinking">Mika sedang berpikir</string>
+    <string name="mascot_pose_confused">Mika terlihat bingung</string>
+    <string name="mascot_pose_sleeping">Mika sedang tidur</string>
+    <string name="mascot_pose_confused_map">Mika kebingungan membaca peta</string>
+    <string name="mascot_pose_padlock">Mika menjaga gembok</string>
+    <string name="mascot_pose_yawn_hourglass">Mika menguap di samping jam pasir</string>
+    <string name="mascot_pose_unplugged">Mika memegang colokan yang terlepas</string>
+    <string name="mascot_pose_hardhat">Mika memakai helm proyek</string>
+    <string name="mascot_pose_trophy">Mika memegang piala</string>
+    <string name="mascot_badge_nyaa">nyaa~</string>
+    <string name="mascot_speaker_greeting">Sapaan Mika</string>
+    <string name="mascot_speaker_tip">Tips Mika</string>
+    <string name="mascot_speaker_guide">Panduan Mika</string>
+    <string name="mascot_speaker_whisper">Mika Berbisik</string>
+    <string name="mascot_speaker_error">Kata Mika</string>
+
+    <!-- core/ui/component/state: shared actions -->
+    <string name="state_action_home">Kembali ke Beranda Belajar</string>
+    <!-- Half-width secondary button (Server, Unknown): keep it short. -->
+    <string name="state_action_home_short">Ke Beranda</string>
+    <string name="state_action_retry">Coba Lagi</string>
+    <string name="state_action_report_bug">Lapor Bug</string>
+    <string name="state_loading_default">Sebentar ya, Mika lagi menyiapkan semuanya…</string>
+
+    <!-- 404 Not Found (system_states mockup, copied verbatim) -->
+    <string name="state_not_found_status">KODE KESALAHAN: 404 NOT FOUND</string>
+    <string name="state_not_found_badge">HTTP: 404</string>
+    <string name="state_not_found_speech">“Wah, Mika cari ke mana-mana halamannya nggak ketemu, meong!”</string>
+    <string name="state_not_found_title">Halaman Ini Tersesat di Luar Radar Mika</string>
+    <string name="state_not_found_body">Tautan yang kamu tuju mungkin sudah dipindahkan, dihapus, atau ada kesalahan ketik URL pada aplikasi. Mika sudah menyisir seluruh modul belajar, tapi hasilnya tetap nihil!</string>
+    <string name="state_not_found_secondary">Buka Riwayat</string>
+    <string name="state_not_found_search_label">Coba cari materi langsung dari sini:</string>
+    <!-- For the search field the caller passes into the 404 search slot. -->
+    <string name="state_not_found_search_placeholder">Cari rumus, flashcard, atau modul…</string>
+    <string name="state_not_found_search_action">Cari</string>
+
+    <!-- 403 Forbidden -->
+    <string name="state_forbidden_status">STATUS: 403 AKSES DIBATASI</string>
+    <string name="state_forbidden_badge">HTTP: 403</string>
+    <string name="state_forbidden_speech">“Ups! Kamar belajar ini dipasang kunci khusus oleh pemiliknya, nyaa!”</string>
+    <string name="state_forbidden_title">Materi Belajar Ini Bersifat Privat</string>
+    <string name="state_forbidden_body">Kamu belum memiliki hak akses atau role kamu saat ini belum terdaftar di ruang belajar ini. Coba hubungi ketua tim atau masuk dengan akun sekolahmu.</string>
+    <string name="state_forbidden_primary">Minta Izin Akses Materi</string>
+    <string name="state_forbidden_secondary">Ganti Akun</string>
+
+    <!-- Sesi Habis -->
+    <string name="state_session_status">STATUS: SESI KEAMANAN KADALUWARSA</string>
+    <string name="state_session_badge">AUTH: EXPIRED</string>
+    <string name="state_session_speech">“Mika kunci dulu sebentar demi melindungi riwayat dan catatanmu!”</string>
+    <string name="state_session_title">Waktu Sesi Berakhir untuk Keamanan</string>
+    <string name="state_session_body">Untuk menjaga kerahasiaan kuis dan data pribadi kamu, sistem HeyMika otomatis mengunci sesi setelah tidak ada aktivitas selama beberapa waktu.</string>
+    <string name="state_session_primary">Masuk Kembali Sekali Klik</string>
+    <string name="state_session_secondary">Cek Email Verifikasi</string>
+
+    <!-- Offline -->
+    <string name="state_offline_status">KONEKSI: KAMU SEDANG OFFLINE</string>
+    <string name="state_offline_badge">NETWORK: NONE</string>
+    <string name="state_offline_speech">“Sinyalnya lagi sembunyi nih! Tenang, flashcard kamu tetap aman di ponsel!”</string>
+    <string name="state_offline_title">Koneksi Internet Terputus</string>
+    <string name="state_offline_body">Mika tidak dapat menghubungi server cloud saat ini. Jangan khawatir, kamu masih bisa mengulang kartu hafalan dan membaca catatan yang sudah di-cache.</string>
+    <string name="state_offline_primary">Coba Hubungkan Ulang</string>
+    <string name="state_offline_secondary">Buka Flashcard Offline</string>
+    <string name="state_offline_banner_body">Flashcard dan catatan tersimpan tetap dapat dibaca.</string>
+
+    <!-- Maintenance -->
+    <string name="state_maintenance_status">MAINTENANCE: PEMELIHARAAN SISTEM</string>
+    <string name="state_maintenance_badge">STATUS: 503</string>
+    <string name="state_maintenance_speech">“Mika lagi poles server dan latih AI baru, sebentar lagi kelar ya!”</string>
+    <string name="state_maintenance_title">Server HeyMika Sedang Dirapikan</string>
+    <string name="state_maintenance_body_eta">Peningkatan performa rutin sedang berlangsung agar respon penjelasan materi belajar kamu 3x lebih cepat. Estimasi selesai dalam %1$d menit ke depan.</string>
+    <string name="state_maintenance_body">Peningkatan performa rutin sedang berlangsung agar respon penjelasan materi belajar kamu 3x lebih cepat. Mika akan segera kembali setelah pemeliharaan selesai.</string>
+    <string name="state_maintenance_primary">Pantau Status Server</string>
+    <string name="state_maintenance_secondary">Jadwalkan Pengingat</string>
+
+    <!-- Batas Kuota -->
+    <string name="state_quota_status_daily">KUOTA: BATAS HARIAN TERCAPAI</string>
+    <string name="state_quota_status_monthly">KUOTA: BATAS BULANAN TERCAPAI</string>
+    <string name="state_quota_badge" formatted="false">USAGE: 100%</string>
+    <string name="state_quota_speech_daily_ai">“Hebat banget belajarnya hari ini! Kuota AI gratis kamu sudah terpakai semua!”</string>
+    <string name="state_quota_speech_daily">“Hebat banget belajarnya hari ini! Kuota gratis kamu sudah terpakai semua!”</string>
+    <string name="state_quota_speech_monthly">“Hebat banget belajarnya bulan ini! Kuota gratis kamu sudah terpakai semua!”</string>
+    <string name="state_quota_title_daily_ai">Batas Kuota AI Harian Telah Penuh</string>
+    <string name="state_quota_title_monthly_ai">Batas Kuota AI Bulanan Telah Penuh</string>
+    <string name="state_quota_title_daily">Batas Kuota Harian Telah Penuh</string>
+    <string name="state_quota_title_monthly">Batas Kuota Bulanan Telah Penuh</string>
+    <!-- %1$s is one of the state_quota_usage_* phrases. -->
+    <string name="state_quota_body_daily">Kamu telah %1$s hari ini. Kuota harianmu akan otomatis terisi kembali pukul 00:00 WIB nanti malam, atau kamu bisa membuka akses instan sekarang.</string>
+    <string name="state_quota_body_monthly">Kamu telah %1$s bulan ini. Kuota bulananmu akan otomatis terisi kembali awal bulan depan, atau kamu bisa membuka akses instan sekarang.</string>
+    <string name="state_quota_body_daily_unknown">Kuota harianmu sudah terpakai semua. Kuota akan otomatis terisi kembali pukul 00:00 WIB nanti malam, atau kamu bisa membuka akses instan sekarang.</string>
+    <string name="state_quota_body_monthly_unknown">Kuota bulananmu sudah terpakai semua. Kuota akan otomatis terisi kembali awal bulan depan, atau kamu bisa membuka akses instan sekarang.</string>
+    <string name="state_quota_usage_ai_chat">menuntaskan %1$d prompt AI</string>
+    <string name="state_quota_usage_documents">mengunggah %1$d dokumen</string>
+    <string name="state_quota_usage_pages">memproses %1$d halaman</string>
+    <string name="state_quota_usage_generator_credits">memakai %1$d kredit generator</string>
+    <string name="state_quota_primary">Upgrade ke HeyMika Pro</string>
+    <string name="state_quota_secondary">Gunakan Tiket Bonus</string>
+
+    <!-- Fallbacks: Server, Unknown, Validation (same voice as the catalog) -->
+    <string name="state_server_status">KODE KESALAHAN: GANGGUAN SERVER</string>
+    <string name="state_server_badge">HTTP: %1$d</string>
+    <string name="state_server_speech">“Aduh, server Mika lagi tersandung. Sebentar lagi pasti pulih, meong!”</string>
+    <string name="state_server_title">Server Mika Sedang Bermasalah</string>
+    <string name="state_server_body">Ada gangguan di server HeyMika saat memproses permintaanmu. Progres belajarmu tetap aman, coba lagi dalam beberapa saat.</string>
+    <string name="state_unknown_status">KODE KESALAHAN: TIDAK DIKENALI</string>
+    <string name="state_unknown_speech">“Hmm, ada yang aneh nih. Mika juga bingung, meong!”</string>
+    <string name="state_unknown_title">Ada yang Tidak Beres</string>
+    <string name="state_unknown_body">Terjadi kesalahan yang tidak terduga. Coba lagi, dan kalau masih muncul, laporkan ke tim Mika supaya cepat dibereskan.</string>
+    <string name="state_validation_status">PERIKSA KEMBALI ISIAN</string>
+    <string name="state_validation_speech">“Ada isian yang perlu dicek lagi, Mika bantu tunjukkan ya!”</string>
+    <string name="state_validation_title">Ada Data yang Perlu Diperbaiki</string>
+    <string name="state_validation_body">Beberapa isian belum sesuai. Periksa kembali data yang kamu masukkan, lalu coba kirim lagi.</string>
+    <string name="state_validation_primary">Periksa Lagi</string>
+</resources>

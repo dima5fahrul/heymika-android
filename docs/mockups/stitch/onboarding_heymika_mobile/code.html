@@ -1,0 +1,391 @@
+<!DOCTYPE html><html lang="id"><head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" name="viewport">
+<title>Onboarding — HeyMika</title>
+<!-- Google Font: Plus Jakarta Sans & Nunito -->
+<link href="https://fonts.googleapis.com" rel="preconnect">
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect">
+<link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800;900&amp;family=Plus+Jakarta+Sans:wght@500;600;700;800&amp;display=swap" rel="stylesheet">
+<!-- Tailwind CSS CDN -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            brand: {
+              blue: '#0075E8',
+              navy: '#082A52',
+              orange: '#FF8A00',
+              softBg: '#F8FCFF',
+              cardBg: '#FFFFFF',
+              border: '#E2EEFA',
+              lightBlue: '#EBF5FF',
+              sky: '#D6ECFF'
+            }
+          },
+          fontFamily: {
+            sans: ['"Nunito"', 'sans-serif'],
+            heading: ['"Plus Jakarta Sans"', '"Nunito"', 'sans-serif']
+          },
+          boxShadow: {
+            manga: '0 4px 0px 0px rgba(8, 42, 82, 0.08)',
+            'manga-strong': '0 6px 0px 0px #082A52',
+            glow: '0 8px 24px -4px rgba(0, 117, 232, 0.35)',
+            card: '0 8px 20px -6px rgba(8, 42, 82, 0.06)'
+          }
+        }
+      }
+    };
+  </script>
+<!-- BEGIN: Custom Styles -->
+<style data-purpose="custom-scrollbars-and-resets">
+    /* iOS smooth scrolling and touch feel */
+    body {
+      -webkit-tap-highlight-color: transparent;
+      overscroll-behavior-y: none;
+    }
+    
+    /* Speech bubble pointer */
+    .speech-bubble-tail::after {
+      content: '';
+      position: absolute;
+      bottom: -10px;
+      left: 36px;
+      width: 0;
+      height: 0;
+      border-left: 10px solid transparent;
+      border-right: 10px solid transparent;
+      border-top: 10px solid #FFFFFF;
+    }
+
+    /* Custom outline borders inspired by manga paneling */
+    .comic-card-border {
+      border: 1.5px solid #E2EEFA;
+      transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+
+    .comic-card-border.active {
+      border-color: #0075E8;
+      background-color: #0075E8;
+      color: #FFFFFF;
+      box-shadow: 0 4px 14px rgba(0, 117, 232, 0.25);
+    }
+  </style>
+<!-- END: Custom Styles -->
+</head>
+<body class="bg-[#F8FCFF] text-brand-navy font-sans min-h-screen flex flex-col justify-between antialiased selection:bg-brand-sky selection:text-brand-navy pb-24">
+<!-- BEGIN: MobileAppHeader -->
+<header class="sticky top-0 z-30 bg-[#F8FCFF]/95 backdrop-blur-md border-b border-[#E8F2FA] px-4 pt-3 pb-3">
+<!-- Top Row: Logo & Badge -->
+<div class="flex items-center justify-between mb-2.5">
+<div class="flex items-center gap-2">
+<img alt="HeyMika Logo" class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBDMiwmHjMZ3o7ZLldRK_XicSTaBy9Hh5DSj_xtWcA_-j1uYEa1kebztvZgOwNX76lsvCPeXJV7irPOMkxEItSVPeSFQmh3BYQoFCInRsNoZ8yxPnaFE_g3ojStJkaVCMfvqKGzUS4GHmKef1GnY68GhhSjqMagSaM1NCVUg62dINtO2_yr64UDZIa7hdh66076Ymu3Tedlw9wi4dFqmzVAWsrGcHsKzMFlrYzTVfxnkeic3snKG_AqKp1BVBFTqN1gZG8">
+</div>
+<!-- Chapter / Edition Badge -->
+<span class="inline-flex items-center gap-1 px-2.5 py-1 text-[11px] font-extrabold tracking-wide uppercase bg-brand-lightBlue text-brand-blue rounded-full border border-brand-sky">
+<svg class="w-3 h-3 text-brand-blue animate-pulse" fill="currentColor" viewBox="0 0 20 20">
+<path d="M10 2a1 1 0 011 1v1.323l3.954 1.582 1.599-.8a1 1 0 011.342 1.342l-.8 1.599L18.677 11H20a1 1 0 010 2h-1.323l-1.582 3.954.8 1.599a1 1 0 01-1.342 1.342l-1.599-.8L11 18.677V20a1 1 0 01-2 0v-1.323l-3.954-1.582-1.599.8a1 1 0 01-1.342-1.342l.8-1.599L1.323 13H0a1 1 0 010-2h1.323l1.582-3.954-.8-1.599a1 1 0 011.342-1.342l1.599.8L9 3.323V2a1 1 0 011-1z"></path>
+</svg>
+        VOL. 1 • ONBOARDING
+      </span>
+</div>
+<!-- Progress Indicator Row -->
+<div class="space-y-1.5">
+<div class="flex items-center justify-between text-xs">
+<div class="flex items-center gap-1.5 font-bold text-slate-700">
+<span class="inline-flex items-center justify-center w-4 h-4 rounded-full bg-brand-blue/15 text-brand-blue text-[10px]">✓</span>
+<span>Langkah 1 dari 3: Profil Diri</span>
+</div>
+<span class="font-extrabold text-brand-blue tracking-wider">33%</span>
+</div>
+<!-- Progress Track -->
+<div class="w-full bg-[#E3EEF8] h-2 rounded-full overflow-hidden p-0.5">
+<div class="bg-gradient-to-r from-brand-blue to-[#2995FF] h-full rounded-full transition-all duration-500 shadow-sm" style="width: 33%"></div>
+</div>
+<!-- Micro XP Motivation -->
+<div class="flex items-center justify-between pt-0.5 text-[11px] text-slate-500 font-semibold">
+<span class="flex items-center gap-1">🐾 Siap temani belajarmu</span>
+<span class="inline-flex items-center gap-0.5 text-brand-orange font-bold">
+          ⚡ +150 XP saat selesai
+        </span>
+</div>
+</div>
+</header>
+<!-- END: MobileAppHeader -->
+<!-- BEGIN: MainContent -->
+<main class="px-4 py-3 space-y-4 max-w-md mx-auto w-full">
+<!-- Mascot Callout & Welcome Card -->
+<!-- BEGIN: MascotSection -->
+<section class="bg-gradient-to-b from-white to-[#F2F8FF] rounded-2xl p-3.5 border-2 border-brand-border shadow-card relative overflow-hidden" data-purpose="mascot-greeting">
+<!-- Star Badge in Corner -->
+<div class="absolute -top-1 -right-1 bg-brand-orange text-white text-[10px] font-black px-3 py-1 rounded-bl-xl shadow-sm tracking-wide flex items-center gap-1">
+<span>TEMAN SETIA</span>
+<span>★</span>
+</div>
+<div class="flex items-start gap-3 mt-1">
+<!-- Mika Character Avatar -->
+<div class="relative flex-shrink-0 w-24 h-28 -mb-2 -ml-1">
+<img alt="Mika, the waving learning kitten" class="w-full h-full object-contain filter drop-shadow-md transform -scale-x-100" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBTliQ2UD-KT68jcWUcBHgRNhKLqRtt_9_hEWl_-Z7_fRwTQZjdUvKDY_knEEv2n-oQ-OtocXJ_IIJn4nzkMD0bI7mrLnSg2YbLO-hkrBKoBpLPIfre1cUrFM35ijadyP4xhS_eFK8udWXWjSyeWdLKWqa8Xk8H9rPgSHlM9zELrQb1XcZRGDrl4fdIhP3JJXiJD3K4Y6u-E054WmtCZpaIUpTtSaOvLVYw1cQ4UsauxlYzgaEgzF-DolqyUBfjRopl9ag">
+</div>
+<!-- Manga Speech Box -->
+<div class="flex-1 bg-white p-3 rounded-xl border border-brand-sky relative shadow-sm">
+<div class="flex items-center gap-1 text-[11px] font-extrabold text-brand-blue uppercase mb-1">
+<svg class="w-3.5 h-3.5 fill-current" viewBox="0 0 20 20">
+<path d="M18 10c0 3.866-3.582 7-8 7a8.84 8.84 0 01-2.58-.387l-3.669 1.223A.75.75 0 012.8 17.09l.923-2.77C2.617 13.06 2 11.604 2 10 2 6.134 5.582 3 10 3s8 3.134 8 7z"></path>
+</svg>
+            Sapaan Mika
+          </div>
+<p class="text-xs font-bold text-brand-navy leading-snug">
+            "Halo calon juara! Siapa nama panggilan kerenmu? Biar Mika bisa sapa kamu pas belajar!"
+          </p>
+<p class="text-[10px] text-slate-500 font-semibold mt-1">
+            Tips: Belajar rutin 15–30 menit sehari lebih awet nempel di otak!
+          </p>
+</div>
+</div>
+<!-- Quick Micro-Badges -->
+<div class="grid grid-cols-2 gap-2 mt-3 pt-2 border-t border-brand-sky/60">
+<div class="flex items-center justify-center gap-1.5 py-1.5 px-2 bg-white/90 rounded-lg text-center border border-slate-100">
+<span class="text-xs">🌱</span>
+<span class="text-[11px] font-extrabold text-brand-blue">100% Ramah Pemula</span>
+</div>
+<div class="flex items-center justify-center gap-1.5 py-1.5 px-2 bg-white/90 rounded-lg text-center border border-slate-100">
+<span class="text-xs">⏰</span>
+<span class="text-[11px] font-extrabold text-brand-orange">24/7 Tanya Mika</span>
+</div>
+</div>
+</section>
+<!-- END: MascotSection -->
+<!-- Form Container -->
+<!-- BEGIN: OnboardingForm -->
+<div class="bg-white rounded-2xl p-4 border border-brand-border shadow-sm space-y-4" data-purpose="profile-form">
+<!-- Section Title & Subtitle -->
+<div>
+<div class="inline-flex items-center gap-1 px-2 py-0.5 rounded text-[10px] font-extrabold uppercase bg-brand-lightBlue text-brand-blue mb-1">
+<span>📋 Langkah 01 Dari 03</span>
+</div>
+<h1 class="text-lg font-black text-brand-navy tracking-tight">
+          Profil &amp; Karakter Pembelajar
+        </h1>
+<p class="text-xs text-slate-500 mt-0.5">
+          Beri tahu Mika nama &amp; statusmu agar gaya penjelasan AI pas dengan kemampuanmu.
+        </p>
+</div>
+<!-- Field 1: Name Input -->
+<div class="space-y-1.5" data-purpose="input-nickname">
+<div class="flex justify-between items-center text-xs">
+<label class="font-extrabold text-brand-navy" for="nickname-input">
+            Nama Panggilan Kamu <span class="text-rose-500">*</span>
+</label>
+<span class="text-[10px] text-slate-400 font-semibold">Disapa di dashboard</span>
+</div>
+<div class="relative">
+<span class="absolute inset-y-0 left-0 flex items-center pl-3.5 pointer-events-none text-slate-400">
+<!-- Cute Panda/User Icon -->
+<svg class="w-4 h-4 text-brand-blue" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+<path d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.2"></path>
+</svg>
+</span>
+<input class="w-full pl-10 pr-4 py-2.5 rounded-xl border border-brand-sky bg-brand-softBg/60 text-sm font-bold text-brand-navy focus:bg-white focus:outline-none focus:ring-2 focus:ring-brand-blue/30 focus:border-brand-blue transition duration-150" id="nickname-input" placeholder="Contoh: Sasha / Kiki" type="text" value="Sasha Pratama">
+</div>
+</div>
+<!-- Field 2: Learner Status Grid (2x2 Touch Cards) -->
+<div class="space-y-2" data-purpose="status-selection">
+<div class="flex justify-between items-center text-xs">
+<label class="font-extrabold text-brand-navy">
+            Status Pembelajar Saat Ini <span class="text-rose-500">*</span>
+</label>
+<span class="text-[10px] text-brand-blue font-bold">Pilih salah satu</span>
+</div>
+<div aria-label="Status Pembelajar Saat Ini" class="grid grid-cols-2 gap-2" id="learner-status-group" role="radiogroup">
+<!-- Option 1: Mahasiswa (Default Selected) -->
+<button aria-checked="true" class="status-card active relative text-left p-3 rounded-xl border-2 transition-all flex flex-col justify-between h-24 bg-brand-blue text-white border-brand-blue shadow-md" data-value="mahasiswa" role="radio" type="button">
+<div class="flex items-center justify-between">
+<span class="p-1.5 rounded-lg bg-white/20 text-white text-base">🏛️</span>
+<span class="status-check-badge w-5 h-5 rounded-full bg-white text-brand-blue flex items-center justify-center font-bold text-xs">✓</span>
+</div>
+<div>
+<p class="font-black text-xs leading-tight">Mahasiswa</p>
+<p class="text-[10px] opacity-85 mt-0.5 leading-tight font-medium">Kuliah, Tugas, Skripsi</p>
+</div>
+</button>
+<!-- Option 2: Siswa SMA / SMK -->
+<button aria-checked="false" class="status-card relative text-left p-3 rounded-xl border-2 transition-all flex flex-col justify-between h-24 bg-white text-brand-navy border-[#E2EEFA] hover:border-brand-sky" data-value="siswa" role="radio" type="button">
+<div class="flex items-center justify-between">
+<span class="p-1.5 rounded-lg bg-brand-lightBlue text-brand-blue text-base">🎒</span>
+<span class="status-check-badge hidden w-5 h-5 rounded-full bg-white text-brand-blue items-center justify-center font-bold text-xs">✓</span>
+</div>
+<div>
+<p class="font-black text-xs leading-tight">Siswa SMA / SMK</p>
+<p class="text-[10px] text-slate-500 mt-0.5 leading-tight font-medium">SNBT, UTBK, Ujian</p>
+</div>
+</button>
+<!-- Option 3: Pembelajar Mandiri -->
+<button aria-checked="false" class="status-card relative text-left p-3 rounded-xl border-2 transition-all flex flex-col justify-between h-24 bg-white text-brand-navy border-[#E2EEFA] hover:border-brand-sky" data-value="mandiri" role="radio" type="button">
+<div class="flex items-center justify-between">
+<span class="p-1.5 rounded-lg bg-brand-lightBlue text-brand-blue text-base">🚀</span>
+<span class="status-check-badge hidden w-5 h-5 rounded-full bg-white text-brand-blue items-center justify-center font-bold text-xs">✓</span>
+</div>
+<div>
+<p class="font-black text-xs leading-tight">Pembelajar Mandiri</p>
+<p class="text-[10px] text-slate-500 mt-0.5 leading-tight font-medium">Otodidak, Sertifikasi</p>
+</div>
+</button>
+<!-- Option 4: Profesional Karier -->
+<button aria-checked="false" class="status-card relative text-left p-3 rounded-xl border-2 transition-all flex flex-col justify-between h-24 bg-white text-brand-navy border-[#E2EEFA] hover:border-brand-sky" data-value="profesional" role="radio" type="button">
+<div class="flex items-center justify-between">
+<span class="p-1.5 rounded-lg bg-brand-lightBlue text-brand-blue text-base">💼</span>
+<span class="status-check-badge hidden w-5 h-5 rounded-full bg-white text-brand-blue items-center justify-center font-bold text-xs">✓</span>
+</div>
+<div>
+<p class="font-black text-xs leading-tight">Profesional Karier</p>
+<p class="text-[10px] text-slate-500 mt-0.5 leading-tight font-medium">Upskilling &amp; Kerja</p>
+</div>
+</button>
+</div>
+</div>
+<!-- Field 3: Mika's Language Style -->
+<div class="space-y-2 pt-1" data-purpose="language-preference">
+<label class="block text-xs font-extrabold text-brand-navy">
+          Gaya Bahasa Respon Mika <span class="text-rose-500">*</span>
+</label>
+<!-- Segmented Horizontal Selector -->
+<div class="grid grid-cols-3 gap-1.5 p-1 bg-brand-lightBlue/70 rounded-xl border border-brand-sky/80" id="language-pill-group">
+<!-- Bahasa Indonesia (Active) -->
+<button class="lang-pill active flex items-center justify-center gap-1 py-2 px-1 text-center rounded-lg text-xs font-extrabold transition-all duration-150 bg-white text-brand-blue shadow-sm border border-brand-sky" data-lang="id" type="button">
+<span class="text-sm">🇮🇩</span>
+<span class="truncate">Indonesia</span>
+</button>
+<!-- English (US) -->
+<button class="lang-pill flex items-center justify-center gap-1 py-2 px-1 text-center rounded-lg text-xs font-bold text-slate-600 transition-all duration-150 hover:text-brand-navy" data-lang="en" type="button">
+<span class="text-sm">🇺🇸</span>
+<span class="truncate">English</span>
+</button>
+<!-- Campuran / Gaul -->
+<button class="lang-pill flex items-center justify-center gap-1 py-2 px-1 text-center rounded-lg text-xs font-bold text-slate-600 transition-all duration-150 hover:text-brand-navy" data-lang="mix" type="button">
+<span class="text-sm">💬</span>
+<span class="truncate">Gaul / Santai</span>
+</button>
+</div>
+</div>
+</div>
+<!-- END: OnboardingForm -->
+<!-- Mini Perk Card / Manga Banner -->
+<!-- BEGIN: MiniMissionBanner -->
+<div class="bg-gradient-to-r from-brand-lightBlue via-sky-50 to-[#EBF5FF] rounded-xl p-3 border border-brand-sky/70 flex items-center gap-3">
+<div class="w-8 h-8 rounded-full bg-brand-blue text-white flex items-center justify-center flex-shrink-0 font-extrabold text-xs">
+        💡
+      </div>
+<p class="text-[11px] text-slate-700 leading-snug">
+<strong class="text-brand-navy font-bold">Misi Otomatis Mika:</strong> Ringkasan materi, kuis harian kilat, &amp; peta konsep akan disesuaikan dengan profil ini!
+      </p>
+</div>
+<!-- END: MiniMissionBanner -->
+</main>
+<!-- END: MainContent -->
+<!-- BEGIN: StickyBottomBar -->
+<footer class="fixed bottom-0 inset-x-0 bg-white/95 backdrop-blur-lg border-t border-[#DFECF8] p-3 z-40 max-w-md mx-auto">
+<div class="flex items-center gap-2.5">
+<!-- Back Button -->
+<button aria-label="Kembali ke langkah sebelumnya" class="h-12 px-4 rounded-xl border border-slate-200 bg-slate-50 hover:bg-slate-100 text-slate-600 font-bold text-xs flex items-center justify-center gap-1 transition-all active:scale-95" id="btn-back" type="button">
+<svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+<path d="M15 19l-7-7 7-7" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5"></path>
+</svg>
+<span class="hidden sm:inline">Kembali</span>
+</button>
+<!-- Primary Next Button -->
+<button class="flex-1 h-12 px-5 rounded-xl bg-brand-blue hover:bg-[#0066cc] active:bg-[#0057b3] text-white font-extrabold text-xs uppercase tracking-wider flex items-center justify-center gap-2 shadow-glow transition-all active:scale-[0.98]" id="btn-next" type="button">
+<span>Lanjut ke Target &amp; Topik</span>
+<svg class="w-4 h-4 transition-transform group-hover:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+<path d="M14 5l7 7m0 0l-7 7m7-7H3" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5"></path>
+</svg>
+</button>
+</div>
+</footer>
+<!-- END: StickyBottomBar -->
+<!-- BEGIN: InteractiveScripts -->
+<script data-purpose="status-card-and-language-picker">
+    document.addEventListener('DOMContentLoaded', () => {
+      // 1. Interactive Selection for Learner Status
+      const statusCards = document.querySelectorAll('.status-card');
+
+      statusCards.forEach(card => {
+        card.addEventListener('click', () => {
+          // Reset all cards
+          statusCards.forEach(c => {
+            c.classList.remove('active', 'bg-brand-blue', 'text-white', 'border-brand-blue', 'shadow-md');
+            c.classList.add('bg-white', 'text-brand-navy', 'border-[#E2EEFA]');
+            c.setAttribute('aria-checked', 'false');
+            
+            // Icon container reset
+            const iconWrap = c.querySelector('div:first-child span:first-child');
+            if (iconWrap) {
+              iconWrap.className = 'p-1.5 rounded-lg bg-brand-lightBlue text-brand-blue text-base';
+            }
+            
+            // Checkmark badge hide
+            const badge = c.querySelector('.status-check-badge');
+            if (badge) {
+              badge.classList.add('hidden');
+              badge.classList.remove('flex');
+            }
+            
+            // Subtitle text color reset
+            const subtitle = c.querySelector('p:last-child');
+            if (subtitle) {
+              subtitle.className = 'text-[10px] text-slate-500 mt-0.5 leading-tight font-medium';
+            }
+          });
+
+          // Set active card
+          card.classList.add('active', 'bg-brand-blue', 'text-white', 'border-brand-blue', 'shadow-md');
+          card.classList.remove('bg-white', 'text-brand-navy', 'border-[#E2EEFA]');
+          card.setAttribute('aria-checked', 'true');
+
+          const activeIconWrap = card.querySelector('div:first-child span:first-child');
+          if (activeIconWrap) {
+            activeIconWrap.className = 'p-1.5 rounded-lg bg-white/20 text-white text-base';
+          }
+
+          const activeBadge = card.querySelector('.status-check-badge');
+          if (activeBadge) {
+            activeBadge.classList.remove('hidden');
+            activeBadge.classList.add('flex');
+          }
+
+          const activeSubtitle = card.querySelector('p:last-child');
+          if (activeSubtitle) {
+            activeSubtitle.className = 'text-[10px] opacity-85 mt-0.5 leading-tight font-medium';
+          }
+        });
+      });
+
+      // 2. Interactive Selection for Language Segmented Control
+      const langPills = document.querySelectorAll('.lang-pill');
+
+      langPills.forEach(pill => {
+        pill.addEventListener('click', () => {
+          langPills.forEach(p => {
+            p.classList.remove('active', 'bg-white', 'text-brand-blue', 'shadow-sm', 'border', 'border-brand-sky');
+            p.classList.add('text-slate-600');
+          });
+
+          pill.classList.add('active', 'bg-white', 'text-brand-blue', 'shadow-sm', 'border', 'border-brand-sky');
+          pill.classList.remove('text-slate-600');
+        });
+      });
+
+      // 3. CTA Click Feedback
+      const btnNext = document.getElementById('btn-next');
+      btnNext.addEventListener('click', () => {
+        const inputName = document.getElementById('nickname-input').value.trim() || 'Sahabat Mika';
+        btnNext.innerHTML = `<span>Menyimpan ${inputName}...</span>`;
+        setTimeout(() => {
+          btnNext.innerHTML = `<span>Lanjut ke Target & Topik ✓</span>`;
+        }, 350);
+      });
+    });
+  </script>
+<!-- END: InteractiveScripts -->
+</body></html>

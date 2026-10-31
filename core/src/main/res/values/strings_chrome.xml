@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- core/ui/component/{navigation,overlay,picker,timer} (owned by the chrome builder) -->
+
+    <!-- navigation: top bar -->
+    <string name="chrome_back">Kembali</string>
+    <string name="chrome_back_to">Kembali ke %1$s</string>
+    <string name="chrome_with_badge">%1$s, ada yang baru</string>
+
+    <!-- navigation: bottom nav tabs -->
+    <string name="chrome_tab_beranda">Beranda</string>
+    <string name="chrome_tab_materi">Materi</string>
+    <string name="chrome_tab_kuis">Kuis</string>
+    <string name="chrome_tab_tanya_mika">Tanya Mika</string>
+    <string name="chrome_tab_profil">Profil</string>
+
+    <!-- navigation: floating input bar -->
+    <string name="chrome_input_placeholder">Tanyakan ke Mika tentang materimu…</string>
+    <string name="chrome_input_send">Kirim ke Mika</string>
+    <string name="chrome_input_sending">Mengirim…</string>
+
+    <!-- overlay: dialog, sheet, snackbar -->
+    <string name="chrome_dialog_cancel">Batal</string>
+    <string name="chrome_sheet_handle">Tuas lembar</string>
+    <string name="chrome_sheet_dismiss">Tutup lembar</string>
+    <string name="chrome_sheet_expand">Luaskan lembar</string>
+    <string name="chrome_sheet_collapse">Ciutkan lembar</string>
+    <string name="chrome_snackbar_dismiss">Tutup pesan</string>
+    <string name="chrome_snackbar_tone_info">Info</string>
+    <string name="chrome_snackbar_tone_success">Berhasil</string>
+    <string name="chrome_snackbar_tone_warning">Perhatian</string>
+    <string name="chrome_snackbar_tone_error">Gagal</string>
+
+    <!-- picker -->
+    <string name="chrome_picker_confirm">Simpan</string>
+    <string name="chrome_picker_cancel">Batal</string>
+    <string name="chrome_picker_next">Lanjut</string>
+    <string name="chrome_picker_field_description">%1$s, %2$s</string>
+    <string name="chrome_picker_not_set">belum diisi</string>
+    <string name="chrome_time_picker_title">Pilih jam</string>
+    <string name="chrome_time_range_step_start">Mulai · 1/2</string>
+    <string name="chrome_time_range_step_end">Selesai · 2/2</string>
+    <string name="chrome_time_range_value">%1$s – %2$s</string>
+    <string name="chrome_time_range_value_description">%1$s sampai %2$s</string>
+    <string name="chrome_time_range_cross_midnight">Melewati tengah malam</string>
+    <string name="chrome_time_range_summary">%1$s · %2$s</string>
+    <string name="chrome_time_range_duration_hours">%1$d jam</string>
+    <string name="chrome_time_range_duration_minutes">%1$d menit</string>
+    <string name="chrome_time_range_duration_hours_minutes">%1$d jam %2$d menit</string>
+    <string name="chrome_time_range_edit">ubah rentang waktu</string>
+    <string name="chrome_time_range_error_same_time">Jam mulai dan jam selesai tidak boleh sama.</string>
+    <string name="chrome_time_range_error_cross_midnight">Rentang ini tidak boleh melewati tengah malam.</string>
+    <string name="chrome_date_picker_title">Pilih tanggal</string>
+    <string name="chrome_date_field_placeholder">Pilih tanggal</string>
+    <string name="chrome_date_field_edit">ubah tanggal</string>
+
+    <!-- timer -->
+    <string name="chrome_timer_description">Sisa waktu %1$d menit %2$d detik</string>
+    <string name="chrome_timer_almost_up">Waktu hampir habis</string>
+    <string name="chrome_timer_expired">Waktu habis</string>
+    <string name="chrome_resend_label">Kirim Ulang</string>
+    <string name="chrome_resend_ready">Siap</string>
+    <string name="chrome_resend_wait_description">Bisa dikirim ulang dalam %1$d detik</string>
+</resources>

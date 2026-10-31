@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="setting_screen_title">Pengaturan</string>
+    <string name="setting_navigate_up">Kembali</string>
+
+    <string name="setting_section_notification">Notifikasi</string>
+    <string name="setting_daily_reminder">Pengingat harian</string>
+    <string name="setting_daily_reminder_summary">Kirim pengingat sekali sehari agar kamu tetap rajin belajar.</string>
+
+    <string name="setting_section_about">Tentang</string>
+    <string name="setting_about_app">HeyMika</string>
+    <string name="setting_about_app_summary">Baca materi belajar, lalu biarkan Mika mengubahnya menjadi kuis dan ringkasan.</string>
+    <string name="setting_about_version">Versi</string>
+    <string name="setting_about_version_value">1.0.0</string>
+    <string name="setting_about_license">Lisensi</string>
+    <string name="setting_about_license_value">Sumber terbuka, untuk keperluan belajar.</string>
+</resources>

@@ -1,0 +1,605 @@
+<!DOCTYPE html><html lang="id"><head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" name="viewport">
+<title>Status Pemrosesan Bahan Belajar - HeyMika</title>
+<!-- Google Fonts: Nunito & Kalam for Japanese/Manga aesthetic -->
+<link href="https://fonts.googleapis.com" rel="preconnect">
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect">
+<link href="https://fonts.googleapis.com/css2?family=Kalam:wght@700&amp;family=Nunito:ital,wght@0,400;0,600;0,700;0,800;0,900;1,700&amp;display=swap" rel="stylesheet">
+<!-- Tailwind CSS CDN with plugins -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<!-- Tailwind Configuration Script -->
+<script data-purpose="tailwind-config">
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            heynavy: {
+              DEFAULT: '#082A52',
+              light: '#143C6D',
+              dark: '#04172E',
+            },
+            heyblue: {
+              DEFAULT: '#0075E8',
+              50: '#F0F7FF',
+              100: '#E0EFFF',
+              500: '#0075E8',
+              600: '#0062C4',
+            },
+            heyorange: {
+              DEFAULT: '#FF8A00',
+              50: '#FFF7ED',
+              100: '#FFEDD5',
+              hover: '#E57900',
+            },
+            heyyellow: {
+              DEFAULT: '#FFD34E',
+              soft: '#FEF9C3',
+            },
+            heygreen: {
+              DEFAULT: '#10B981',
+              light: '#D1FAE5',
+            },
+            heybg: '#F5F9FD',
+          },
+          fontFamily: {
+            sans: ['"Nunito"', 'sans-serif'],
+            manga: ['"Kalam"', 'cursive'],
+          },
+          boxShadow: {
+            'comic': '0 4px 0 #082A52',
+            'comic-sm': '0 2px 0 #082A52',
+            'card-pop': '0 8px 24px -4px rgba(8, 42, 82, 0.08), 0 2px 6px -1px rgba(8, 42, 82, 0.04)',
+          }
+        }
+      }
+    }
+  </script>
+<!-- Custom Styles for Manga Accents & Animations -->
+<style data-purpose="custom-animations">
+    @keyframes pulse-subtle {
+      0%, 100% { opacity: 1; transform: scale(1); }
+      50% { opacity: 0.85; transform: scale(1.02); }
+    }
+    .animate-pulse-subtle {
+      animation: pulse-subtle 2.5s infinite ease-in-out;
+    }
+    @keyframes progress-stripe {
+      0% { background-position: 0 0; }
+      100% { background-position: 24px 0; }
+    }
+    .progress-animated {
+      background-image: linear-gradient(
+        45deg,
+        rgba(255, 255, 255, 0.25) 25%,
+        transparent 25%,
+        transparent 50%,
+        rgba(255, 255, 255, 0.25) 50%,
+        rgba(255, 255, 255, 0.25) 75%,
+        transparent 75%,
+        transparent
+      );
+      background-size: 24px 24px;
+      animation: progress-stripe 1.2s linear infinite;
+    }
+    /* Safe padding for iOS bottom bar and notch */
+    .safe-top {
+      padding-top: env(safe-area-inset-top, 14px);
+    }
+    .safe-bottom {
+      padding-bottom: env(safe-area-inset-bottom, 24px);
+    }
+  </style>
+</head>
+<body class="bg-heybg text-heynavy antialiased font-sans flex justify-center min-h-screen selection:bg-heyblue-100 selection:text-heyblue-600">
+<!-- Mobile Viewport Container (Fixed width standard iPhone portrait preview) -->
+<div class="w-full max-w-[420px] bg-heybg min-h-screen flex flex-col relative shadow-2xl border-x border-slate-200 overflow-x-hidden">
+<!-- BEGIN: iOSStatusBar -->
+<aside class="sticky top-0 z-50 bg-white/95 backdrop-blur-md safe-top px-6 pt-3 pb-2 flex items-center justify-between text-xs font-black tracking-tight border-b border-slate-100" data-purpose="ios-status-bar">
+<span>09:41</span>
+<div class="flex items-center gap-1.5 text-heynavy">
+<!-- Signal Icon -->
+<svg class="w-3.5 h-3.5 fill-current" viewBox="0 0 24 24"><path d="M12 3c-4.97 0-9 4.03-9 9 0 2.12.74 4.07 1.97 5.61L12 22l7.03-4.39C20.26 16.07 21 14.12 21 12c0-4.97-4.03-9-9-9z"></path></svg>
+<!-- Wifi Icon -->
+<svg class="w-3.5 h-3.5 stroke-current fill-none stroke-2" viewBox="0 0 24 24"><path d="M8.288 15.038a5.25 5.25 0 017.424 0M5.106 11.856c3.807-3.808 9.98-3.808 13.788 0M1.924 8.674c5.565-5.565 14.587-5.565 20.152 0M12.001 19.5v.008" stroke-linecap="round" stroke-linejoin="round"></path></svg>
+<!-- Battery Icon -->
+<div class="w-5 h-2.5 border border-heynavy rounded-[3px] p-[1px] flex items-center">
+<div class="h-full w-3.5 bg-heynavy rounded-[1px]"></div>
+</div>
+</div>
+</aside>
+<!-- END: iOSStatusBar -->
+<!-- BEGIN: MobileAppHeader -->
+<header class="bg-white px-4 py-3 border-b border-blue-50 sticky top-[38px] z-40 flex items-center justify-between" data-purpose="top-navigation-header">
+<!-- Back Button & Breadcrumbs -->
+<div class="flex items-center gap-2.5">
+<a aria-label="Kembali ke Workspace" class="w-9 h-9 rounded-full bg-slate-100 flex items-center justify-center text-heynavy hover:bg-heyblue-50 hover:text-heyblue transition active:scale-95" href="#back">
+<svg class="w-5 h-5 stroke-[2.5]" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M15.75 19.5L8.25 12l7.5-7.5" stroke-linecap="round" stroke-linejoin="round"></path></svg>
+</a>
+<div class="flex flex-col">
+<div class="flex items-center gap-1.5 text-[11px] font-bold text-slate-400 uppercase tracking-wider">
+<span>Biologi Sel</span>
+<span class="w-1 h-1 rounded-full bg-slate-300"></span>
+<span class="text-heyblue font-mono font-extrabold">#JOB-2025-089X</span>
+</div>
+<img alt="HeyMika Logo" class="h-5 w-auto object-contain mt-0.5" src="https://lh3.googleusercontent.com/aida-public/AB6AXuANr1yyCYVOH0Xrd08elKT3Qww24aOM59pPaY96MYfWsf9MKcFnm-acx3YrYNKCOAqfrFxCFExZzPLbyA4TAjX4vM7ndr39T9z-uReEaTa1MB1Zd0tSnnAci2B_DAiYk-OQTyixyn-Tbld40ix0TgOFKzFTo09otE2wcKSj-fpDGXjdr9MKnHfPt1v3IgPFvDXWhOOQPu7eLQdgvCvMPV9SSIoLC6yoXgFuWnzNRjouDkP8Gc5vjU4MvirYRvryFcsIv5s">
+</div>
+</div>
+<!-- Streaks & User Status -->
+<div class="flex items-center gap-2">
+<!-- Day 7 Streak Pill -->
+<div class="flex items-center gap-1 bg-heyblue-50 border border-heyblue/20 text-heyblue px-2.5 py-1 rounded-full text-xs font-black">
+<span class="animate-bounce">🔥</span>
+<span>7 HARI</span>
+</div>
+<!-- Notification Bell with badge -->
+<button aria-label="Notifikasi" class="relative w-9 h-9 rounded-full bg-slate-50 border border-slate-200/80 flex items-center justify-center text-heynavy">
+<svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M15 17h5l-1.405-1.405A2.032 2.032 0 0118 14.158V11a6.002 6.002 0 00-4-5.659V5a2 2 0 10-4 0v.341C7.67 6.165 6 8.388 6 11v3.159c0 .538-.214 1.055-.595 1.436L4 17h5m6 0v1a3 3 0 11-6 0v-1m6 0H9" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path></svg>
+<span class="absolute top-1.5 right-1.5 w-2 h-2 rounded-full bg-heyorange ring-2 ring-white"></span>
+</button>
+</div>
+</header>
+<!-- END: MobileAppHeader -->
+<!-- Main Content Body -->
+<main class="flex-1 p-4 space-y-4 pb-28">
+<!-- BEGIN: HeroDocumentCard -->
+<section class="bg-white rounded-2xl p-4 border-2 border-heynavy shadow-comic relative overflow-hidden" data-purpose="job-overview-card">
+<!-- Manga corner ribbon accent -->
+<div class="absolute -right-8 -top-8 w-16 h-16 bg-heyyellow rotate-45 border-b-2 border-heynavy flex items-end justify-center pb-0.5">
+<span class="text-[10px] font-black text-heynavy">AI</span>
+</div>
+<!-- Status Badges Row -->
+<div class="flex flex-wrap items-center gap-2 mb-2.5">
+<span class="inline-flex items-center gap-1.5 bg-blue-50 text-heyblue text-xs font-black px-2.5 py-1 rounded-full border border-blue-200" id="job-status-pill">
+<span class="relative flex h-2 w-2">
+<span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-heyblue opacity-75"></span>
+<span class="relative inline-flex rounded-full h-2 w-2 bg-heyblue"></span>
+</span>
+<span id="job-status-text">⚡ Sedang Diproses</span>
+</span>
+<span class="text-[11px] text-slate-400 font-semibold flex items-center gap-1">
+<svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10" stroke-width="2"></circle><path d="M12 6v6l4 2" stroke-width="2"></path></svg>
+            Dimulai 14:32 WIB
+          </span>
+</div>
+<!-- Document Title -->
+<div class="flex items-start gap-2.5 mb-3">
+<div class="w-9 h-9 rounded-xl bg-heyorange/10 border border-heyorange/20 flex-shrink-0 flex items-center justify-center text-heyorange mt-0.5">
+<svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path></svg>
+</div>
+<div>
+<h1 class="text-base font-extrabold text-heynavy leading-snug">
+              Bab 4: Struktur Membran Sel &amp; Transpor Pasif-Aktif.pdf
+            </h1>
+</div>
+</div>
+<!-- Metadata Chips -->
+<div class="flex flex-wrap gap-1.5 text-[11px] font-bold text-slate-600 mb-3.5">
+<span class="bg-slate-100 px-2.5 py-1 rounded-md flex items-center gap-1">
+            📂 Biologi SMA / Kuliah
+          </span>
+<span class="bg-slate-100 px-2.5 py-1 rounded-md flex items-center gap-1">
+            📄 8.4 MB (42 Hal)
+          </span>
+<span class="bg-slate-100 px-2.5 py-1 rounded-md flex items-center gap-1">
+            🇮🇩 Bhs Indonesia
+          </span>
+</div>
+<!-- Notification Toggle & Cancel Row -->
+<div class="pt-3 border-t border-slate-100 flex items-center justify-between text-xs">
+<div class="flex items-center gap-2">
+<!-- Toggle Switch -->
+<label class="relative inline-flex items-center cursor-pointer">
+<input checked="" class="sr-only peer" id="notification-toggle" type="checkbox">
+<div class="w-9 h-5 bg-slate-200 peer-focus:outline-none rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-slate-300 after:border after:rounded-full after:h-4 after:w-4 after:transition-all peer-checked:bg-heyblue"></div>
+</label>
+<span class="text-[11px] font-bold text-slate-700">Notifikasi Bunyi (Ding)</span>
+</div>
+<button class="text-[11px] font-bold text-rose-500 hover:text-rose-700 active:scale-95 transition flex items-center gap-1" id="btn-cancel-job">
+<svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M6 18L18 6M6 6l12 12" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path></svg>
+            Batalkan
+          </button>
+</div>
+</section>
+<!-- END: HeroDocumentCard -->
+<!-- BEGIN: MascotAssistantCard -->
+<section class="bg-gradient-to-b from-blue-50 to-white rounded-2xl p-4 border-2 border-heynavy shadow-comic relative" data-purpose="mika-companion-card">
+<!-- Assistant Top Pill -->
+<div class="flex items-center justify-between mb-3">
+<span class="bg-heynavy text-white text-[10px] font-black uppercase tracking-wider px-2.5 py-0.5 rounded-full flex items-center gap-1">
+            ⭐ Asisten Belajar Mika
+          </span>
+<span class="text-[11px] text-heyblue font-bold flex items-center gap-1">
+<span class="w-1.5 h-1.5 rounded-full bg-emerald-500 animate-pulse"></span>
+            Live Sync AI
+          </span>
+</div>
+<!-- Mika Avatar & Dialogue Bubble -->
+<div class="flex gap-3 items-start mb-3">
+<!-- Mascot Frame -->
+<div class="relative flex-shrink-0 w-20">
+<div class="w-20 h-20 rounded-2xl bg-gradient-to-tr from-amber-100 to-amber-50 border-2 border-heynavy shadow-comic-sm overflow-hidden flex items-center justify-center p-1">
+<img alt="Mika si Kucing Pintar" class="w-full h-full object-contain filter drop-shadow hover:scale-105 transition-transform" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDrhIrXPHQhEM33L43tRFciHw8IrNZ__ieJkyW840KptjxITlhJqan8owNcFjUA1j1wO8HOrpMnzcwP-jH7iW4zhykRgQHTSDkJvO_sU2gzzjqJvkRbeQ9HbMIN-6v5zZuTCgxS09GeGS0bDxbzaxW6TyGNd_F9ZJ4oxu4MzMk9jvybJfOV6vlBiFjLSmJ4x2hvP81Pzn3XbtBDthWbUdpI8QnByAf7cHUlNqGkgZAXedrzHx-MxVW_oPT_MHeq-2vwBkc">
+</div>
+<!-- Manga Badge under avatar -->
+<div class="absolute -bottom-2 inset-x-0 mx-auto w-max bg-heyyellow border border-heynavy text-[10px] font-black text-heynavy px-2 py-0.2 rounded-full shadow-sm text-center">
+              Mika ✨
+            </div>
+</div>
+<!-- Speech Bubble -->
+<div class="flex-1 bg-white p-3 rounded-xl border border-slate-200 relative text-xs text-slate-700 leading-relaxed shadow-sm">
+<!-- Bubble arrow pointer -->
+<div class="absolute -left-1.5 top-5 w-3 h-3 bg-white border-l border-b border-slate-200 transform rotate-45"></div>
+<p id="mika-speech-text">
+<span class="font-extrabold text-heynavy">“Tenang ya!”</span> Mika lagi merapikan konsep 
+              <span class="bg-heyblue-50 text-heyblue px-1 py-0.5 rounded font-bold">Transpor Membran</span>. 
+              Bisa ditinggal ngopi dulu — nanti Mika ping begitu 100% beres! 🌸
+            </p>
+</div>
+</div>
+<!-- Waiting Micro-Tip Card -->
+<div class="bg-amber-50/80 border border-amber-200 rounded-xl p-2.5 flex items-start gap-2.5 text-xs text-amber-900" data-purpose="learning-tip-box">
+<div class="w-6 h-6 rounded-lg bg-amber-400 text-white flex-shrink-0 flex items-center justify-center text-xs mt-0.5 shadow-sm font-bold">
+            💡
+          </div>
+<div>
+<div class="font-extrabold text-[11px] uppercase tracking-wide text-amber-800 mb-0.5">Tips Cepat Sambil Menunggu</div>
+<p class="text-[11px] leading-tight text-amber-950/80">
+              Membran sel tersusun dari lapisan <span class="font-bold underline decoration-amber-400">lipid bilayer</span> selektif permeabel. Ingat perbedaan difusi terfasilitasi vs transpor aktif berenergi ATP ya!
+            </p>
+</div>
+</div>
+</section>
+<!-- END: MascotAssistantCard -->
+<!-- BEGIN: RealTimeProgressTimeline -->
+<section class="bg-white rounded-2xl p-4 border-2 border-heynavy shadow-comic space-y-3" data-purpose="pipeline-timeline-card">
+<!-- Header Stepper -->
+<div class="flex items-center justify-between pb-2 border-b border-slate-100">
+<div>
+<span class="text-[10px] font-black text-heyblue uppercase tracking-wider block">Alur Pemrosesan Real-Time</span>
+<h2 class="text-sm font-extrabold text-heynavy">Tahapan Generasi Belajar</h2>
+</div>
+<div class="bg-heyblue-50 border border-heyblue/20 text-heyblue text-[11px] font-black px-2.5 py-1 rounded-full flex items-center gap-1">
+<span>⏳ Sisa ~45 detik</span>
+</div>
+</div>
+<!-- Overall Progress Bar Animated -->
+<div class="w-full bg-slate-100 h-2.5 rounded-full overflow-hidden border border-slate-200 p-[1px]">
+<div class="h-full bg-heyblue rounded-full transition-all duration-700 progress-animated" id="overall-progress-bar" style="width: 72%;"></div>
+</div>
+<!-- Step List -->
+<div class="space-y-3.5 pt-1 text-xs" id="timeline-stepper-container">
+<!-- Step 1 (Completed) -->
+<div class="flex items-start gap-3" data-step="1">
+<div class="w-6 h-6 rounded-full bg-heygreen text-white flex items-center justify-center flex-shrink-0 shadow-sm mt-0.5">
+<svg class="w-3.5 h-3.5 stroke-[3]" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M4.5 12.75l6 6 9-13.5" stroke-linecap="round" stroke-linejoin="round"></path></svg>
+</div>
+<div class="flex-1">
+<div class="flex items-center justify-between">
+<div class="font-extrabold text-heynavy flex items-center gap-1.5">
+                  1. Unggah File
+                  <span class="text-[9px] bg-emerald-100 text-emerald-800 font-extrabold px-1.5 py-0.2 rounded">SELESAI</span>
+</div>
+<span class="text-[10px] text-slate-400 font-mono">14:32:05</span>
+</div>
+<p class="text-[11px] text-slate-500 mt-0.5 leading-snug">File 8.4 MB berhasil diterima dan diamankan pada ruang penyimpanan terenkripsi.</p>
+</div>
+</div>
+<!-- Step 2 (Completed) -->
+<div class="flex items-start gap-3" data-step="2">
+<div class="w-6 h-6 rounded-full bg-heygreen text-white flex items-center justify-center flex-shrink-0 shadow-sm mt-0.5">
+<svg class="w-3.5 h-3.5 stroke-[3]" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M4.5 12.75l6 6 9-13.5" stroke-linecap="round" stroke-linejoin="round"></path></svg>
+</div>
+<div class="flex-1">
+<div class="flex items-center justify-between">
+<div class="font-extrabold text-heynavy flex items-center gap-1.5">
+                  2. Validasi Format &amp; OCR
+                  <span class="text-[9px] bg-emerald-100 text-emerald-800 font-extrabold px-1.5 py-0.2 rounded">SELESAI</span>
+</div>
+<span class="text-[10px] text-slate-400 font-mono">14:32:18</span>
+</div>
+<p class="text-[11px] text-slate-500 mt-0.5 leading-snug">Integritas PDF diverifikasi, seluruh 42 halaman terekstraksi tanpa kerusakan lapisan teks.</p>
+</div>
+</div>
+<!-- Step 3 (Completed) -->
+<div class="flex items-start gap-3" data-step="3">
+<div class="w-6 h-6 rounded-full bg-heygreen text-white flex items-center justify-center flex-shrink-0 shadow-sm mt-0.5">
+<svg class="w-3.5 h-3.5 stroke-[3]" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M4.5 12.75l6 6 9-13.5" stroke-linecap="round" stroke-linejoin="round"></path></svg>
+</div>
+<div class="flex-1">
+<div class="flex items-center justify-between">
+<div class="font-extrabold text-heynavy flex items-center gap-1.5">
+                  3. Ekstraksi Konten &amp; Diagram
+                  <span class="text-[9px] bg-emerald-100 text-emerald-800 font-extrabold px-1.5 py-0.2 rounded">SELESAI</span>
+</div>
+<span class="text-[10px] text-slate-400 font-mono">14:33:02</span>
+</div>
+<p class="text-[11px] text-slate-500 mt-0.5 leading-snug">18.420 kata &amp; 14 diagram biologi (fosfolipid bilayer, pompa ion) teridentifikasi.</p>
+</div>
+</div>
+<!-- Step 4 (In Progress Active) -->
+<div class="flex items-start gap-3 bg-blue-50/70 p-2 rounded-xl border border-blue-200" data-step="4">
+<div class="w-6 h-6 rounded-full bg-heyblue text-white flex items-center justify-center flex-shrink-0 shadow-sm mt-0.5 animate-spin">
+<svg class="w-3.5 h-3.5 stroke-[2.5]" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M16.023 9.348h4.992v-.001M2.985 19.644v-4.992m0 0h4.992m-4.993 0l3.181 3.183a8.25 8.25 0 0013.803-3.7M4.031 9.865a8.25 8.25 0 0113.803-3.7l3.181 3.182m0-4.991v4.99" stroke-linecap="round" stroke-linejoin="round"></path></svg>
+</div>
+<div class="flex-1">
+<div class="flex items-center justify-between">
+<div class="font-extrabold text-heyblue flex items-center gap-1.5">
+                  4. Indexing &amp; Pemetaan Konsep
+                  <span class="text-[9px] bg-heyblue text-white font-extrabold px-1.5 py-0.2 rounded animate-pulse">BERJALAN</span>
+</div>
+<span class="text-[10px] text-heyblue font-mono font-bold">14:34:10</span>
+</div>
+<p class="text-[11px] text-slate-600 mt-0.5 leading-snug">Menghubungkan istilah kunci (osmosis, gradien konsentrasi), glosarium, ke dalam memori vektor Mika...</p>
+<!-- Mini Progress bar inside active step -->
+<div class="w-full bg-white h-1.5 rounded-full mt-2 overflow-hidden border border-blue-200">
+<div class="h-full bg-heyorange rounded-full w-3/4 progress-animated"></div>
+</div>
+</div>
+</div>
+<!-- Step 5 (Pending) -->
+<div class="flex items-start gap-3 opacity-60" data-step="5">
+<div class="w-6 h-6 rounded-full bg-slate-200 text-slate-500 flex items-center justify-center flex-shrink-0 shadow-sm mt-0.5">
+<svg class="w-3.5 h-3.5 stroke-[2]" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M12 6v6h4.5m4.5 0a9 9 0 11-18 0 9 9 0 0118 0z" stroke-linecap="round" stroke-linejoin="round"></path></svg>
+</div>
+<div class="flex-1">
+<div class="flex items-center justify-between">
+<div class="font-extrabold text-slate-700 flex items-center gap-1.5">
+                  5. Penyusunan Ringkasan &amp; Flashcard
+                  <span class="text-[9px] bg-slate-100 text-slate-500 font-extrabold px-1.5 py-0.2 rounded">MENUNGGU</span>
+</div>
+<span class="text-[10px] text-slate-400 font-mono">--:--</span>
+</div>
+<p class="text-[11px] text-slate-400 mt-0.5 leading-snug">Ringkasan eksekutif, 15 flashcard pintar, dan 5 kuis adaptif pilihan ganda.</p>
+</div>
+</div>
+</div>
+</section>
+<!-- END: RealTimeProgressTimeline -->
+<!-- BEGIN: ActionButtonsAndTerminal -->
+<section class="space-y-2.5 pt-1" data-purpose="action-and-logs">
+<!-- Toggle Terminal Log Button -->
+<button class="w-full py-2.5 px-3 bg-white hover:bg-slate-50 border-2 border-slate-300 rounded-xl text-xs font-extrabold text-heynavy flex items-center justify-center gap-2 transition active:scale-[0.98]" id="toggle-terminal-btn">
+<svg class="w-4 h-4 text-slate-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M8 9l3 3-3 3m5 0h3M5 20h14a2 2 0 002-2V6a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path></svg>
+<span id="terminal-btn-label">Buka Terminal Log Teknis</span>
+</button>
+<!-- Hidden Technical Log Console -->
+<div class="hidden bg-slate-900 text-emerald-400 rounded-xl p-3 font-mono text-[10px] space-y-1 border border-slate-800 shadow-inner" id="terminal-console">
+<div class="text-slate-400 border-b border-slate-800 pb-1 flex justify-between">
+<span>[HeyMika Vector Engine v2.4]</span>
+<span class="text-emerald-500">Connected</span>
+</div>
+<p>&gt; POST /v1/embeddings [batch size: 32 chunks]</p>
+<p>&gt; Cosine similarity map computed: 0.941</p>
+<p>&gt; Extracting biology entities: Phospholipid, ATP, Osmosis</p>
+<p class="text-amber-400">&gt; Synching concept graph with curriculum SMA-Biologi...</p>
+</div>
+<!-- Return to workspace navigation link -->
+<a class="block w-full text-center py-2 text-xs font-bold text-slate-500 hover:text-heynavy underline decoration-slate-300" href="#workspace">
+          Kembali ke Workspace <span class="text-[10px] text-slate-400">(Pemrosesan tetap aktif di server)</span>
+</a>
+</section>
+<!-- END: ActionButtonsAndTerminal -->
+</main>
+<!-- BEGIN: SimulatorSwitchToolbar -->
+<!-- Sticky Interactive Simulator Control Toolbar for previewing states -->
+<div class="fixed bottom-0 z-50 w-full max-w-[420px] bg-white/95 backdrop-blur-md border-t-2 border-heynavy p-2.5 safe-bottom shadow-lg" data-purpose="mobile-demo-simulator">
+<div class="flex items-center justify-between mb-1.5 px-1">
+<span class="text-[10px] font-black uppercase text-heynavy tracking-wider flex items-center gap-1">
+<span class="w-2 h-2 rounded-full bg-heyorange"></span> DEMO SIMULATOR STATUS:
+        </span>
+<span class="text-[9px] text-slate-400 font-semibold">Uji coba respon UI</span>
+</div>
+<div class="grid grid-cols-3 gap-1.5">
+<button class="py-2 px-1 text-[11px] font-black rounded-lg border-2 border-heynavy bg-heyblue text-white shadow-comic-sm transition active:scale-95 text-center" id="sim-running">
+          1. Berjalan
+        </button>
+<button class="py-2 px-1 text-[11px] font-bold rounded-lg border border-slate-300 bg-white text-slate-700 hover:bg-slate-50 transition active:scale-95 text-center" id="sim-success">
+          2. Selesai 🎉
+        </button>
+<button class="py-2 px-1 text-[11px] font-bold rounded-lg border border-slate-300 bg-white text-slate-700 hover:bg-slate-50 transition active:scale-95 text-center" id="sim-failed">
+          3. Gagal ⚠️
+        </button>
+</div>
+</div>
+<!-- END: SimulatorSwitchToolbar -->
+</div>
+<!-- BEGIN: InteractiveScripts -->
+<!-- Script for Handling Simulator Switch & Mini Interactions -->
+<script data-purpose="simulator-and-toggles">
+    document.addEventListener('DOMContentLoaded', () => {
+      // Toggle Terminal Console
+      const toggleTermBtn = document.getElementById('toggle-terminal-btn');
+      const terminalConsole = document.getElementById('terminal-console');
+      const terminalLabel = document.getElementById('terminal-btn-label');
+
+      toggleTermBtn.addEventListener('click', () => {
+        const isHidden = terminalConsole.classList.toggle('hidden');
+        terminalLabel.textContent = isHidden ? 'Buka Terminal Log Teknis' : 'Tutup Terminal Log Teknis';
+      });
+
+      // Simulator Buttons
+      const btnRunning = document.getElementById('sim-running');
+      const btnSuccess = document.getElementById('sim-success');
+      const btnFailed = document.getElementById('sim-failed');
+
+      // Elements to change
+      const jobStatusPill = document.getElementById('job-status-pill');
+      const jobStatusText = document.getElementById('job-status-text');
+      const mikaSpeechText = document.getElementById('mika-speech-text');
+      const overallProgressBar = document.getElementById('overall-progress-bar');
+      const timelineContainer = document.getElementById('timeline-stepper-container');
+
+      function resetActiveSimButtons() {
+        [btnRunning, btnSuccess, btnFailed].forEach(b => {
+          b.className = 'py-2 px-1 text-[11px] font-bold rounded-lg border border-slate-300 bg-white text-slate-700 transition active:scale-95 text-center';
+        });
+      }
+
+      // STATE 1: RUNNING (Default)
+      btnRunning.addEventListener('click', () => {
+        resetActiveSimButtons();
+        btnRunning.className = 'py-2 px-1 text-[11px] font-black rounded-lg border-2 border-heynavy bg-heyblue text-white shadow-comic-sm transition active:scale-95 text-center';
+
+        jobStatusPill.className = 'inline-flex items-center gap-1.5 bg-blue-50 text-heyblue text-xs font-black px-2.5 py-1 rounded-full border border-blue-200';
+        jobStatusPill.innerHTML = `
+          <span class="relative flex h-2 w-2">
+            <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-heyblue opacity-75"></span>
+            <span class="relative inline-flex rounded-full h-2 w-2 bg-heyblue"></span>
+          </span>
+          <span>⚡ Sedang Diproses</span>
+        `;
+
+        overallProgressBar.style.width = '72%';
+        overallProgressBar.className = 'h-full bg-heyblue rounded-full transition-all duration-700 progress-animated';
+
+        mikaSpeechText.innerHTML = `
+          <span class="font-extrabold text-heynavy">“Tenang ya!”</span> Mika lagi merapikan konsep 
+          <span class="bg-heyblue-50 text-heyblue px-1 py-0.5 rounded font-bold">Transpor Membran</span>. 
+          Bisa ditinggal ngopi dulu — nanti Mika ping begitu 100% beres! 🌸
+        `;
+
+        // Restore original timeline
+        timelineContainer.innerHTML = `
+          <div class="flex items-start gap-3">
+            <div class="w-6 h-6 rounded-full bg-heygreen text-white flex items-center justify-center flex-shrink-0 shadow-sm mt-0.5">
+              <svg class="w-3.5 h-3.5 stroke-[3]" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5"/></svg>
+            </div>
+            <div class="flex-1">
+              <div class="flex items-center justify-between">
+                <div class="font-extrabold text-heynavy flex items-center gap-1.5">1. Unggah File <span class="text-[9px] bg-emerald-100 text-emerald-800 font-extrabold px-1.5 py-0.2 rounded">SELESAI</span></div>
+                <span class="text-[10px] text-slate-400 font-mono">14:32:05</span>
+              </div>
+              <p class="text-[11px] text-slate-500 mt-0.5 leading-snug">File 8.4 MB berhasil diterima dan diamankan pada ruang penyimpanan terenkripsi.</p>
+            </div>
+          </div>
+          <div class="flex items-start gap-3">
+            <div class="w-6 h-6 rounded-full bg-heygreen text-white flex items-center justify-center flex-shrink-0 shadow-sm mt-0.5">
+              <svg class="w-3.5 h-3.5 stroke-[3]" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5"/></svg>
+            </div>
+            <div class="flex-1">
+              <div class="flex items-center justify-between">
+                <div class="font-extrabold text-heynavy flex items-center gap-1.5">2. Validasi Format &amp; OCR <span class="text-[9px] bg-emerald-100 text-emerald-800 font-extrabold px-1.5 py-0.2 rounded">SELESAI</span></div>
+                <span class="text-[10px] text-slate-400 font-mono">14:32:18</span>
+              </div>
+              <p class="text-[11px] text-slate-500 mt-0.5 leading-snug">Integritas PDF diverifikasi, seluruh 42 halaman terekstraksi tanpa kerusakan lapisan teks.</p>
+            </div>
+          </div>
+          <div class="flex items-start gap-3">
+            <div class="w-6 h-6 rounded-full bg-heygreen text-white flex items-center justify-center flex-shrink-0 shadow-sm mt-0.5">
+              <svg class="w-3.5 h-3.5 stroke-[3]" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5"/></svg>
+            </div>
+            <div class="flex-1">
+              <div class="flex items-center justify-between">
+                <div class="font-extrabold text-heynavy flex items-center gap-1.5">3. Ekstraksi Konten &amp; Diagram <span class="text-[9px] bg-emerald-100 text-emerald-800 font-extrabold px-1.5 py-0.2 rounded">SELESAI</span></div>
+                <span class="text-[10px] text-slate-400 font-mono">14:33:02</span>
+              </div>
+              <p class="text-[11px] text-slate-500 mt-0.5 leading-snug">18.420 kata &amp; 14 diagram biologi (fosfolipid bilayer, pompa ion) teridentifikasi.</p>
+            </div>
+          </div>
+          <div class="flex items-start gap-3 bg-blue-50/70 p-2 rounded-xl border border-blue-200">
+            <div class="w-6 h-6 rounded-full bg-heyblue text-white flex items-center justify-center flex-shrink-0 shadow-sm mt-0.5 animate-spin">
+              <svg class="w-3.5 h-3.5 stroke-[2.5]" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M16.023 9.348h4.992v-.001M2.985 19.644v-4.992m0 0h4.992m-4.993 0l3.181 3.183a8.25 8.25 0 0013.803-3.7M4.031 9.865a8.25 8.25 0 0113.803-3.7l3.181 3.182m0-4.991v4.99"/></svg>
+            </div>
+            <div class="flex-1">
+              <div class="flex items-center justify-between">
+                <div class="font-extrabold text-heyblue flex items-center gap-1.5">4. Indexing &amp; Pemetaan Konsep <span class="text-[9px] bg-heyblue text-white font-extrabold px-1.5 py-0.2 rounded animate-pulse">BERJALAN</span></div>
+                <span class="text-[10px] text-heyblue font-mono font-bold">14:34:10</span>
+              </div>
+              <p class="text-[11px] text-slate-600 mt-0.5 leading-snug">Menghubungkan istilah kunci (osmosis, gradien konsentrasi), glosarium, ke dalam memori vektor Mika...</p>
+              <div class="w-full bg-white h-1.5 rounded-full mt-2 overflow-hidden border border-blue-200">
+                <div class="h-full bg-heyorange rounded-full w-3/4 progress-animated"></div>
+              </div>
+            </div>
+          </div>
+          <div class="flex items-start gap-3 opacity-60">
+            <div class="w-6 h-6 rounded-full bg-slate-200 text-slate-500 flex items-center justify-center flex-shrink-0 shadow-sm mt-0.5">
+              <svg class="w-3.5 h-3.5 stroke-[2]" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M12 6v6h4.5m4.5 0a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+            </div>
+            <div class="flex-1">
+              <div class="flex items-center justify-between">
+                <div class="font-extrabold text-slate-700 flex items-center gap-1.5">5. Penyusunan Ringkasan &amp; Flashcard <span class="text-[9px] bg-slate-100 text-slate-500 font-extrabold px-1.5 py-0.2 rounded">MENUNGGU</span></div>
+                <span class="text-[10px] text-slate-400 font-mono">--:--</span>
+              </div>
+              <p class="text-[11px] text-slate-400 mt-0.5 leading-snug">Ringkasan eksekutif, 15 flashcard pintar, dan 5 kuis adaptif pilihan ganda.</p>
+            </div>
+          </div>
+        `;
+      });
+
+      // STATE 2: SUCCESS / COMPLETED
+      btnSuccess.addEventListener('click', () => {
+        resetActiveSimButtons();
+        btnSuccess.className = 'py-2 px-1 text-[11px] font-black rounded-lg border-2 border-heynavy bg-emerald-600 text-white shadow-comic-sm transition active:scale-95 text-center';
+
+        jobStatusPill.className = 'inline-flex items-center gap-1.5 bg-emerald-100 text-emerald-800 text-xs font-black px-2.5 py-1 rounded-full border border-emerald-300';
+        jobStatusPill.innerHTML = `<span>✅ 100% Siap Dipelajari!</span>`;
+
+        overallProgressBar.style.width = '100%';
+        overallProgressBar.className = 'h-full bg-emerald-500 rounded-full transition-all duration-500';
+
+        mikaSpeechText.innerHTML = `
+          <span class="font-extrabold text-emerald-700">“Horeee! Bahan belajarmu sudah siap!”</span> ✨ 
+          Mika sudah buatkan rangkuman super rapi, 15 kartu flashcard, &amp; 5 kuis latihan. Yuk langsung mulai belajar! 🚀
+        `;
+
+        timelineContainer.innerHTML = `
+          <div class="p-3 bg-emerald-50 border-2 border-emerald-300 rounded-xl space-y-2 text-center">
+            <span class="text-3xl">🎉</span>
+            <div class="font-extrabold text-sm text-emerald-900">Semua 5 Tahap Selesai dengan Sempurna!</div>
+            <p class="text-[11px] text-emerald-700">Waktu total generasi: 2 menit 14 detik. Bahan siap diakses kapan saja.</p>
+            <a href="#open-materi" class="mt-2 block w-full py-3 bg-heyblue hover:bg-heyblue-600 border-2 border-heynavy text-white font-extrabold text-xs rounded-xl shadow-comic transition active:scale-95">
+              Buka Catatan &amp; Latihan Soal 🚀
+            </a>
+          </div>
+        `;
+      });
+
+      // STATE 3: FAILED (SAFE QUOTA)
+      btnFailed.addEventListener('click', () => {
+        resetActiveSimButtons();
+        btnFailed.className = 'py-2 px-1 text-[11px] font-black rounded-lg border-2 border-heynavy bg-rose-600 text-white shadow-comic-sm transition active:scale-95 text-center';
+
+        jobStatusPill.className = 'inline-flex items-center gap-1.5 bg-rose-100 text-rose-800 text-xs font-black px-2.5 py-1 rounded-full border border-rose-300';
+        jobStatusPill.innerHTML = `<span>⚠️ Gagal Diproses (Kuota Aman)</span>`;
+
+        overallProgressBar.style.width = '48%';
+        overallProgressBar.className = 'h-full bg-rose-500 rounded-full transition-all duration-500';
+
+        mikaSpeechText.innerHTML = `
+          <span class="font-extrabold text-rose-700">“Aduh, maaf ya!”</span> File PDF kamu terproteksi password atau rusak di halaman 14. 
+          <span class="font-bold underline">Kuota belajarmu tidak berkurang sama sekali</span> kok! Coba re-upload ya. 🙏
+        `;
+
+        timelineContainer.innerHTML = `
+          <div class="p-3 bg-rose-50 border-2 border-rose-300 rounded-xl space-y-2.5">
+            <div class="flex items-center gap-2 text-rose-800 font-extrabold text-xs">
+              <svg class="w-5 h-5 text-rose-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z"/></svg>
+              Gagal pada Tahap Validasi OCR
+            </div>
+            <p class="text-[11px] text-rose-700">
+              Dokumen mengandung proteksi enkripsi DRM. Mika tidak diizinkan membaca halaman terproteksi.
+            </p>
+            <div class="flex gap-2 pt-1">
+              <button class="flex-1 py-2.5 bg-heynavy text-white font-extrabold text-xs rounded-xl shadow-comic-sm active:scale-95 transition">
+                Coba Unggah Ulang
+              </button>
+              <button class="px-3 py-2.5 bg-white border border-rose-300 text-rose-700 font-bold text-xs rounded-xl active:scale-95 transition">
+                Bantuan
+              </button>
+            </div>
+          </div>
+        `;
+      });
+
+      // Simple click handler for cancel button demo
+      const cancelBtn = document.getElementById('btn-cancel-job');
+      cancelBtn.addEventListener('click', () => {
+        if (confirm('Batalkan antrean pemrosesan dokumen ini? Kuota akan tetap utuh.')) {
+          alert('Antrean berhasil dibatalkan. Mengarahkan kembali ke Workspace...');
+        }
+      });
+    });
+  </script>
+<!-- END: InteractiveScripts -->
+</body></html>

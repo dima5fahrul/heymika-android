@@ -1,0 +1,386 @@
+<!DOCTYPE html><html class="light" lang="en"><head><meta charset="utf-8"><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" name="viewport"><meta content="mobile_stack" name="shell-type"><link href="https://fonts.googleapis.com" rel="preconnect"><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"><link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,400..900;1,6..12,400..900&amp;display=swap" rel="stylesheet"><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"><style>@layer base{html,body{width:100vw;margin:0;padding:0;}body{overscroll-behavior:none;}.pb-safe{padding-bottom:env(safe-area-inset-bottom,0px);}.pt-safe{padding-top:env(safe-area-inset-top,0px);}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { "colors": { "surface-bright": "#f9f9ff", "on-surface": "#001b3c", "on-tertiary-container": "#fcfcff", "badge-cyan": "#C5EFFF", "secondary-container": "#ff8a00", "on-secondary-fixed-variant": "#6f3900", "canvas-bg": "#F8FCFF", "on-secondary": "#ffffff", "primary-container": "#0072e3", "surface-container-highest": "#d6e3ff", "surface-dim": "#c8dbff", "ribbon-red": "#EF3E36", "border-muted": "#D8DDF4", "tertiary-fixed": "#c5e7ff", "on-primary": "#ffffff", "outline-variant": "#c1c6d6", "inverse-on-surface": "#ecf1ff", "tertiary": "#006388", "error": "#ba1a1a", "on-secondary-fixed": "#2f1500", "surface": "#FFFFFF", "inverse-primary": "aac7ff", "on-error": "#ffffff", "background": "#f9f9ff", "tertiary-container": "#007dab", "text-muted": "#5868A4", "primary": "#005ab5", "on-background": "#001b3c", "surface-container-lowest": "#ffffff", "error-container": "#ffdad6", "on-primary-fixed": "#001b3e", "on-tertiary": "#ffffff", "surface-container-low": "#f0f3ff", "secondary": "#914c00", "primary-fixed-dim": "#aac7ff", "on-error-container": "#93000a", "on-primary-container": "#fefcff", "outline": "#717785", "on-surface-variant": "#414754", "secondary-fixed": "#ffdcc4", "on-secondary-container": "#613100", "brand-sky": "#16B5F5", "inverse-surface": "#113059", "tertiary-fixed-dim": "#7fd0ff", "danger-bg": "#FFF0F2", "on-primary-fixed-variant": "#00458e", "brand-yellow": "#FFD34E", "surface-variant": "#d6e3ff", "danger": "#BC2535", "surface-container": "#e7eeff", "secondary-fixed-dim": "#ffb77f", "surface-tint": "#005cba", "success": "#167549", "on-tertiary-fixed-variant": "#004c6a", "surface-container-high": "#dee8ff", "primary-fixed": "#d7e3ff", "on-tertiary-fixed": "#001e2d" }, "borderRadius": { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" }, "spacing": { "space-lg": "1.5rem", "space-md": "1rem", "space-xs": "0.25rem", "space-sm": "0.5rem", "margin": "1.5rem", "gutter": "1.5rem", "space-xl": "2rem" }, "fontFamily": { "body-md": ["Nunito Sans"], "headline-md": ["Nunito Sans"], "caption": ["Nunito Sans"], "display-hero-mobile": ["Nunito Sans"], "body-lg": ["Nunito Sans"], "body-sm": ["Nunito Sans"], "headline-sm": ["Nunito Sans"], "display-hero": ["Nunito Sans"], "headline-lg-mobile": ["Nunito Sans"], "headline-lg": ["Nunito Sans"], "label-sm": ["Nunito Sans"], "label-lg": ["Nunito Sans"], "label-md": ["Nunito Sans"] }, "fontSize": { "body-md": ["16px", { "lineHeight": "24px", "fontWeight": "400" }], "headline-md": ["24px", { "lineHeight": "32px", "fontWeight": "800" }], "caption": ["12px", { "lineHeight": "16px", "fontWeight": "500" }], "display-hero-mobile": ["32px", { "lineHeight": "40px", "letterSpacing": "-0.01em", "fontWeight": "900" }], "body-lg": ["18px", { "lineHeight": "28px", "fontWeight": "400" }], "body-sm": ["14px", { "lineHeight": "20px", "fontWeight": "400" }], "headline-sm": ["20px", { "lineHeight": "28px", "fontWeight": "700" }], "display-hero": ["48px", { "lineHeight": "56px", "letterSpacing": "-0.02em", "fontWeight": "900" }], "headline-lg-mobile": ["26px", { "lineHeight": "34px", "letterSpacing": "-0.01em", "fontWeight": "800" }], "headline-lg": ["36px", { "lineHeight": "44px", "letterSpacing": "-0.015em", "fontWeight": "800" }], "label-sm": ["12px", { "lineHeight": "16px", "letterSpacing": "0.05em", "fontWeight": "700" }], "label-lg": ["16px", { "lineHeight": "22px", "fontWeight": "700" }], "label-md": ["14px", { "lineHeight": "18px", "letterSpacing": "0.02em", "fontWeight": "700" }] } } } };</script></head><body class="bg-surface font-body-md text-body-md text-on-surface flex flex-col min-h-screen"><header class="fixed top-0 inset-x-0 z-50 bg-surface/85 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.04)] pt-safe"><div class="h-16 px-space-md flex items-center justify-between gap-space-sm"><div class="flex items-center gap-space-xs"><a class="w-11 h-11 flex items-center justify-center rounded-xl text-on-surface hover:text-primary transition-colors active:scale-95" href="/app/quizzes"><span class="material-symbols-outlined text-[24px]">arrow_back</span></a><div class="flex items-center gap-space-xs"><img alt="HeyMika Kitten Logo with Manga Accents.png" class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/AEtjO1XjkJzza4bh8-PD-iTCEmSiHpgBUv0XJmC061RJPMWTt4w00Ai5fxMsrIRCYd1WLkyzPsYIs-u6UjNJPZP2VhwlkVu7pB2XM18aZcVfPmyc77Us3weH3dJceN6SZY7xfq8ea7BS5G3sMue7rVme6Pww3SI8xU40ZwwF4Z9OLJS-f7lTsKQA98XPyTSJ9mTDIVUdFTBeliq0pCPLSOqm_ze0h6Q5y_gGR5667iAj8YbjpLbR7x-jcOndeyFeEIRweQzn12fuzmQJqIk"><h1 class="font-headline-sm text-headline-sm text-on-surface tracking-tight truncate max-w-[170px]">Hasil Kuis &amp; Evaluasi</h1></div></div><div class="flex items-center gap-space-xs"><button class="w-11 h-11 flex items-center justify-center rounded-xl text-on-surface hover:text-primary transition-colors active:scale-95"><span class="material-symbols-outlined text-[22px]">share</span></button><div class="relative flex items-center justify-center"><img alt="Profile" class="w-8 h-8 rounded-full object-cover" src="https://lh3.googleusercontent.com/aida/AEtjO1VPvQVnyPJLB80v6HVS532yNRqj0NFh3C_F3OS8ad37-vntzZgwVL8Q2ndCLbbbsWvxyW_Ry8r-Rbqkx7xZgyUZkhvuba92RnhILL-v1O_f6olX7FfzWJLq9uO8npMXWhuFUUfpNgteSSuaLFHBXituVXc58tb6PA9UzzMppPyI9SViDONQ_FC4f_p1NC2dyz2CgswgobmrJV07ksPGL5iijMumSn6Ploo_0FStV3bRfFFUpREJmyUBWv3n4EfzVq6ogw52UMAl"></div></div></div></header><main class="flex flex-col relative w-full pt-16 bg-surface flex-grow pb-safe"><div class="flex flex-col w-full pb-28">
+<!-- TOP META BANNER -->
+<section class="px-space-md pt-space-md flex flex-col gap-space-sm">
+<div class="flex items-center gap-space-xs text-text-muted font-label-sm text-label-sm uppercase tracking-wider flex-wrap">
+<span class="bg-badge-cyan text-on-surface px-space-xs py-0.5 rounded-full font-label-sm text-label-sm">Kuis SDA</span>
+<span>•</span>
+<span class="truncate max-w-[200px]">Attempt #3 Evaluasi</span>
+</div>
+<div class="flex items-center justify-between gap-space-xs flex-wrap">
+<div class="flex items-center gap-space-xs bg-success text-on-primary px-space-sm py-1 rounded-full shadow-sm">
+<span class="material-symbols-outlined text-[16px]">verified</span>
+<span class="font-label-sm text-label-sm">Selesai Dinilai • Passing Grade: 70</span>
+</div>
+<div class="flex items-center gap-1 bg-surface-container-high text-on-surface px-space-xs py-1 rounded-full text-caption font-caption">
+<span class="material-symbols-outlined text-[14px]">calendar_today</span>
+<span>12 Mei 2025, 14:32</span>
+</div>
+</div>
+<!-- Chips Row -->
+<div class="flex items-center gap-space-xs overflow-x-auto no-scrollbar py-1 text-caption font-caption text-on-surface-variant">
+<span class="inline-flex items-center gap-1 bg-surface-container px-space-sm py-1 rounded-full shrink-0">
+<span class="material-symbols-outlined text-[14px] text-primary">timer</span> 14m 20s (Limit 20m)
+      </span>
+<span class="inline-flex items-center gap-1 bg-surface-container px-space-sm py-1 rounded-full shrink-0">
+<span class="material-symbols-outlined text-[14px] text-secondary">assignment_turned_in</span> Ujian Terjadwal
+      </span>
+<span class="inline-flex items-center gap-1 bg-surface-container px-space-sm py-1 rounded-full shrink-0">
+<span class="material-symbols-outlined text-[14px] text-secondary-container">bolt</span> 2 Bantuan Hint
+      </span>
+</div>
+</section>
+<!-- SCORE & HERO CARD -->
+<section class="px-space-md pt-space-sm">
+<div class="bg-surface rounded-2xl p-space-md shadow-md flex flex-col gap-space-md relative overflow-hidden">
+<!-- Halftone pattern deco SVG -->
+<svg class="absolute -right-6 -top-6 w-32 h-32 opacity-10 pointer-events-none" fill="currentColor" viewBox="0 0 100 100">
+<pattern height="12" id="dot-pattern" patternUnits="userSpaceOnUse" width="12" x="0" y="0">
+<circle cx="3" cy="3" fill="#0072e3" r="2.2"></circle>
+</pattern>
+<rect fill="url(#dot-pattern)" height="100" width="100"></rect>
+</svg>
+<!-- Score Header -->
+<div class="flex items-center justify-between gap-space-md relative z-10">
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm text-text-muted uppercase tracking-wider">Hasil Ujian Kamu</span>
+<div class="flex items-baseline gap-space-xs">
+<span class="font-display-hero-mobile text-display-hero-mobile text-primary leading-none">75</span>
+<span class="font-headline-sm text-headline-sm text-text-muted">/ 100</span>
+</div>
+<div class="inline-flex items-center gap-1 mt-1 bg-brand-yellow/30 text-on-surface px-space-sm py-0.5 rounded-full w-fit">
+<span class="material-symbols-outlined text-[16px] text-secondary-container">star</span>
+<span class="font-label-sm text-label-sm">Bagus! Terus Semangat!</span>
+</div>
+</div>
+<!-- Donut Chart -->
+<div class="relative w-24 h-24 shrink-0 flex items-center justify-center">
+<svg class="w-full h-full -rotate-90" viewBox="0 0 36 36">
+<circle class="stroke-surface-container" cx="18" cy="18" fill="none" r="14" stroke-width="3.5"></circle>
+<circle class="stroke-primary" cx="18" cy="18" fill="none" r="14" stroke-dasharray="87.96" stroke-dashoffset="26.38" stroke-linecap="round" stroke-width="3.5"></circle>
+<circle class="stroke-secondary-container" cx="18" cy="18" fill="none" r="14" stroke-dasharray="87.96" stroke-dashoffset="70.36" stroke-linecap="round" stroke-width="3.5"></circle>
+</svg>
+<div class="absolute inset-0 flex flex-col items-center justify-center text-center">
+<span class="font-label-lg text-label-lg text-on-surface leading-none">70%</span>
+<span class="font-caption text-[10px] text-text-muted leading-tight mt-0.5">Mandiri</span>
+</div>
+</div>
+</div>
+<!-- Stats Grid -->
+<div class="grid grid-cols-3 gap-space-xs pt-space-xs border-t border-border-muted/60">
+<div class="bg-surface-container-low rounded-xl p-space-xs text-center flex flex-col items-center">
+<span class="font-label-md text-label-md text-success flex items-center gap-1">
+<span class="material-symbols-outlined text-[16px]">check_circle</span> 7 Benar
+          </span>
+<span class="font-caption text-caption text-text-muted">70% akurasi</span>
+</div>
+<div class="bg-danger-bg rounded-xl p-space-xs text-center flex flex-col items-center">
+<span class="font-label-md text-label-md text-danger flex items-center gap-1">
+<span class="material-symbols-outlined text-[16px]">cancel</span> 2 Salah
+          </span>
+<span class="font-caption text-caption text-text-muted">20% review</span>
+</div>
+<div class="bg-surface-container rounded-xl p-space-xs text-center flex flex-col items-center">
+<span class="font-label-md text-label-md text-outline flex items-center gap-1">
+<span class="material-symbols-outlined text-[16px]">hourglass_empty</span> 1 Kosong
+          </span>
+<span class="font-caption text-caption text-text-muted">Waktu habis</span>
+</div>
+</div>
+<!-- Mika Mascot Encouragement Speech Card -->
+<div class="bg-surface-container-low rounded-2xl p-space-sm flex gap-space-sm items-start relative mt-space-xs">
+<div class="w-14 h-14 shrink-0 rounded-full bg-badge-cyan overflow-hidden p-1 flex items-center justify-center">
+<img alt="Mika Learning Kitten" class="w-full h-full object-contain" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBpPPH0fGsfAV5Jc6JZTWDzdFlmbPi7wKI42YHq91k1U74DK-wiA3i2bFTZ4WgSdAU1PKtNlOogA6J94DaOXQqypiuZgccEzuNjSgr_G62acp3IRHnwvsT8MaJaPbTY_2R92VOjoYgWgql3K1mE2KAgeW5JmoLZ04bNi_G2oohxGbXtTzF-4nmEkLkbXg_PkKVG-V5_GS1lWNSiKI1b2FeGqRfNVm0Iu5f1GyJrKjcFsfO_xEVe8KdDHNPu7hKyytytcmI">
+</div>
+<div class="flex-1 flex flex-col gap-1">
+<div class="flex items-center gap-1">
+<span class="font-label-md text-label-md text-on-surface">Mika Tutor AI</span>
+<span class="text-caption font-caption text-primary bg-surface px-1.5 py-0.5 rounded-full">🐾 Paw-sitive!</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant leading-snug">
+            “Keren banget! Kamu menaklukkan 7 dari 10 soal! Bagian tree traversal kamu solid, mari kita poles lagi konsep Bellman-Ford ya! 🐾✨”
+          </p>
+<div class="mt-1 bg-surface rounded-lg p-space-xs flex items-center justify-between text-caption font-caption text-secondary">
+<span class="flex items-center gap-1 font-label-sm">
+<span class="material-symbols-outlined text-[16px] text-secondary-container">military_tech</span> +120 XP (Lv. 14!)
+            </span>
+<span class="flex items-center gap-1 font-label-sm text-ribbon-red">
+<span class="material-symbols-outlined text-[16px]">local_fire_department</span> 7 Hari Streak!
+            </span>
+</div>
+</div>
+</div>
+<!-- Action Buttons -->
+<div class="flex flex-col gap-space-xs mt-space-xs">
+<button class="w-full h-12 bg-secondary-container text-on-secondary rounded-xl font-label-lg text-label-lg flex items-center justify-center gap-space-xs shadow-md active:translate-y-0.5 transition-all">
+<span class="material-symbols-outlined text-[20px]">bolt</span> Latih Khusus Topik yang Salah (3 Soal)
+        </button>
+<button class="w-full h-11 bg-surface-container-high text-primary rounded-xl font-label-md text-label-md flex items-center justify-center gap-space-xs active:scale-[0.99] transition-all">
+<span class="material-symbols-outlined text-[18px]">chat</span> Bahas dengan Mika AI
+        </button>
+</div>
+<!-- Tertiary quick links -->
+<div class="flex items-center justify-around text-caption font-caption text-text-muted pt-space-xs border-t border-border-muted/50">
+<button class="hover:text-primary transition-colors flex items-center gap-0.5">
+<span class="material-symbols-outlined text-[14px]">bookmark_add</span> Flashcard
+        </button>
+<span>•</span>
+<button class="hover:text-primary transition-colors flex items-center gap-0.5">
+<span class="material-symbols-outlined text-[14px]">replay</span> Ulangi Kuis
+        </button>
+<span>•</span>
+<button class="hover:text-primary transition-colors flex items-center gap-0.5">
+<span class="material-symbols-outlined text-[14px]">compare_arrows</span> Riwayat #1 &amp; #2
+        </button>
+</div>
+</div>
+</section>
+<!-- DISTRIBUSI PENGUASAAN SUBTOPIK -->
+<section class="px-space-md pt-space-lg flex flex-col gap-space-sm">
+<div class="flex items-center justify-between">
+<div>
+<h2 class="font-headline-sm text-headline-sm text-on-surface">Peta Penguasaan Subtopik</h2>
+<p class="font-caption text-caption text-text-muted">5 Subtopik Diuji pada Attempt Ini</p>
+</div>
+<span class="bg-badge-cyan text-on-surface font-label-sm text-label-sm px-2 py-0.5 rounded-full">Overview</span>
+</div>
+<div class="flex flex-col gap-space-xs">
+<!-- Topic 1 -->
+<div class="bg-surface rounded-xl p-space-sm flex flex-col gap-1.5 shadow-sm">
+<div class="flex items-center justify-between text-body-sm font-body-sm">
+<span class="font-label-md text-on-surface truncate">1. Binary Search Tree (BST) &amp; AVL</span>
+<span class="font-label-sm text-success shrink-0">100% (3/3) 🟢</span>
+</div>
+<div class="w-full bg-surface-container h-2 rounded-full overflow-hidden">
+<div class="bg-success h-full rounded-full" style="width: 100%;"></div>
+</div>
+<span class="font-caption text-[11px] text-text-muted">Mastered • Kecepatan pemahaman sangat tinggi</span>
+</div>
+<!-- Topic 2 -->
+<div class="bg-surface rounded-xl p-space-sm flex flex-col gap-1.5 shadow-sm">
+<div class="flex items-center justify-between text-body-sm font-body-sm">
+<span class="font-label-md text-on-surface truncate">2. Graph Traversal (BFS &amp; DFS)</span>
+<span class="font-label-sm text-success shrink-0">100% (2/2) 🟢</span>
+</div>
+<div class="w-full bg-surface-container h-2 rounded-full overflow-hidden">
+<div class="bg-success h-full rounded-full" style="width: 100%;"></div>
+</div>
+<span class="font-caption text-[11px] text-text-muted">Sangat Baik • Logika antrian &amp; rekursi solid</span>
+</div>
+<!-- Topic 3 -->
+<div class="bg-surface rounded-xl p-space-sm flex flex-col gap-1.5 shadow-sm">
+<div class="flex items-center justify-between text-body-sm font-body-sm">
+<span class="font-label-md text-on-surface truncate">3. Shortest Path (Dijkstra)</span>
+<span class="font-label-sm text-secondary-container shrink-0">50% (1/2) 🟡</span>
+</div>
+<div class="w-full bg-surface-container h-2 rounded-full overflow-hidden">
+<div class="bg-secondary-container h-full rounded-full" style="width: 50%;"></div>
+</div>
+<span class="font-caption text-[11px] text-text-muted">Butuh Latihan • 1 soal salah pada kasus bobot negatif</span>
+</div>
+<!-- Topic 4 -->
+<div class="bg-surface rounded-xl p-space-sm flex flex-col gap-1.5 shadow-sm">
+<div class="flex items-center justify-between text-body-sm font-body-sm">
+<span class="font-label-md text-on-surface truncate">4. Dynamic Programming on Trees</span>
+<span class="font-label-sm text-outline shrink-0">0% (0/1) ⚪</span>
+</div>
+<div class="w-full bg-surface-container h-2 rounded-full overflow-hidden">
+<div class="bg-outline h-full rounded-full" style="width: 10%;"></div>
+</div>
+<span class="font-caption text-[11px] text-text-muted">Belum Dicoba • Dilewati karena batasan waktu</span>
+</div>
+<!-- Topic 5 -->
+<div class="bg-surface rounded-xl p-space-sm flex flex-col gap-1.5 shadow-sm">
+<div class="flex items-center justify-between text-body-sm font-body-sm">
+<span class="font-label-md text-on-surface truncate">5. Graph Cycle Detection</span>
+<span class="font-label-sm text-danger shrink-0">50% (1/2) 🔴</span>
+</div>
+<div class="w-full bg-surface-container h-2 rounded-full overflow-hidden">
+<div class="bg-danger h-full rounded-full" style="width: 50%;"></div>
+</div>
+<span class="font-caption text-[11px] text-text-muted">Review Diperlukan • Deteksi back-edge DFS perlu diperjelas</span>
+</div>
+</div>
+<!-- AI Recommendation Box -->
+<div class="bg-surface-container-high rounded-xl p-space-sm flex flex-col gap-space-xs mt-1">
+<div class="flex items-start gap-space-xs">
+<span class="material-symbols-outlined text-[20px] text-primary shrink-0 mt-0.5">auto_awesome</span>
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm text-on-surface">Rekomendasi Personal Mika:</span>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+            Buka kembali slide “Dijkstra vs Bellman-Ford &amp; Siklus Negatif” di Workspace Bab 4.
+          </p>
+</div>
+</div>
+<button class="self-end inline-flex items-center gap-1 font-label-sm text-label-sm text-primary hover:underline">
+        Buka Modul Terkait <span class="material-symbols-outlined text-[16px]">arrow_forward</span>
+</button>
+</div>
+</section>
+<!-- BEDAH JAWABAN & SITASI AKADEMIK -->
+<section class="px-space-md pt-space-lg flex flex-col gap-space-sm">
+<div class="flex items-center justify-between">
+<h2 class="font-headline-sm text-headline-sm text-on-surface">Bedah Jawaban &amp; Sitasi</h2>
+<span class="font-caption text-caption text-text-muted">10 Soal</span>
+</div>
+<!-- Filter Pills Horizontal Scroll -->
+<div class="flex items-center gap-space-xs overflow-x-auto no-scrollbar py-1">
+<button class="bg-primary text-on-primary font-label-sm text-label-sm px-3 py-1.5 rounded-full shrink-0">Semua (10)</button>
+<button class="bg-danger-bg text-danger font-label-sm text-label-sm px-3 py-1.5 rounded-full shrink-0">Salah (2)</button>
+<button class="bg-surface-container text-on-surface font-label-sm text-label-sm px-3 py-1.5 rounded-full shrink-0">Tidak Dijawab (1)</button>
+<button class="bg-surface-container text-on-surface font-label-sm text-label-sm px-3 py-1.5 rounded-full shrink-0">Benar (7)</button>
+<button class="bg-surface-container text-on-surface font-label-sm text-label-sm px-3 py-1.5 rounded-full shrink-0">Pakai Hint (2) 💡</button>
+</div>
+<div class="flex flex-col gap-space-md">
+<!-- QUESTION 1: SALAH -->
+<div class="bg-surface rounded-2xl p-space-md shadow-sm flex flex-col gap-space-sm relative overflow-hidden">
+<div class="flex items-center justify-between gap-space-xs flex-wrap">
+<div class="flex items-center gap-1.5">
+<span class="bg-danger text-on-primary font-label-sm text-label-sm px-2 py-0.5 rounded-full flex items-center gap-0.5">
+<span class="material-symbols-outlined text-[14px]">cancel</span> SALAH
+            </span>
+<span class="bg-surface-container font-label-sm text-label-sm text-on-surface px-2 py-0.5 rounded-full">Shortest Path</span>
+</div>
+<div class="flex items-center gap-1 text-caption font-caption text-text-muted">
+<span class="bg-badge-cyan text-on-surface px-1.5 py-0.2 rounded font-label-sm text-[10px]">💡 Pakai Hint</span>
+<span>• 0/10 Poin • 2m 14s</span>
+</div>
+</div>
+<p class="font-body-md text-body-md text-on-surface font-semibold leading-snug">
+          “Dalam graph berarah dengan bobot sisi negatif tanpa siklus negatif, algoritma manakah yang paling tepat dan menjamin solusi lintasan terpendek dari simpul asal tunggal?”
+        </p>
+<!-- Jawaban Kamu vs Kunci -->
+<div class="flex flex-col gap-space-xs mt-1">
+<!-- Wrong choice -->
+<div class="bg-danger-bg rounded-xl p-space-sm flex flex-col gap-0.5">
+<div class="flex items-center gap-1 text-danger font-label-sm text-label-sm">
+<span class="material-symbols-outlined text-[16px]">close</span> Jawaban Kamu: Opsi A (Dijkstra)
+            </div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+              Dijkstra gagal karena mengasumsikan jarak node yang telah ditandai “visited” tidak akan pernah berkurang lagi.
+            </p>
+</div>
+<!-- Correct choice -->
+<div class="bg-surface-container-low rounded-xl p-space-sm flex flex-col gap-0.5">
+<div class="flex items-center gap-1 text-success font-label-sm text-label-sm">
+<span class="material-symbols-outlined text-[16px]">check_circle</span> Kunci Jawaban: Opsi C (Bellman-Ford)
+            </div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+              Mampu menangani bobot negatif dengan melakukan relaksasi semua edge sebanyak |V|-1 iterasi berturut-turut.
+            </p>
+</div>
+</div>
+<!-- Pembahasan AI & Sitasi -->
+<div class="bg-surface-container-high rounded-xl p-space-sm flex flex-col gap-space-xs">
+<div class="flex items-center gap-1 text-primary font-label-sm text-label-sm">
+<span class="material-symbols-outlined text-[16px]">school</span> Konsep: Greedy vs Dynamic Programming
+          </div>
+<p class="font-caption text-caption text-on-surface-variant">
+            Dijkstra berprinsip Greedy (memilih lokal minimum saat itu juga), sedangkan Bellman-Ford menggunakan pendekatan Dynamic Programming yang terus mengevaluasi kemungkinan penurunan bobot.
+          </p>
+<div class="bg-surface rounded-lg p-space-xs flex items-center justify-between text-caption font-caption">
+<div class="flex items-center gap-1 text-text-muted truncate max-w-[220px]">
+<span class="material-symbols-outlined text-[14px]">menu_book</span> [CLRS_Algorithms.pdf, Hal. 651]
+            </div>
+<button class="text-primary font-label-sm flex items-center gap-0.5 hover:underline">
+              Kutipan ↗
+            </button>
+</div>
+<!-- Mika mnemonic note -->
+<div class="bg-brand-yellow/20 rounded-lg p-space-xs flex gap-space-xs items-start">
+<span class="text-secondary-container font-label-sm text-base">🐾</span>
+<p class="font-caption text-caption text-on-surface">
+<span class="font-bold">Jembatan Keledai Mika:</span> “Ingat kasir tol diskon cashback! Kalau ada voucher cashback di rest-area berikutnya, kasir Dijkstra sudah keburu cetak struk lunas di depan dan nolak revisi.”
+            </p>
+</div>
+</div>
+<!-- Card bottom actions -->
+<div class="flex items-center justify-end gap-space-sm pt-space-xs border-t border-border-muted/40">
+<button class="text-primary font-label-sm text-label-sm inline-flex items-center gap-1">
+<span class="material-symbols-outlined text-[16px]">chat</span> Tanya Mika Soal Ini
+          </button>
+<button class="text-text-muted hover:text-on-surface font-label-sm text-label-sm inline-flex items-center gap-1">
+<span class="material-symbols-outlined text-[16px]">bookmark_add</span> Simpan ke Bank Khilaf
+          </button>
+</div>
+</div>
+<!-- QUESTION 2: TIDAK DIJAWAB -->
+<div class="bg-surface rounded-2xl p-space-md shadow-sm flex flex-col gap-space-sm relative overflow-hidden">
+<div class="flex items-center justify-between gap-space-xs flex-wrap">
+<div class="flex items-center gap-1.5">
+<span class="bg-outline text-on-primary font-label-sm text-label-sm px-2 py-0.5 rounded-full flex items-center gap-0.5">
+<span class="material-symbols-outlined text-[14px]">hourglass_empty</span> TIDAK DIJAWAB
+            </span>
+<span class="bg-surface-container font-label-sm text-label-sm text-on-surface px-2 py-0.5 rounded-full">DP on Trees</span>
+</div>
+<span class="text-caption font-caption text-text-muted">0/10 Poin • 0m 00s (Waktu Habis)</span>
+</div>
+<p class="font-body-md text-body-md text-on-surface font-semibold leading-snug">
+          “Berapa kompleksitas waktu optimasi perhitungan diameter pohon (jarak terpanjang antara dua simpul manapun) menggunakan metode Dynamic Programming dengan satu kali DFS traversal?”
+        </p>
+<div class="bg-surface-container-low rounded-xl p-space-sm flex flex-col gap-0.5">
+<div class="flex items-center gap-1 text-success font-label-sm text-label-sm">
+<span class="material-symbols-outlined text-[16px]">check_circle</span> Kunci Jawaban: Opsi B — O(V + E) atau O(N)
+          </div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+            Dengan menyimpan nilai kedalaman maksimum dari setiap subtree saat backtrack, diameter dihitung dalam O(N) tanpa menghitung all-pairs shortest path.
+          </p>
+</div>
+<div class="bg-surface rounded-lg p-space-xs flex items-center justify-between text-caption font-caption border border-border-muted/60">
+<div class="flex items-center gap-1 text-text-muted truncate max-w-[220px]">
+<span class="material-symbols-outlined text-[14px]">book</span> [Modul_Tree_Algoritma_Mika.pdf, Bab 6]
+          </div>
+<button class="text-primary font-label-sm flex items-center gap-0.5 hover:underline">
+            Buka Modul →
+          </button>
+</div>
+<div class="flex items-center justify-end gap-space-sm pt-space-xs">
+<button class="text-primary font-label-sm text-label-sm inline-flex items-center gap-1">
+<span class="material-symbols-outlined text-[16px]">school</span> Pelajari Konsep Ini Bersama Mika
+          </button>
+</div>
+</div>
+<!-- QUESTION 3: BENAR -->
+<div class="bg-surface rounded-2xl p-space-md shadow-sm flex flex-col gap-space-sm relative overflow-hidden">
+<div class="flex items-center justify-between gap-space-xs flex-wrap">
+<div class="flex items-center gap-1.5">
+<span class="bg-success text-on-primary font-label-sm text-label-sm px-2 py-0.5 rounded-full flex items-center gap-0.5">
+<span class="material-symbols-outlined text-[14px]">check</span> BENAR
+            </span>
+<span class="bg-surface-container font-label-sm text-label-sm text-on-surface px-2 py-0.5 rounded-full">Binary Search Tree</span>
+</div>
+<span class="text-caption font-caption text-success font-label-sm">10/10 Poin • 42s ⚡ Cepat</span>
+</div>
+<p class="font-body-md text-body-md text-on-surface font-semibold leading-snug">
+          “Operasi inorder traversal (Left-Root-Right) pada Binary Search Tree yang valid secara matematis akan selalu menghasilkan urutan data...”
+        </p>
+<div class="bg-surface-container-low rounded-xl p-space-sm flex flex-col gap-0.5">
+<div class="flex items-center gap-1 text-success font-label-sm text-label-sm">
+<span class="material-symbols-outlined text-[16px]">thumb_up</span> Jawaban Kamu: Opsi A (Tepat Sekali!)
+          </div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+            Terurut secara ascending (menaik dari nilai terkecil ke nilai terbesar).
+          </p>
+</div>
+<div class="bg-surface-container-high rounded-xl p-space-xs flex items-center justify-between text-caption font-caption">
+<div class="flex items-center gap-1 text-text-muted truncate max-w-[240px]">
+<span class="material-symbols-outlined text-[14px]">verified</span> [Slide_Kuliah_BST_Pertemuan_5.pdf, Slide 14]
+          </div>
+<span class="text-secondary-container font-label-sm text-[11px]">⭐️ Penguasaan Sempurna</span>
+</div>
+</div>
+</div>
+</section>
+<!-- STICKY BOTTOM FLOATING REMEDIAL BAR -->
+<div class="fixed bottom-0 inset-x-0 bg-surface/95 backdrop-blur-md border-t border-border-muted p-space-md pb-safe flex flex-col gap-2 z-40 shadow-lg">
+<div class="flex items-center justify-between text-caption font-caption">
+<span class="font-label-sm text-on-surface flex items-center gap-1">
+<span class="material-symbols-outlined text-[16px] text-secondary-container">trending_up</span> Target 90+ di Attempt Berikutnya?
+      </span>
+<span class="text-text-muted">Fokus Graf &amp; DP (3 Soal)</span>
+</div>
+<button class="w-full h-12 bg-primary text-on-primary rounded-xl font-label-lg text-label-lg flex items-center justify-center gap-space-xs shadow-md active:translate-y-0.5 transition-all">
+<span class="material-symbols-outlined text-[20px]">rocket_launch</span> Mulai Latihan Remedial Kilat 🚀
+    </button>
+</div>
+</div></main></body></html>

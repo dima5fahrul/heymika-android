@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+    Debug-only additions. The design gallery is a second launcher entry ("HeyMika DS") and never
+    ships: this manifest and app/src/debug are not part of the release variant.
+-->
+<manifest xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <application>
+        <activity
+            android:name=".debug.gallery.DesignGalleryActivity"
+            android:exported="true"
+            android:label="@string/gallery_app_name"
+            android:launchMode="singleTop"
+            android:taskAffinity="com.ai.heymika.designgallery"
+            android:theme="@style/Theme.HeyMika">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+    </application>
+
+</manifest>

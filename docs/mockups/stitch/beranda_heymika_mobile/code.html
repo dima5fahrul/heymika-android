@@ -1,0 +1,537 @@
+<!DOCTYPE html><html lang="id"><head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" name="viewport">
+<title>HeyMika - Belajar Jadi Menyenangkan</title>
+<!-- Google Fonts: Nunito Sans -->
+<link href="https://fonts.googleapis.com" rel="preconnect">
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect">
+<link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,300..900;1,6..12,300..900&amp;display=swap" rel="stylesheet">
+<!-- Tailwind CSS CDN with forms & container queries -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<!-- Tailwind Configuration -->
+<script data-purpose="tailwind-config">
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['"Nunito Sans"', 'sans-serif'],
+          },
+          colors: {
+            brand: {
+              navy: '#082A52',
+              blue: '#0075E8',
+              sky: '#16B5F5',
+              orange: '#FF8A00',
+              yellow: '#FFD34E',
+              red: '#EF3E36',
+              cyanBadge: '#C5EFFF',
+              bgLight: '#F8FCFF',
+              cardBorder: '#D8DDF4',
+            }
+          },
+          boxShadow: {
+            'comic': '0 4px 0 0 #D8DDF4',
+            'comic-active': '0 2px 0 0 #0075E8',
+            'comic-orange': '0 4px 0 0 #E07000',
+            'comic-blue': '0 4px 0 0 #0056B3',
+          }
+        }
+      }
+    }
+  </script>
+<!-- Custom Styles for Mobile Device Preview & Micro-interactions -->
+<style data-purpose="custom-mobile-layout">
+    body {
+      background-color: #EDF3F9;
+      display: flex;
+      justify-content: center;
+      align-items: flex-start;
+      min-height: 100vh;
+      margin: 0;
+      padding: 0;
+      font-family: 'Nunito Sans', sans-serif;
+      -webkit-tap-highlight-color: transparent;
+    }
+
+    /* Target iPhone standard viewport container */
+    .mobile-frame {
+      width: 100%;
+      max-width: 390px;
+      min-height: 100vh;
+      background-color: #F8FCFF;
+      position: relative;
+      overflow-x: hidden;
+      box-shadow: 0 15px 40px -10px rgba(8, 42, 82, 0.15);
+    }
+
+    /* Hide scrollbars for slick horizontal scroll */
+    .no-scrollbar::-webkit-scrollbar {
+      display: none;
+    }
+    .no-scrollbar {
+      -ms-overflow-style: none;
+      scrollbar-width: none;
+    }
+  </style>
+</head>
+<body class="text-brand-navy antialiased selection:bg-brand-sky selection:text-white">
+<!-- Mobile Viewport Container (390px target width) -->
+<div class="mobile-frame flex flex-col min-h-screen pb-28">
+<!-- BEGIN: MobileStatusBar -->
+<header class="sticky top-0 z-50 bg-[#F8FCFF]/95 backdrop-blur-md px-6 pt-3 pb-2 flex justify-between items-center text-xs font-bold text-brand-navy select-none" data-purpose="ios-status-bar">
+<!-- iOS Clock -->
+<span>09:41</span>
+<!-- Dynamic Island spacer / aesthetic gap -->
+<div class="w-24 h-4 bg-black/5 rounded-full mx-auto"></div>
+<!-- Battery & Connectivity Icons -->
+<div class="flex items-center space-x-1.5">
+<!-- Signal -->
+<svg class="w-3.5 h-3.5 fill-current" viewBox="0 0 24 24">
+<path d="M2 17h3v4H2v-4zm6-5h3v9H8v-9zm6-4h3v13h-3V8zm6-5h3v18h-3V3z"></path>
+</svg>
+<!-- Wifi -->
+<svg class="w-3.5 h-3.5 fill-current" viewBox="0 0 24 24">
+<path d="M12 4C7.31 4 3.07 5.9 0 8.98L12 21 24 8.98C20.93 5.9 16.69 4 12 4zm0 3.5c3.78 0 7.21 1.5 9.77 3.93L12 19.33 2.23 11.43C4.79 8.93 8.22 7.5 12 7.5z"></path>
+</svg>
+<!-- Battery -->
+<div class="w-5 h-2.5 border border-brand-navy rounded-sm p-0.5 flex items-center">
+<div class="w-full h-full bg-brand-navy rounded-2xs"></div>
+</div>
+</div>
+</header>
+<!-- END: MobileStatusBar -->
+<!-- BEGIN: TopHeader -->
+<div class="px-4 py-2.5 flex items-center justify-between border-b border-brand-cardBorder/40" data-purpose="top-navigation-header">
+<!-- Brand Logo -->
+<div class="flex items-center space-x-2">
+<img alt="HeyMika Logo" class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC6VvhnX_6b7KPKOjobYTBuF8FrbrS9h1Rbut7gVdL5G4hNEu-rta-k89hpZg-bdDSdvmb_ByUxNjydR1LGXdPHIFOJVxTJIlsNpmZ8w2574-ihlXUp1izU3IcDASZnXLP52OwUZuGiexDcBwT55zm356-L1fh586xsy2GalsiZ72_IRM21_ZVRpS63Zq5TZEG7HDI5IPfoIXfsfzC3jDZlapRNxNlwkBoSl9f1OD_li-aT_wHXFcALMkhdaEUzHd7iWHk">
+</div>
+<!-- Right Actions: Streak, Notification, Avatar -->
+<div class="flex items-center space-x-2">
+<!-- Streak Capsule -->
+<div class="flex items-center space-x-1 bg-amber-50 border border-amber-200/80 px-2 py-1 rounded-full text-xs font-extrabold text-brand-orange shadow-xs">
+<span>🔥</span>
+<span>7 Hari</span>
+</div>
+<!-- Notification Bell -->
+<button aria-label="Notifikasi" class="relative w-8 h-8 rounded-full bg-white border border-brand-cardBorder flex items-center justify-center text-brand-navy shadow-xs active:scale-95 transition-transform" type="button">
+<svg class="w-4 h-4 text-brand-navy" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+<path d="M15 17h5l-1.405-1.405A2.032 2.032 0 0118 14.158V11a6.002 6.002 0 00-4-5.659V5a2 2 0 10-4 0v.341C7.67 6.165 6 8.388 6 11v3.159c0 .538-.214 1.055-.595 1.436L4 17h5m6 0v1a3 3 0 11-6 0v-1m6 0H9" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+<span class="absolute top-1.5 right-1.5 w-2 h-2 bg-brand-red rounded-full ring-2 ring-white"></span>
+</button>
+<!-- User Profile Pill -->
+<div class="relative w-8 h-8 rounded-full ring-2 ring-brand-sky/40 overflow-hidden bg-brand-cyanBadge flex items-center justify-center font-black text-brand-blue text-xs shadow-xs">
+<span class="text-sm">🐱</span>
+</div>
+</div>
+</div>
+<!-- END: TopHeader -->
+<main class="px-4 pt-3 space-y-4">
+<!-- BEGIN: StudentGreetingAndStats -->
+<section class="bg-white rounded-2xl p-3.5 border border-brand-cardBorder shadow-comic" data-purpose="user-status-card">
+<div class="flex items-center justify-between">
+<div class="flex items-center space-x-3">
+<div class="relative">
+<div class="w-12 h-12 rounded-2xl bg-amber-100 border border-amber-300 flex items-center justify-center text-xl overflow-hidden shadow-inner">
+                😺
+              </div>
+<span class="absolute -bottom-1 -right-1 w-4 h-4 bg-emerald-500 border-2 border-white rounded-full"></span>
+</div>
+<div>
+<div class="flex items-center space-x-1.5">
+<h1 class="font-extrabold text-base text-brand-navy leading-none">Halo, Budi!</h1>
+<span class="text-xs">🐾</span>
+</div>
+<div class="mt-1 inline-flex items-center px-2 py-0.5 rounded-md bg-sky-50 border border-brand-sky/30 text-[11px] font-bold text-brand-blue">
+                Level 12 • Pelajar Tangkas
+              </div>
+</div>
+</div>
+<!-- Quick XP Counter -->
+<div class="text-right">
+<div class="text-[11px] font-medium text-slate-400">Total Poin</div>
+<div class="flex items-center justify-end space-x-1 text-sm font-black text-amber-500">
+<span>⭐</span>
+<span class="text-brand-navy">1.450</span>
+<span class="text-[10px] text-slate-400 font-bold">XP</span>
+</div>
+</div>
+</div>
+<!-- Quick Action Buttons -->
+<div class="grid grid-cols-2 gap-2 mt-3 pt-2.5 border-t border-slate-100">
+<button class="w-full py-1.5 px-3 bg-brand-blue text-white rounded-xl text-xs font-bold flex items-center justify-center space-x-1.5 shadow-comic-blue active:translate-y-0.5 transition-all" type="button">
+<span class="text-sm">+</span>
+<span>Tambah Materi</span>
+</button>
+<button class="w-full py-1.5 px-3 bg-brand-orange text-white rounded-xl text-xs font-bold flex items-center justify-center space-x-1.5 shadow-comic-orange active:translate-y-0.5 transition-all" type="button">
+<span>💬</span>
+<span>Tanya Mika</span>
+</button>
+</div>
+</section>
+<!-- END: StudentGreetingAndStats -->
+<!-- BEGIN: SearchBar -->
+<section class="relative" data-purpose="mobile-search-bar">
+<div class="relative flex items-center">
+<span class="absolute left-3.5 text-slate-400">
+<svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+<path d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5"></path>
+</svg>
+</span>
+<input class="w-full pl-10 pr-10 py-2.5 text-xs bg-white rounded-xl border border-brand-cardBorder placeholder:text-slate-400 text-brand-navy focus:outline-none focus:ring-2 focus:ring-brand-blue/30 focus:border-brand-blue shadow-sm" placeholder="Cari materi, rumus cepat, catatan..." type="search">
+<button aria-label="Pencarian Suara" class="absolute right-3 text-brand-blue hover:text-brand-navy" type="button">
+<svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+<path d="M19 11a7 7 0 01-7 7m0 0a7 7 0 01-7-7m7 7v4m0 0H8m4 0h4m-4-8a3 3 0 01-3-3V5a3 3 0 116 0v6a3 3 0 01-3 3z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</button>
+</div>
+</section>
+<!-- END: SearchBar -->
+<!-- BEGIN: MascotHeroRecommendation -->
+<section class="relative bg-gradient-to-br from-[#FFF5F2] via-white to-[#F0F8FF] rounded-3xl p-4 border-2 border-brand-orange/30 shadow-comic overflow-hidden" data-purpose="daily-recommendation-hero">
+<!-- Floating Badge -->
+<div class="inline-flex items-center space-x-1.5 bg-brand-orange/10 text-brand-orange px-2.5 py-1 rounded-full text-[11px] font-black uppercase tracking-wider mb-2">
+<span>✨</span>
+<span>Rekomendasi Mika Hari Ini</span>
+</div>
+<div class="flex items-start justify-between gap-2">
+<!-- Text Bubble Container -->
+<div class="flex-1 pr-1">
+<p class="text-xs leading-relaxed font-bold text-brand-navy">
+              "Halo Budi! Mika sudah rapikan <span class="text-brand-blue underline decoration-brand-sky">3 tugas paling penting</span> untukmu hari ini. Siap selesaikan dalam <span class="text-brand-orange font-black">45 menit</span>?"
+            </p>
+<p class="text-[11px] text-slate-500 mt-1 leading-snug">
+              Kalkulus dan Biologi Sel siap disinkronkan ke memori jangka panjang lewat Spaced Repetition!
+            </p>
+</div>
+<!-- Mika Anime Mascot with Comic Badge -->
+<div class="relative w-28 shrink-0 flex flex-col items-center">
+<div class="relative w-24 h-28 flex items-center justify-center">
+<img alt="Mika si Kucing Pintar" class="w-full h-full object-contain filter drop-shadow-md transform -scale-x-100 hover:scale-105 transition-transform" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBtSFOHGWHgiIqjtZvglU4J9ozbvBwxLnv3oREEVSVKsP2nfget28qAGqeqSqJ7TFiGp6DJFiIDI__oDRRpvaZeavL8drGdwysOW2EkJ22kMrQa-NuXezq2xHDvFKl_nq6Ccc0ZZdzEf7fWD_xET8HKBnP1H0QdR7_vuOhOt0Di8cdpTBJqq8AMZQa_-O3vzYLAQBab-h4kyXNZ9QDoLkBEf7VOJxHS4szCrVEipzVFsqJ69YxdofeBrm7yxHczIfON49s">
+</div>
+<!-- Comic shouting pill -->
+<span class="absolute -bottom-1 bg-amber-400 text-brand-navy font-black text-[10px] px-2 py-0.5 rounded-full border border-amber-500 shadow-xs uppercase tracking-tight">
+              GANBATTE! 🐾
+            </span>
+</div>
+</div>
+<!-- Action & Progress Bar -->
+<div class="mt-4 pt-3 border-t border-brand-orange/15 space-y-2.5">
+<button class="w-full py-2.5 px-4 bg-brand-blue hover:bg-blue-600 text-white rounded-xl text-xs font-black flex items-center justify-center space-x-2 shadow-comic-blue active:scale-[0.98] transition-all" type="button">
+<span>🚀</span>
+<span>Mulai Sesi Belajar Sekarang</span>
+</button>
+<!-- Compact Daily Target Meter -->
+<div class="bg-white/90 rounded-xl p-2 px-3 border border-slate-200 flex items-center justify-between text-xs">
+<div class="flex items-center space-x-2">
+<span class="text-base">⏱️</span>
+<div>
+<span class="text-slate-500 text-[10px] block font-bold">Target Harian</span>
+<span class="font-extrabold text-brand-navy">35 / 45 Menit</span>
+</div>
+</div>
+<span class="bg-emerald-100 text-emerald-800 text-[11px] font-black px-2 py-0.5 rounded-full">
+              78% Selesai
+            </span>
+</div>
+</div>
+</section>
+<!-- END: MascotHeroRecommendation -->
+<!-- BEGIN: CompactStatCardsGrid -->
+<section class="grid grid-cols-2 gap-2.5" data-purpose="status-overview-cards">
+<!-- Card 1: Fokus Hari Ini -->
+<div class="bg-white rounded-2xl p-3 border border-brand-cardBorder shadow-comic flex flex-col justify-between">
+<div class="flex items-center justify-between">
+<span class="text-[10px] font-black uppercase text-brand-blue bg-blue-50 px-1.5 py-0.5 rounded">Fokus Hari Ini</span>
+<span class="text-xs">⭐</span>
+</div>
+<div class="flex items-center space-x-2 my-2">
+<!-- Circular Progress Visual -->
+<div class="relative w-10 h-10 flex items-center justify-center shrink-0">
+<svg class="w-10 h-10 transform -rotate-90">
+<circle cx="20" cy="20" fill="transparent" r="16" stroke="#E2E8F0" stroke-width="3"></circle>
+<circle cx="20" cy="20" fill="transparent" r="16" stroke="#0075E8" stroke-dasharray="100" stroke-dashoffset="22" stroke-linecap="round" stroke-width="3"></circle>
+</svg>
+<span class="absolute text-[10px] font-black text-brand-blue">78%</span>
+</div>
+<div class="text-[11px] leading-tight">
+<p class="font-bold text-brand-navy">35 / 45m</p>
+<p class="text-[10px] text-slate-400">Sisa 10m</p>
+</div>
+</div>
+<p class="text-[10px] text-slate-500 font-medium">
+            🔥 7 hari konsisten!
+          </p>
+</div>
+<!-- Card 2: Spaced Repetition SRS -->
+<div class="bg-white rounded-2xl p-3 border border-brand-cardBorder shadow-comic flex flex-col justify-between">
+<div class="flex items-center justify-between">
+<span class="text-[10px] font-black uppercase text-amber-600 bg-amber-50 px-1.5 py-0.5 rounded">SRS Review</span>
+<span class="text-[10px] bg-red-100 text-red-600 font-black px-1 rounded">Prioritas</span>
+</div>
+<div class="my-1.5">
+<p class="text-xs font-black text-brand-navy leading-snug">18 Konsep</p>
+<p class="text-[10px] text-slate-400">Perlu diulang hari ini</p>
+</div>
+<a class="mt-1 w-full bg-amber-500 hover:bg-amber-600 text-white rounded-lg py-1.5 text-center font-bold text-[10px] flex items-center justify-center space-x-1 shadow-xs" href="#">
+<span>Review Flashcard</span>
+<span>➜</span>
+</a>
+</div>
+</section>
+<!-- END: CompactStatCardsGrid -->
+<!-- BEGIN: PriorityChecklistSection -->
+<section class="space-y-2.5" data-purpose="checklist-priority-actions">
+<div class="flex items-center justify-between">
+<div class="flex items-center space-x-1.5">
+<span class="bg-brand-navy text-white text-[10px] font-black px-2 py-0.5 rounded-md">FOKUS UTAMA</span>
+<h2 class="text-xs font-black text-brand-navy">Langkah Belajarmu Hari Ini</h2>
+</div>
+<span class="text-[10px] text-slate-400">3 tersisa</span>
+</div>
+<!-- Task Item 1: Kuis Kilat Kalkulus -->
+<article class="bg-white p-3 rounded-2xl border border-brand-cardBorder shadow-comic hover:border-brand-blue/50 transition-colors">
+<div class="flex items-start space-x-3">
+<div class="mt-0.5">
+<input class="w-4 h-4 rounded text-brand-blue focus:ring-brand-blue/30 border-slate-300" type="checkbox">
+</div>
+<div class="flex-1">
+<div class="flex items-center space-x-1.5 flex-wrap gap-y-1">
+<span class="text-[10px] font-extrabold text-brand-blue bg-blue-50 px-1.5 py-0.2 rounded">Kuis Interaktif</span>
+<span class="text-[10px] text-slate-400">• 10 Menit</span>
+<span class="text-[10px] font-bold text-red-500 bg-red-50 px-1 rounded">🔥 Segera</span>
+</div>
+<h3 class="text-xs font-extrabold text-brand-navy mt-1">Kuis Kilat: Kalkulus &amp; Turunan Fungsi</h3>
+<p class="text-[11px] text-slate-500 mt-0.5 leading-tight">5 soal pilihan ganda adaptif untuk menguji laju perubahan.</p>
+<div class="mt-2 flex justify-end">
+<button class="px-3 py-1 bg-brand-blue text-white rounded-lg text-xs font-bold shadow-xs active:scale-95 flex items-center space-x-1" type="button">
+<span>Kerjakan Kuis</span>
+<span>✍️</span>
+</button>
+</div>
+</div>
+</div>
+</article>
+<!-- Task Item 2: Flashcard SRS -->
+<article class="bg-white p-3 rounded-2xl border border-brand-cardBorder shadow-comic hover:border-brand-blue/50 transition-colors">
+<div class="flex items-start space-x-3">
+<div class="mt-0.5">
+<input class="w-4 h-4 rounded text-brand-blue focus:ring-brand-blue/30 border-slate-300" type="checkbox">
+</div>
+<div class="flex-1">
+<div class="flex items-center space-x-1.5 flex-wrap gap-y-1">
+<span class="text-[10px] font-extrabold text-amber-600 bg-amber-50 px-1.5 py-0.2 rounded">Flashcard SRS</span>
+<span class="text-[10px] text-slate-400">• 15 Kartu Siap</span>
+<span class="text-[10px] font-bold text-emerald-600 bg-emerald-50 px-1 rounded">⚡ Retensi 92%</span>
+</div>
+<h3 class="text-xs font-extrabold text-brand-navy mt-1">Review Flashcard: Kosakata JLPT N4 &amp; Biologi Sel</h3>
+<p class="text-[11px] text-slate-500 mt-0.5 leading-tight">Latih ingatan aktif dengan kartu pintar bertingkat kesulitan.</p>
+<div class="mt-2 flex justify-end">
+<button class="px-3 py-1 bg-white border border-brand-cardBorder text-brand-navy rounded-lg text-xs font-bold shadow-xs active:scale-95 flex items-center space-x-1 hover:bg-slate-50" type="button">
+<span>Mulai Review</span>
+<span>🗂️</span>
+</button>
+</div>
+</div>
+</div>
+</article>
+<!-- Task Item 3: Teori Relativitas -->
+<article class="bg-white p-3 rounded-2xl border border-brand-cardBorder shadow-comic hover:border-brand-blue/50 transition-colors">
+<div class="flex items-start space-x-3">
+<div class="mt-0.5">
+<input class="w-4 h-4 rounded text-brand-blue focus:ring-brand-blue/30 border-slate-300" type="checkbox">
+</div>
+<div class="flex-1">
+<div class="flex items-center space-x-1.5 flex-wrap gap-y-1">
+<span class="text-[10px] font-extrabold text-purple-600 bg-purple-50 px-1.5 py-0.2 rounded">Baca Materi</span>
+<span class="text-[10px] text-slate-400">• Sisa 12 Menit • Halaman 18/24</span>
+</div>
+<h3 class="text-xs font-extrabold text-brand-navy mt-1">Lanjutkan Sesi: Teori Relativitas Khusus</h3>
+<p class="text-[11px] text-slate-500 mt-0.5 leading-tight">Mika telah menandai rumus dilatasi waktu dan rangkuman intinya.</p>
+<div class="mt-2 flex justify-end">
+<button class="px-3 py-1 bg-white border border-brand-cardBorder text-brand-navy rounded-lg text-xs font-bold shadow-xs active:scale-95 flex items-center space-x-1 hover:bg-slate-50" type="button">
+<span>Lanjutkan Baca</span>
+<span>📖</span>
+</button>
+</div>
+</div>
+</div>
+</article>
+</section>
+<!-- END: PriorityChecklistSection -->
+<!-- BEGIN: RecentTopicsSection -->
+<section class="space-y-3 pt-2" data-purpose="recent-learning-materials">
+<div class="flex items-center justify-between">
+<div>
+<h2 class="text-xs font-black text-brand-navy">Materi Terakhir Dipelajari</h2>
+<p class="text-[10px] text-slate-400">Catatan &amp; ringkasan yang sedang berjalan</p>
+</div>
+</div>
+<!-- Horizontal Filter Badges -->
+<div class="flex space-x-2 overflow-x-auto no-scrollbar py-0.5">
+<button class="px-3 py-1 rounded-full text-xs font-extrabold bg-brand-blue text-white shadow-xs shrink-0" type="button">Semua</button>
+<button class="px-3 py-1 rounded-full text-xs font-bold bg-white text-slate-600 border border-brand-cardBorder shrink-0" type="button">Sedang Berjalan</button>
+<button class="px-3 py-1 rounded-full text-xs font-bold bg-white text-slate-600 border border-brand-cardBorder shrink-0" type="button">Selesai</button>
+</div>
+<!-- Horizontal Scroll Cards of Subjects -->
+<div class="flex space-x-3 overflow-x-auto no-scrollbar pb-2 pt-1">
+<!-- Subject Card 1: Fisika -->
+<div class="min-w-[220px] max-w-[220px] bg-white rounded-2xl p-3 border border-brand-cardBorder shadow-comic shrink-0 flex flex-col justify-between">
+<div>
+<div class="flex items-center justify-between">
+<span class="text-[10px] font-black uppercase text-blue-600 bg-blue-50 px-1.5 py-0.5 rounded">Fisika</span>
+<span class="text-[10px] text-slate-400">2 jam lalu</span>
+</div>
+<h3 class="text-xs font-extrabold text-brand-navy mt-2 line-clamp-2">Fisika Modern: Gelombang Elektromagnetik</h3>
+<p class="text-[10px] text-slate-400 mt-1 line-clamp-2">Spektrum gelombang, radiasi benda hitam, dan efek fotolistrik.</p>
+</div>
+<div class="mt-3">
+<div class="flex justify-between text-[10px] font-bold text-slate-500 mb-1">
+<span>Progress</span>
+<span class="text-brand-blue">65%</span>
+</div>
+<div class="w-full bg-slate-100 h-1.5 rounded-full overflow-hidden">
+<div class="bg-brand-blue h-full rounded-full" style="width: 65%;"></div>
+</div>
+<button class="mt-2.5 w-full py-1 text-center bg-slate-50 hover:bg-slate-100 text-brand-navy font-bold text-[11px] rounded-lg border border-slate-200" type="button">
+                Buka Materi
+              </button>
+</div>
+</div>
+<!-- Subject Card 2: Informatika -->
+<div class="min-w-[220px] max-w-[220px] bg-white rounded-2xl p-3 border border-brand-cardBorder shadow-comic shrink-0 flex flex-col justify-between">
+<div>
+<div class="flex items-center justify-between">
+<span class="text-[10px] font-black uppercase text-amber-600 bg-amber-50 px-1.5 py-0.5 rounded">Informatika</span>
+<span class="text-[10px] text-slate-400">Kemarin</span>
+</div>
+<h3 class="text-xs font-extrabold text-brand-navy mt-2 line-clamp-2">Struktur Data: Graph Traversal (BFS &amp; DFS)</h3>
+<p class="text-[10px] text-slate-400 mt-1 line-clamp-2">Algoritma penjelajahan graf, queue, stack, dan aplikasi.</p>
+</div>
+<div class="mt-3">
+<div class="flex justify-between text-[10px] font-bold text-slate-500 mb-1">
+<span>Progress</span>
+<span class="text-brand-blue">80%</span>
+</div>
+<div class="w-full bg-slate-100 h-1.5 rounded-full overflow-hidden">
+<div class="bg-brand-blue h-full rounded-full" style="width: 80%;"></div>
+</div>
+<button class="mt-2.5 w-full py-1 text-center bg-slate-50 hover:bg-slate-100 text-brand-navy font-bold text-[11px] rounded-lg border border-slate-200" type="button">
+                Buka Materi
+              </button>
+</div>
+</div>
+<!-- Subject Card 3: Biologi -->
+<div class="min-w-[220px] max-w-[220px] bg-white rounded-2xl p-3 border border-brand-cardBorder shadow-comic shrink-0 flex flex-col justify-between">
+<div>
+<div class="flex items-center justify-between">
+<span class="text-[10px] font-black uppercase text-emerald-600 bg-emerald-50 px-1.5 py-0.5 rounded">Biologi</span>
+<span class="text-[10px] text-red-500 font-bold">Ada Kuis</span>
+</div>
+<h3 class="text-xs font-extrabold text-brand-navy mt-2 line-clamp-2">Biologi Sel: Mitosis &amp; Meiosis</h3>
+<p class="text-[10px] text-slate-400 mt-1 line-clamp-2">Tahapan profase hingga telofase pada sel eukariot.</p>
+</div>
+<div class="mt-3">
+<div class="flex justify-between text-[10px] font-bold text-slate-500 mb-1">
+<span>Progress</span>
+<span class="text-brand-orange">40%</span>
+</div>
+<div class="w-full bg-slate-100 h-1.5 rounded-full overflow-hidden">
+<div class="bg-brand-orange h-full rounded-full" style="width: 40%;"></div>
+</div>
+<button class="mt-2.5 w-full py-1 text-center bg-slate-50 hover:bg-slate-100 text-brand-navy font-bold text-[11px] rounded-lg border border-slate-200" type="button">
+                Buka Materi
+              </button>
+</div>
+</div>
+</div>
+<!-- Quick Upload Action Banner -->
+<div class="p-3 bg-gradient-to-r from-blue-50 to-sky-50 rounded-2xl border border-brand-sky/30 flex items-center justify-between shadow-xs">
+<div class="flex items-center space-x-2.5">
+<div class="w-9 h-9 rounded-xl bg-brand-blue text-white flex items-center justify-center shrink-0">
+<svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+<path d="M7 16a4 4 0 01-.88-7.903A5 5 0 1115.9 6L16 6a5 5 0 011 9.9M15 13l-3-3m0 0l-3 3m3-3v12" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</div>
+<div>
+<p class="text-xs font-extrabold text-brand-navy">Mau belajar materi baru?</p>
+<p class="text-[10px] text-slate-500 leading-tight">Unggah PDF rangkuman atau foto catatanmu</p>
+</div>
+</div>
+<button class="shrink-0 px-2.5 py-1.5 bg-brand-blue text-white rounded-lg text-[11px] font-black shadow-comic-blue active:scale-95" type="button">
+            + Unggah
+          </button>
+</div>
+</section>
+<!-- END: RecentTopicsSection -->
+</main>
+<!-- BEGIN: FloatingMikaAIQuickBar -->
+<div class="fixed bottom-20 left-0 right-0 max-w-[390px] mx-auto px-4 z-40" data-purpose="floating-ask-mika-bar">
+<div class="bg-white/95 backdrop-blur-md rounded-2xl p-1.5 pl-2 border-2 border-brand-sky shadow-lg flex items-center space-x-2">
+<div class="w-7 h-7 rounded-full bg-amber-100 flex items-center justify-center shrink-0 text-sm">
+          🐱
+        </div>
+<input class="flex-1 bg-transparent border-none text-xs text-brand-navy placeholder:text-slate-400 focus:outline-none focus:ring-0 p-0" placeholder="Tanyakan ke Mika tentang materimu..." type="text">
+<button aria-label="Kirim ke Mika" class="w-8 h-8 rounded-xl bg-brand-orange text-white flex items-center justify-center shadow-comic-orange shrink-0 active:scale-90 transition-transform" type="button">
+<svg class="w-4 h-4 transform rotate-90" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+<path d="M12 19l9 2-9-18-9 18 9-2zm0 0v-8" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5"></path>
+</svg>
+</button>
+</div>
+</div>
+<!-- END: FloatingMikaAIQuickBar -->
+<!-- BEGIN: MobileBottomNavigation -->
+<nav class="fixed bottom-0 left-0 right-0 max-w-[390px] mx-auto bg-white/95 backdrop-blur-md border-t border-brand-cardBorder z-50" data-purpose="ios-native-bottom-nav">
+<div class="grid grid-cols-5 py-2 px-1 text-center">
+<!-- Tab 1: Beranda (Active) -->
+<a class="flex flex-col items-center justify-center text-brand-blue group" href="#beranda">
+<div class="w-5 h-5 flex items-center justify-center mb-0.5">
+<svg class="w-5 h-5 fill-current" viewBox="0 0 24 24">
+<path d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8z"></path>
+</svg>
+</div>
+<span class="text-[10px] font-black leading-none">Beranda</span>
+</a>
+<!-- Tab 2: Materimu -->
+<a class="flex flex-col items-center justify-center text-slate-400 hover:text-brand-blue group" href="#materimu">
+<div class="w-5 h-5 flex items-center justify-center mb-0.5">
+<svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+<path d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</div>
+<span class="text-[10px] font-bold leading-none">Materi</span>
+</a>
+<!-- Tab 3: Flashcard & Kuis -->
+<a class="flex flex-col items-center justify-center text-slate-400 hover:text-brand-blue group" href="#kuis">
+<div class="w-5 h-5 flex items-center justify-center mb-0.5">
+<svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+<path d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-3 7h3m-3 4h3m-6-4h.01M9 16h.01" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</div>
+<span class="text-[10px] font-bold leading-none">Kuis</span>
+</a>
+<!-- Tab 4: Tanya Mika AI -->
+<a class="flex flex-col items-center justify-center text-slate-400 hover:text-brand-orange group" href="#mika-ai">
+<div class="relative w-5 h-5 flex items-center justify-center mb-0.5">
+<span class="text-base leading-none">🐾</span>
+<span class="absolute -top-1 -right-1 w-2 h-2 bg-brand-orange rounded-full"></span>
+</div>
+<span class="text-[10px] font-bold leading-none">Tanya Mika</span>
+</a>
+<!-- Tab 5: Profil Siswa -->
+<a class="flex flex-col items-center justify-center text-slate-400 hover:text-brand-blue group" href="#profil">
+<div class="w-5 h-5 flex items-center justify-center mb-0.5">
+<svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+<path d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</div>
+<span class="text-[10px] font-bold leading-none">Profil</span>
+</a>
+</div>
+<!-- iOS Home Indicator Home Bar -->
+<div class="w-32 h-1 bg-slate-300 rounded-full mx-auto mb-1.5 mt-0.5"></div>
+</nav>
+<!-- END: MobileBottomNavigation -->
+</div>
+</body></html>

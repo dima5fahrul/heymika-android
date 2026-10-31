@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">HeyMika</string>
+
+    <!-- Bottom navigation (legacy tabs until the P3 shell) -->
+    <string name="tab_home">Beranda</string>
+    <string name="tab_favorite">Favorit</string>
+    <string name="tab_setting">Pengaturan</string>
+
+    <!-- Home -->
+    <string name="home_title">Materi belajar</string>
+    <string name="home_search_hint">Cari judul atau mata pelajaran…</string>
+    <string name="home_subject_all">Semua mapel</string>
+    <string name="home_loading">Mika sedang mengambil materimu…</string>
+    <string name="home_empty_title">Belum ada materi yang cocok</string>
+    <string name="home_empty_body">Coba kata kunci atau mata pelajaran lain.</string>
+
+    <!-- Material detail -->
+    <string name="detail_back">Kembali</string>
+    <string name="detail_favorite_add">Tambahkan ke favorit</string>
+    <string name="detail_favorite_remove">Hapus dari favorit</string>
+    <string name="detail_subject_duration">%1$s · %2$d menit baca</string>
+    <string name="detail_generate_title">Buat dengan AI</string>
+    <string name="action_generate_quiz">Buat kuis</string>
+    <string name="action_generate_summary">Buat ringkasan</string>
+    <string name="action_generate_story">Buat cerita pendek</string>
+
+    <!-- Dynamic feature modules -->
+    <string name="feature_aistudio">AI Studio</string>
+    <string name="feature_favorite">Favorit</string>
+    <string name="feature_setting">Pengaturan</string>
+    <string name="feature_install_not_installed">Bagian aplikasi ini diunduh saat dibutuhkan. Pasang dulu untuk melanjutkan.</string>
+    <string name="feature_install_pending">Menyiapkan unduhan…</string>
+    <string name="feature_install_downloading">Mengunduh… %1$d%%</string>
+    <string name="feature_install_installing">Memasang…</string>
+    <string name="feature_install_installed">Siap.</string>
+    <string name="feature_install_confirm">Google Play perlu konfirmasimu sebelum mengunduh.</string>
+    <string name="feature_install_failed_start">Unduhan belum bisa dimulai. Periksa koneksimu lalu coba lagi.</string>
+    <string name="feature_install_failed_play">Google Play belum bisa memasangnya (kode %1$d). Coba lagi sebentar lagi.</string>
+    <string name="feature_install_failed_entry">Fitur ini belum bisa dibuka. Coba lagi nanti.</string>
+
+    <!-- Generic actions -->
+    <string name="action_retry">Coba lagi</string>
+    <string name="action_cancel">Batal</string>
+    <string name="action_confirm">Konfirmasi</string>
+</resources>

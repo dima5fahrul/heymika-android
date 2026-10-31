@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- MaterialCard (legacy, replaced in P3) -->
+    <string name="core_read_duration">%1$d menit baca</string>
+    <string name="core_cover_of">Sampul %1$s</string>
+    <string name="core_add_to_favorites">Tambahkan %1$s ke favorit</string>
+    <string name="core_remove_from_favorites">Hapus %1$s dari favorit</string>
+</resources>

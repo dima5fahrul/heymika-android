@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="aistudio_screen_title">AI Studio</string>
+    <string name="aistudio_navigate_up">Kembali</string>
+    <string name="aistudio_kind_quiz">Kuis</string>
+    <string name="aistudio_kind_summary">Ringkasan</string>
+    <string name="aistudio_kind_story">Cerita pendek</string>
+    <string name="aistudio_generating">Mika sedang membuatnya untukmu…</string>
+    <string name="aistudio_refreshing">Memperbarui…</string>
+    <string name="aistudio_regenerate">Buat ulang</string>
+    <string name="aistudio_empty_title">Belum ada hasil</string>
+    <string name="aistudio_empty_body">Mika belum membuat apa pun untuk materi ini.</string>
+
+    <string name="aistudio_quiz_score">Skor %1$d dari %2$d</string>
+    <string name="aistudio_quiz_progress">%1$d dari %2$d terjawab</string>
+    <string name="aistudio_quiz_reveal">Lihat jawaban</string>
+    <string name="aistudio_quiz_reveal_all">Lihat semua jawaban</string>
+    <string name="aistudio_quiz_reset">Ulangi jawaban</string>
+    <string name="aistudio_quiz_correct">Benar</string>
+    <string name="aistudio_quiz_incorrect">Salah</string>
+    <string name="aistudio_quiz_question_number">Soal %1$d</string>
+    <string name="aistudio_quiz_explanation">Alasan: %1$s</string>
+    <string name="aistudio_quiz_unparsable">Kuis tidak bisa dibaca sebagai soal, jadi hasil mentah dari AI ditampilkan di bawah.</string>
+
+    <string name="aistudio_history_title">Hasil sebelumnya</string>
+    <string name="aistudio_history_empty">Belum ada hasil sebelumnya untuk materi ini.</string>
+    <string name="aistudio_history_expand">Tampilkan</string>
+    <string name="aistudio_history_collapse">Sembunyikan</string>
+</resources>

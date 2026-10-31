@@ -1,0 +1,595 @@
+<!DOCTYPE html><html lang="id"><head><meta charset="utf-8"><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" name="viewport"><meta content="mobile_stack" name="shell-type"><link href="https://fonts.googleapis.com" rel="preconnect"><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"><link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@400;500;600;700;800;900&amp;display=swap" rel="stylesheet"><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: 'class', theme: { extend: { 'colors': { 'text-muted': '#5868A4', 'on-tertiary-fixed': '#001e2d', 'on-secondary': '#ffffff', 'on-error-container': '#93000a', 'secondary': '#914c00', 'secondary-container': '#ff8a00', 'tertiary-container': '#007dab', 'danger': '#BC2535', 'primary-container': '#0072e3', 'danger-bg': '#FFF0F2', 'on-surface-variant': '#414754', 'primary': '#005ab5', 'surface-container-high': '#dee8ff', 'success': '#167549', 'surface': '#FFFFFF', 'primary-fixed-dim': '#aac7ff', 'on-secondary-fixed-variant': '#6f3900', 'surface-dim': '#c8dbff', 'inverse-primary': '#aac7ff', 'brand-yellow': '#FFD34E', 'on-error': '#ffffff', 'primary-fixed': '#d7e3ff', 'surface-container': '#e7eeff', 'on-secondary-fixed': '#2f1500', 'inverse-on-surface': '#ecf1ff', 'tertiary-fixed': '#c5e7ff', 'secondary-fixed': '#ffdcc4', 'tertiary-fixed-dim': '#7fd0ff', 'on-primary-fixed-variant': '#00458e', 'on-secondary-container': '#613100', 'secondary-fixed-dim': '#ffb77f', 'surface-tint': '#005cba', 'on-primary-container': '#fefcff', 'surface-container-highest': '#d6e3ff', 'surface-container-lowest': '#ffffff', 'canvas-bg': '#F8FCFF', 'outline-variant': '#c1c6d6', 'surface-container-low': '#f0f3ff', 'on-tertiary': '#ffffff', 'error-container': '#ffdad6', 'surface-variant': '#d6e3ff', 'border-muted': '#D8DDF4', 'on-surface': '#001b3c', 'ribbon-red': '#EF3E36', 'tertiary': '#006388', 'outline': '#717785', 'on-primary': '#ffffff', 'on-tertiary-fixed-variant': '#004c6a', 'on-tertiary-container': '#fcfcff', 'surface-bright': '#f9f9ff', 'brand-sky': '#16B5F5', 'badge-cyan': '#C5EFFF', 'background': '#f9f9ff', 'inverse-surface': '#113059', 'on-background': '#001b3c', 'error': '#ba1a1a', 'on-primary-fixed': '#001b3e' }, 'borderRadius': { 'DEFAULT': '0.25rem', 'lg': '0.5rem', 'xl': '0.75rem', 'full': '9999px' }, 'spacing': { 'gutter': '1.5rem', 'space-md': '1rem', 'space-sm': '0.5rem', 'space-xs': '0.25rem', 'space-xl': '2rem', 'space-lg': '1.5rem', 'margin': '1.5rem' }, 'fontFamily': { 'headline-lg': ['Nunito Sans'], 'caption': ['Nunito Sans'], 'body-md': ['Nunito Sans'], 'label-sm': ['Nunito Sans'], 'headline-lg-mobile': ['Nunito Sans'], 'label-md': ['Nunito Sans'], 'display-hero': ['Nunito Sans'], 'label-lg': ['Nunito Sans'], 'headline-sm': ['Nunito Sans'], 'headline-md': ['Nunito Sans'], 'body-sm': ['Nunito Sans'], 'body-lg': ['Nunito Sans'], 'display-hero-mobile': ['Nunito Sans'] }, 'fontSize': { 'headline-lg': ['36px', { 'lineHeight': '44px', 'letterSpacing': '-0.015em', 'fontWeight': '800' }], 'caption': ['12px', { 'lineHeight': '16px', 'fontWeight': '500' }], 'body-md': ['16px', { 'lineHeight': '24px', 'fontWeight': '400' }], 'label-sm': ['12px', { 'lineHeight': '16px', 'letterSpacing': '0.05em', 'fontWeight': '700' }], 'headline-lg-mobile': ['26px', { 'lineHeight': '34px', 'letterSpacing': '-0.01em', 'fontWeight': '800' }], 'label-md': ['14px', { 'lineHeight': '18px', 'letterSpacing': '0.02em', 'fontWeight': '700' }], 'display-hero': ['48px', { 'lineHeight': '56px', 'letterSpacing': '-0.02em', 'fontWeight': '900' }], 'label-lg': ['16px', { 'lineHeight': '22px', 'fontWeight': '700' }], 'headline-sm': ['20px', { 'lineHeight': '28px', 'fontWeight': '700' }], 'headline-md': ['24px', { 'lineHeight': '32px', 'fontWeight': '800' }], 'body-sm': ['14px', { 'lineHeight': '20px', 'fontWeight': '400' }], 'body-lg': ['18px', { 'lineHeight': '28px', 'fontWeight': '400' }], 'display-hero-mobile': ['32px', { 'lineHeight': '40px', 'letterSpacing': '-0.01em', 'fontWeight': '900' }] } } } }</script><style>@layer base{html,body{width:100vw;margin:0;padding:0;}body{overscroll-behavior:none;}.pb-safe{padding-bottom:env(safe-area-inset-bottom,0px);}.pt-safe{padding-top:env(safe-area-inset-top,0px);}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style></head><body class="bg-canvas-bg font-body-md text-body-md text-on-surface flex flex-col min-h-screen"><header class="fixed top-0 w-full z-50 pt-safe bg-surface/90 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><div class="h-16 px-gutter flex items-center justify-between"><button aria-label="Kembali ke Billing" class="flex items-center gap-space-xs text-on-surface font-label-md text-label-md min-h-[44px] min-w-[44px] -ml-2 px-2 rounded-full hover:bg-surface-container-low transition-colors" onclick="history.back()"><span class="material-symbols-outlined text-[20px]">arrow_back_ios_new</span><span>Kembali ke Billing</span></button><div class="flex items-center gap-space-sm"><div class="flex items-center gap-1 bg-badge-cyan/60 text-on-surface px-space-sm py-1 rounded-full font-label-sm text-label-sm"><span class="material-symbols-outlined text-[16px] text-tertiary">lock</span><span>256-Bit SSL</span></div><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></div></header><main class="flex flex-col relative w-full pt-16 bg-canvas-bg min-h-screen pb-safe"><div class="flex flex-col w-full pb-32">
+<!-- Top Comic Deco & Banner Bar -->
+<div class="w-full px-gutter pt-4 pb-3 flex flex-col gap-2">
+<!-- Step & Trust Indicators -->
+<div class="flex items-center justify-between gap-2">
+<div class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-badge-cyan text-on-surface font-label-sm text-label-sm shadow-sm">
+<span class="w-2 h-2 rounded-full bg-primary animate-pulse"></span>
+<span>Langkah 1 dari 2: Konfirmasi Paket &amp; Bayar</span>
+</div>
+<div class="inline-flex items-center gap-1 text-on-surface-variant font-caption text-caption">
+<span class="material-symbols-outlined text-[16px] text-secondary-container" style="font-variation-settings: 'FILL' 1;">bolt</span>
+<span class="hidden sm:inline">Aktivasi Instan</span>
+<span>• SSL 256-Bit</span>
+</div>
+</div>
+<!-- Friendly Mika Micro-Banner -->
+<div class="bg-surface rounded-xl p-3.5 shadow-sm flex items-center gap-3">
+<div class="w-12 h-12 rounded-full bg-secondary-fixed flex-shrink-0 flex items-center justify-center overflow-hidden">
+<img alt="Mika AI Tutor Mascot" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBGbxanpXIEOny8FkgZX5Frv9YJkd8KtaXAajFe5MvKY6R6--U7JIlcA4AjpZu6gWVGZHWesjxaWPZ3mjc_hKieBkfR5Fn-dWoJa8Cf7JT_ELViIK9kVIAhq9DKtf2fErGUVcQLjPZQmkWx9VunqR6cO61sze_40oPQpTYe1XgeRLvJhxHC3fIm2FZ4u4YcuoNs3QEg3grtnybvtoU_Z9bwiVL-ckWpNP1ROdsQ33IDUEHMAF7oRJk704cwZ2s5qIB3PQc">
+</div>
+<div class="flex-1 min-w-0">
+<div class="flex items-center gap-1.5">
+<span class="font-label-md text-label-md text-on-surface truncate">Hai, Budi! Siap taklukkan ujian?</span>
+<span class="px-1.5 py-0.5 rounded-full bg-badge-cyan text-tertiary font-label-sm text-[10px]">PRO</span>
+</div>
+<p class="font-body-sm text-body-sm text-text-muted truncate">Pilih paket belajarmu &amp; langsung nikmati tutor AI cerdas!</p>
+</div>
+</div>
+</div>
+<!-- Main Workflow Container -->
+<div class="w-full px-gutter flex flex-col gap-5 mt-1">
+<!-- SEKSI 1: PILIH PAKET BELAJAR -->
+<section class="flex flex-col gap-3">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-2">
+<span class="w-6 h-6 rounded-full bg-primary text-on-primary flex items-center justify-center font-label-sm text-label-sm">1</span>
+<h2 class="font-headline-sm text-headline-sm text-on-surface">Pilih Periode Langganan</h2>
+</div>
+<span class="font-caption text-caption text-text-muted">Garansi 7 Hari</span>
+</div>
+<!-- Plan Switcher Tabs -->
+<div class="grid grid-cols-2 p-1 bg-surface-container rounded-xl gap-1">
+<button class="py-2.5 px-3 rounded-lg font-label-md text-label-md transition-all flex items-center justify-center gap-1.5 bg-surface text-primary shadow-sm" id="tab-champion" onclick="switchPlanTier('champion')">
+<span class="material-symbols-outlined text-[18px]">verified</span>
+<span>Mika Champion Pro</span>
+</button>
+<button class="py-2.5 px-3 rounded-lg font-label-md text-label-md text-text-muted transition-all flex items-center justify-center gap-1.5 hover:text-on-surface" id="tab-genius" onclick="switchPlanTier('genius')">
+<span class="material-symbols-outlined text-[18px]">psychology</span>
+<span>Genius AI Elite</span>
+</button>
+</div>
+<!-- Period Selection Cards -->
+<div class="flex flex-col gap-2.5">
+<!-- 1 Bulan Card -->
+<div class="plan-card p-3.5 rounded-xl bg-surface shadow-sm cursor-pointer transition-all flex items-center justify-between relative" id="plan-card-1" onclick="selectPlanPeriod(1)">
+<div class="flex items-center gap-3 min-w-0">
+<div class="plan-radio w-5 h-5 rounded-full bg-surface-container flex items-center justify-center flex-shrink-0">
+<div class="plan-dot w-2.5 h-2.5 rounded-full bg-transparent"></div>
+</div>
+<div class="flex flex-col min-w-0">
+<span class="font-label-md text-label-md text-on-surface">1 Bulan Akses</span>
+<span class="font-caption text-caption text-text-muted">Fleksibel, bebas batalkan sewaktu-waktu</span>
+</div>
+</div>
+<div class="text-right flex-shrink-0 pl-2">
+<div class="font-headline-sm text-headline-sm text-on-surface">Rp 69.000</div>
+<div class="font-caption text-caption text-text-muted">/bulan</div>
+</div>
+</div>
+<!-- 6 Bulan Card -->
+<div class="plan-card p-3.5 rounded-xl bg-surface shadow-sm cursor-pointer transition-all flex items-center justify-between relative" id="plan-card-6" onclick="selectPlanPeriod(6)">
+<div class="flex items-center gap-3 min-w-0">
+<div class="plan-radio w-5 h-5 rounded-full bg-surface-container flex items-center justify-center flex-shrink-0">
+<div class="plan-dot w-2.5 h-2.5 rounded-full bg-transparent"></div>
+</div>
+<div class="flex flex-col min-w-0">
+<div class="flex items-center gap-1.5 flex-wrap">
+<span class="font-label-md text-label-md text-on-surface">6 Bulan Akses</span>
+<span class="px-1.5 py-0.2 rounded-full bg-tertiary-fixed text-on-tertiary-fixed font-label-sm text-[10px]">Hemat 15%</span>
+</div>
+<span class="font-caption text-caption text-text-muted">Setara Rp 58.167/bln</span>
+</div>
+</div>
+<div class="text-right flex-shrink-0 pl-2">
+<div class="font-headline-sm text-headline-sm text-on-surface">Rp 349.000</div>
+<div class="font-caption text-caption line-through text-text-muted">Rp 414.000</div>
+</div>
+</div>
+<!-- 12 Bulan Card (Recommended Active) -->
+<div class="plan-card p-3.5 rounded-xl bg-surface shadow-md cursor-pointer transition-all flex items-center justify-between relative" id="plan-card-12" onclick="selectPlanPeriod(12)">
+<!-- Recommended Badge Sticker -->
+<div class="absolute -top-2.5 right-4 bg-secondary-container text-on-secondary font-label-sm text-[11px] px-2.5 py-0.5 rounded-full flex items-center gap-1 shadow-sm">
+<span class="material-symbols-outlined text-[13px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span>REKOMENDASI MIKA • HEMAT 35%</span>
+</div>
+<div class="flex items-center gap-3 min-w-0 pt-1">
+<div class="plan-radio w-5 h-5 rounded-full bg-primary flex items-center justify-center flex-shrink-0">
+<div class="plan-dot w-2.5 h-2.5 rounded-full bg-surface"></div>
+</div>
+<div class="flex flex-col min-w-0">
+<div class="flex items-center gap-1.5 flex-wrap">
+<span class="font-label-lg text-label-lg text-primary">12 Bulan Akses</span>
+<span class="px-1.5 py-0.2 rounded-full bg-brand-yellow text-on-surface font-label-sm text-[10px] font-bold">+500 Koin AI</span>
+</div>
+<span class="font-body-sm text-body-sm text-on-surface-variant font-medium">Hanya Rp 44.916 /bulan</span>
+</div>
+</div>
+<div class="text-right flex-shrink-0 pl-2 pt-1">
+<div class="font-headline-md text-headline-md text-primary">Rp 539.000</div>
+<div class="font-caption text-caption line-through text-text-muted">Rp 828.000</div>
+</div>
+</div>
+</div>
+<!-- Collapsible Feature Accordion -->
+<div class="rounded-xl bg-surface-container-low p-3.5 shadow-sm">
+<button class="w-full flex items-center justify-between text-left text-on-surface font-label-md text-label-md" onclick="toggleFeatures()">
+<span class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-[20px]">auto_awesome</span>
+<span>Semua Manfaat Champion Pro Termasuk:</span>
+</span>
+<span class="material-symbols-outlined text-on-surface-variant transition-transform" id="features-chevron">expand_more</span>
+</button>
+<div class="flex flex-col gap-2 mt-3 pt-3" id="features-list">
+<div class="flex items-start gap-2.5">
+<span class="material-symbols-outlined text-success text-[18px] flex-shrink-0" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+<span class="font-body-sm text-body-sm text-on-surface"><strong>Chat Mika AI Tutor tanpa batas:</strong> Respon instan GPT-4o turbo 24/7.</span>
+</div>
+<div class="flex items-start gap-2.5">
+<span class="material-symbols-outlined text-success text-[18px] flex-shrink-0" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+<span class="font-body-sm text-body-sm text-on-surface"><strong>Upload PDF materi kuliah:</strong> Kapasitas hingga 50 MB / 100 dokumen per bulan.</span>
+</div>
+<div class="flex items-start gap-2.5">
+<span class="material-symbols-outlined text-success text-[18px] flex-shrink-0" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+<span class="font-body-sm text-body-sm text-on-surface"><strong>Generator Kuis &amp; Flashcards:</strong> Dilengkapi algoritma Spaced Repetition ilmiah.</span>
+</div>
+<div class="flex items-start gap-2.5">
+<span class="material-symbols-outlined text-success text-[18px] flex-shrink-0" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+<span class="font-body-sm text-body-sm text-on-surface"><strong>Bank Kesalahan Pintar:</strong> Deteksi konsep rapuh &amp; roadmap remedial terarah.</span>
+</div>
+<div class="flex items-start gap-2.5">
+<span class="material-symbols-outlined text-success text-[18px] flex-shrink-0" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+<span class="font-body-sm text-body-sm text-on-surface"><strong>Prioritas Antrean OCR:</strong> Transkrip tulisan tangan &amp; rumus matematika seketika.</span>
+</div>
+</div>
+</div>
+</section>
+<!-- SEKSI 2: METODE PEMBAYARAN -->
+<section class="flex flex-col gap-3">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-2">
+<span class="w-6 h-6 rounded-full bg-primary text-on-primary flex items-center justify-center font-label-sm text-label-sm">2</span>
+<h2 class="font-headline-sm text-headline-sm text-on-surface">Pilih Metode Pembayaran</h2>
+</div>
+<span class="font-caption text-caption text-success font-bold flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">lock</span> Aman
+        </span>
+</div>
+<div class="flex flex-col gap-2.5">
+<!-- Opsi 1: QRIS (Default Selected) -->
+<label class="payment-option bg-surface rounded-xl p-3.5 shadow-sm flex flex-col gap-2 cursor-pointer transition-all" onclick="selectPayment('qris')">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-3">
+<input checked="" class="accent-primary w-4 h-4 cursor-pointer" name="payment_method" type="radio" value="qris">
+<div class="flex flex-col">
+<div class="flex items-center gap-2">
+<span class="font-label-md text-label-md text-on-surface">QRIS Instant Pay</span>
+<span class="px-2 py-0.5 rounded-full bg-badge-cyan text-on-tertiary-fixed font-label-sm text-[10px]">Bebas Biaya Admin</span>
+</div>
+<span class="font-caption text-caption text-text-muted">Scan langsung via aplikasi favoritmu</span>
+</div>
+</div>
+<span class="material-symbols-outlined text-primary text-[24px]">qr_code_scanner</span>
+</div>
+<!-- Channel Logos Row -->
+<div class="flex items-center gap-1.5 flex-wrap pt-1 pl-7">
+<span class="px-2 py-0.5 rounded bg-surface-container text-on-surface-variant font-label-sm text-[11px] font-semibold">Gopay</span>
+<span class="px-2 py-0.5 rounded bg-surface-container text-on-surface-variant font-label-sm text-[11px] font-semibold">ShopeePay</span>
+<span class="px-2 py-0.5 rounded bg-surface-container text-on-surface-variant font-label-sm text-[11px] font-semibold">DANA</span>
+<span class="px-2 py-0.5 rounded bg-surface-container text-on-surface-variant font-label-sm text-[11px] font-semibold">OVO</span>
+<span class="px-2 py-0.5 rounded bg-surface-container text-on-surface-variant font-label-sm text-[11px] font-semibold">All M-Banking</span>
+</div>
+</label>
+<!-- Opsi 2: Virtual Account -->
+<label class="payment-option bg-surface rounded-xl p-3.5 shadow-sm flex flex-col gap-2 cursor-pointer transition-all" onclick="selectPayment('va')">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-3">
+<input class="accent-primary w-4 h-4 cursor-pointer" name="payment_method" type="radio" value="va">
+<div class="flex flex-col">
+<div class="flex items-center gap-2">
+<span class="font-label-md text-label-md text-on-surface">Virtual Account (VA)</span>
+<span class="px-1.5 py-0.2 rounded-full bg-surface-container text-text-muted font-label-sm text-[10px]">Verifikasi Otomatis</span>
+</div>
+<span class="font-caption text-caption text-text-muted">Nomor unik pembayaran langsung muncul</span>
+</div>
+</div>
+<span class="material-symbols-outlined text-on-surface-variant text-[22px]">account_balance</span>
+</div>
+<div class="flex items-center gap-1.5 flex-wrap pt-1 pl-7">
+<span class="px-2 py-0.5 rounded bg-surface-container text-on-surface-variant font-label-sm text-[11px] font-semibold">BCA</span>
+<span class="px-2 py-0.5 rounded bg-surface-container text-on-surface-variant font-label-sm text-[11px] font-semibold">Mandiri</span>
+<span class="px-2 py-0.5 rounded bg-surface-container text-on-surface-variant font-label-sm text-[11px] font-semibold">BRI</span>
+<span class="px-2 py-0.5 rounded bg-surface-container text-on-surface-variant font-label-sm text-[11px] font-semibold">BNI</span>
+<span class="px-2 py-0.5 rounded bg-surface-container text-on-surface-variant font-label-sm text-[11px] font-semibold">CIMB</span>
+</div>
+</label>
+<!-- Opsi 3: E-Wallet Direct Link -->
+<label class="payment-option bg-surface rounded-xl p-3.5 shadow-sm flex items-center justify-between cursor-pointer transition-all" onclick="selectPayment('ewallet')">
+<div class="flex items-center gap-3">
+<input class="accent-primary w-4 h-4 cursor-pointer" name="payment_method" type="radio" value="ewallet">
+<div class="flex flex-col">
+<span class="font-label-md text-label-md text-on-surface">E-Wallet Direct Checkout</span>
+<span class="font-caption text-caption text-text-muted">GoPay 1-Tap, ShopeePay, DANA Saldo</span>
+</div>
+</div>
+<span class="material-symbols-outlined text-on-surface-variant text-[22px]">wallet</span>
+</label>
+<!-- Opsi 4: Kartu Kredit / Debit -->
+<label class="payment-option bg-surface rounded-xl p-3.5 shadow-sm flex items-center justify-between cursor-pointer transition-all" onclick="selectPayment('cc')">
+<div class="flex items-center gap-3">
+<input class="accent-primary w-4 h-4 cursor-pointer" name="payment_method" type="radio" value="cc">
+<div class="flex flex-col">
+<span class="font-label-md text-label-md text-on-surface">Kartu Kredit / Debit Online</span>
+<span class="font-caption text-caption text-text-muted">Visa, Mastercard, JCB (3D Secure)</span>
+</div>
+</div>
+<span class="material-symbols-outlined text-on-surface-variant text-[22px]">credit_card</span>
+</label>
+</div>
+</section>
+<!-- SEKSI 3: KUPON DISKON & IDENTITAS SISWA -->
+<section class="bg-surface rounded-xl p-4 shadow-sm flex flex-col gap-3">
+<!-- Akun Siswa Header -->
+<div class="flex items-center justify-between bg-surface-container-low p-2.5 rounded-lg">
+<div class="flex items-center gap-2 min-w-0">
+<div class="w-7 h-7 rounded-full bg-badge-cyan flex items-center justify-center font-label-sm text-tertiary flex-shrink-0">
+            BP
+          </div>
+<div class="flex flex-col min-w-0">
+<span class="font-label-sm text-label-sm text-on-surface truncate">Budi Pratama</span>
+<span class="font-caption text-caption text-text-muted truncate">budi.pratama@kampus.id</span>
+</div>
+</div>
+<span class="px-2 py-0.5 rounded-full bg-badge-cyan text-tertiary font-label-sm text-[11px] flex-shrink-0 flex items-center gap-1">
+<span class="material-symbols-outlined text-[13px]">verified_user</span> Terverifikasi
+        </span>
+</div>
+<!-- Voucher Box -->
+<div class="flex flex-col gap-1.5">
+<label class="font-label-sm text-label-sm text-on-surface">Kupon Promo / Referral</label>
+<div class="flex gap-2">
+<div class="relative flex-1">
+<span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-[18px] text-text-muted">confirmation_number</span>
+<input class="w-full bg-surface-container-low pl-9 pr-8 py-2.5 rounded-lg font-label-md text-label-md text-on-surface uppercase focus:outline-none focus:bg-surface" id="voucher-input" placeholder="Masukkan kode voucher" type="text" value="BELAJARASIK">
+<button class="absolute right-2.5 top-1/2 -translate-y-1/2 text-text-muted hover:text-on-surface" id="clear-voucher-btn" onclick="clearVoucher()">
+<span class="material-symbols-outlined text-[18px]">cancel</span>
+</button>
+</div>
+<button class="px-4 py-2.5 rounded-lg bg-surface-container text-primary font-label-md text-label-md hover:bg-surface-container-high transition-colors" id="apply-voucher-btn" onclick="applyVoucher()">
+            Terapkan
+          </button>
+</div>
+<!-- Voucher Applied Banner -->
+<div class="p-2.5 rounded-lg bg-badge-cyan/60 flex items-start gap-2" id="voucher-alert">
+<span class="material-symbols-outlined text-success text-[18px] flex-shrink-0">check_circle</span>
+<div class="flex-1">
+<p class="font-label-sm text-label-sm text-on-surface">Kupon <span class="font-bold text-primary">BELAJARASIK</span> terpasang!</p>
+<p class="font-caption text-caption text-success font-semibold">Potongan langsung Rp 50.000 untuk paket tahunan.</p>
+</div>
+</div>
+</div>
+</section>
+<!-- SEKSI 4: RINGKASAN PEMBAYARAN LENGKAP -->
+<section class="bg-surface rounded-xl p-4 shadow-sm flex flex-col gap-3">
+<div class="flex items-center justify-between pb-2 border-b border-surface-container">
+<h3 class="font-headline-sm text-headline-sm text-on-surface">Ringkasan Tagihan</h3>
+<span class="px-2.5 py-0.5 rounded-full bg-secondary-fixed text-on-secondary-fixed font-label-sm text-[11px] font-bold" id="summary-period-badge">12 Bulan Akses</span>
+</div>
+<div class="flex flex-col gap-2 font-body-sm text-body-sm">
+<div class="flex items-center justify-between text-on-surface">
+<span id="label-base-price">Harga Paket Mika Champion (12 Bln)</span>
+<span class="font-label-md text-label-md" id="val-base-price">Rp 539.000</span>
+</div>
+<div class="flex items-center justify-between text-success" id="row-discount">
+<span class="flex items-center gap-1">
+<span>Diskon Kupon BELAJARASIK</span>
+</span>
+<span class="font-label-md text-label-md" id="val-discount">-Rp 50.000</span>
+</div>
+<div class="flex items-center justify-between text-on-surface-variant">
+<span class="flex items-center gap-1">
+<span>PPN 11% (Pajak Resmi)</span>
+<span class="material-symbols-outlined text-[14px] text-text-muted" title="Pajak Pertambahan Nilai Republik Indonesia">info</span>
+</span>
+<span class="font-label-md text-label-md" id="val-tax">Rp 53.790</span>
+</div>
+<div class="flex items-center justify-between text-on-surface-variant">
+<span>Biaya Gateway Pembayaran</span>
+<span class="font-label-md text-label-md text-success uppercase">Gratis (Disubsidi)</span>
+</div>
+</div>
+<!-- Divider -->
+<div class="h-px bg-surface-container my-1"></div>
+<!-- Grand Total -->
+<div class="flex items-baseline justify-between">
+<div>
+<span class="font-label-lg text-label-lg text-on-surface block">Total Akhir Tagihan</span>
+<span class="font-caption text-caption text-text-muted">Termasuk semua pajak &amp; lisensi resmi</span>
+</div>
+<div class="text-right">
+<span class="font-display-hero-mobile text-display-hero-mobile text-primary font-black" id="val-grand-total">Rp 542.790</span>
+</div>
+</div>
+</section>
+<!-- SEKSI 5: MIKA GUARANTEE & TRUST CARD -->
+<section class="bg-surface-container-low rounded-xl p-4 shadow-sm flex flex-col gap-3 relative overflow-hidden">
+<!-- Comic Corner Stamp Accent -->
+<div class="flex items-start gap-3">
+<div class="w-16 h-16 rounded-full bg-brand-yellow flex-shrink-0 flex items-center justify-center overflow-hidden p-1 shadow-sm">
+<img alt="Mika Garansi Mascot" class="w-full h-full object-contain" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBGbxanpXIEOny8FkgZX5Frv9YJkd8KtaXAajFe5MvKY6R6--U7JIlcA4AjpZu6gWVGZHWesjxaWPZ3mjc_hKieBkfR5Fn-dWoJa8Cf7JT_ELViIK9kVIAhq9DKtf2fErGUVcQLjPZQmkWx9VunqR6cO61sze_40oPQpTYe1XgeRLvJhxHC3fIm2FZ4u4YcuoNs3QEg3grtnybvtoU_Z9bwiVL-ckWpNP1ROdsQ33IDUEHMAF7oRJk704cwZ2s5qIB3PQc">
+</div>
+<div class="flex-1">
+<div class="bg-surface rounded-xl p-3 shadow-xs relative">
+<p class="font-body-sm text-body-sm text-on-surface italic">
+              “Tenang! Transaksimu dilindungi <strong>garansi 100% uang kembali 7 hari</strong> jika kamu merasa belajarmu tidak terbantu. Mika janji!”
+            </p>
+<span class="block mt-1 font-label-sm text-[11px] text-secondary-container font-bold">— Mika Si Kucing Tutor</span>
+</div>
+</div>
+</div>
+<!-- Trust Checkmarks Grid -->
+<div class="grid grid-cols-1 gap-2 pt-1">
+<div class="flex items-center gap-2 text-on-surface font-caption text-caption">
+<span class="material-symbols-outlined text-success text-[16px]">verified</span>
+<span>Paket langsung aktif otomatis saat konfirmasi webhook diterima.</span>
+</div>
+<div class="flex items-center gap-2 text-on-surface font-caption text-caption">
+<span class="material-symbols-outlined text-success text-[16px]">lock_reset</span>
+<span>Order ID terenkripsi Idempotent Lock (Anti Tagihan Ganda).</span>
+</div>
+<div class="flex items-center gap-2 text-on-surface font-caption text-caption">
+<span class="material-symbols-outlined text-success text-[16px]">receipt_long</span>
+<span>Invoice resmi bertanda tangan digital langsung terkirim ke emailmu.</span>
+</div>
+</div>
+</section>
+<!-- SEKSI 6: BANTUAN 24/7 WHATSAPP CS -->
+<div class="rounded-xl bg-surface p-3.5 shadow-sm flex items-center justify-between gap-3">
+<div class="flex items-center gap-2.5">
+<div class="w-9 h-9 rounded-full bg-success/10 flex items-center justify-center text-success">
+<span class="material-symbols-outlined text-[20px]">support_agent</span>
+</div>
+<div class="flex flex-col">
+<span class="font-label-md text-label-md text-on-surface">Butuh bantuan bayar?</span>
+<span class="font-caption text-caption text-text-muted">Tim Mika siap memandu 24/7 di WhatsApp</span>
+</div>
+</div>
+<button class="px-3 py-1.5 rounded-lg bg-surface-container font-label-sm text-label-sm text-on-surface hover:bg-surface-container-high transition-colors flex items-center gap-1" onclick="openWhatsAppCS()">
+<span>Chat CS</span>
+<span class="material-symbols-outlined text-[16px]">open_in_new</span>
+</button>
+</div>
+<!-- SEKSI 7: SIMULATOR BAR (INTERACTIVE TOOLBAR) -->
+<div class="rounded-xl bg-surface-container-high p-3 flex flex-col gap-2">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm text-on-surface flex items-center gap-1">
+<span class="material-symbols-outlined text-[16px]">tune</span>
+<span>Simulator State Checkout</span>
+</span>
+<span class="font-caption text-caption text-text-muted">Mode Pengujian UX</span>
+</div>
+<div class="flex items-center gap-2 flex-wrap">
+<button class="px-2.5 py-1 rounded bg-surface text-on-surface font-label-sm text-[11px] shadow-xs hover:bg-surface-container-lowest" onclick="selectPlanPeriod(1)">Set 1 Bulan</button>
+<button class="px-2.5 py-1 rounded bg-surface text-on-surface font-label-sm text-[11px] shadow-xs hover:bg-surface-container-lowest" onclick="selectPlanPeriod(6)">Set 6 Bulan</button>
+<button class="px-2.5 py-1 rounded bg-surface text-on-surface font-label-sm text-[11px] shadow-xs hover:bg-surface-container-lowest" onclick="selectPlanPeriod(12)">Set 12 Bulan</button>
+<button class="px-2.5 py-1 rounded bg-surface text-on-surface font-label-sm text-[11px] shadow-xs hover:bg-surface-container-lowest" onclick="toggleVoucherState()">Toggle Kupon</button>
+</div>
+</div>
+</div>
+<!-- FLOATING ERGONOMIC BOTTOM BAR (STICKY CHECKOUT DOCK) -->
+<aside aria-label="Ringkasan Pembayaran dan Konfirmasi" class="fixed bottom-0 left-0 w-full bg-surface/95 backdrop-blur-md shadow-[0_-4px_20px_rgba(0,27,60,0.08)] z-40 px-gutter pt-3 pb-safe">
+<div class="max-w-md mx-auto flex flex-col gap-2 pb-2">
+<div class="flex items-center justify-between">
+<div class="flex flex-col">
+<span class="font-caption text-caption text-text-muted">Total Pembayaran</span>
+<div class="flex items-baseline gap-1">
+<span class="font-headline-md text-headline-md text-on-surface font-black" id="bottom-bar-total">Rp 542.790</span>
+<span class="font-caption text-[11px] text-primary font-bold" id="bottom-period-tag">/ 12 Bln</span>
+</div>
+</div>
+<!-- Security Pill -->
+<div class="flex items-center gap-1 text-success font-caption text-[11px] font-semibold bg-success/10 px-2.5 py-1 rounded-full">
+<span class="material-symbols-outlined text-[14px]">verified</span>
+<span>Garansi 7 Hari</span>
+</div>
+</div>
+<!-- Main CTA Button with Comic Bounce -->
+<button class="w-full h-14 rounded-xl bg-primary text-on-primary font-label-lg text-label-lg flex items-center justify-center gap-2 shadow-md active:translate-y-0.5 transition-all" id="main-pay-button" onclick="handleCheckoutSubmission()">
+<span class="material-symbols-outlined text-[20px]">lock</span>
+<span id="btn-label-text">Lanjutkan ke Pembayaran Aman</span>
+<span class="material-symbols-outlined text-[20px]">arrow_forward</span>
+</button>
+<!-- Fine Print -->
+<p class="font-caption text-[10px] text-center text-text-muted leading-tight">
+        Dengan menekan tombol, kamu menyetujui <a class="underline text-primary" href="#tos">Syarat &amp; Ketentuan</a> serta <a class="underline text-primary" href="#privacy">Kebijakan Privasi</a> HeyMika.
+      </p>
+</div>
+</aside>
+<!-- SUCCESS TOAST MODAL (Hidden by default) -->
+<div class="fixed inset-0 bg-on-surface/50 backdrop-blur-xs z-50 flex items-center justify-center p-gutter hidden" id="success-modal">
+<div class="bg-surface w-full max-w-sm rounded-2xl p-6 shadow-xl flex flex-col items-center text-center gap-3">
+<div class="w-20 h-20 rounded-full bg-secondary-fixed flex items-center justify-center overflow-hidden">
+<img alt="Mika Success Mascot" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBGbxanpXIEOny8FkgZX5Frv9YJkd8KtaXAajFe5MvKY6R6--U7JIlcA4AjpZu6gWVGZHWesjxaWPZ3mjc_hKieBkfR5Fn-dWoJa8Cf7JT_ELViIK9kVIAhq9DKtf2fErGUVcQLjPZQmkWx9VunqR6cO61sze_40oPQpTYe1XgeRLvJhxHC3fIm2FZ4u4YcuoNs3QEg3grtnybvtoU_Z9bwiVL-ckWpNP1ROdsQ33IDUEHMAF7oRJk704cwZ2s5qIB3PQc">
+</div>
+<div class="inline-flex items-center gap-1 px-3 py-1 rounded-full bg-badge-cyan text-tertiary font-label-sm text-label-sm">
+<span class="material-symbols-outlined text-[16px]">task_alt</span>
+<span>Order Berhasil Dibuat!</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface">Mengarahkan ke Gateway...</h3>
+<p class="font-body-sm text-body-sm text-text-muted">
+        Invoice ID: <span class="font-mono font-bold text-on-surface">HM-2025-0891</span> telah dikirim ke <span class="text-on-surface">budi.pratama@kampus.id</span>.
+      </p>
+<div class="w-full h-2 bg-surface-container rounded-full overflow-hidden mt-2">
+<div class="h-full bg-primary animate-pulse w-3/4 rounded-full"></div>
+</div>
+<button class="w-full py-3 rounded-xl bg-surface-container text-on-surface font-label-md text-label-md mt-2" onclick="closeSuccessModal()">
+        Tutup Simulasi
+      </button>
+</div>
+</div>
+</div>
+<script>
+  // State Store
+  const state = {
+    planTier: 'champion', // 'champion' | 'genius'
+    periodMonths: 12,     // 1 | 6 | 12
+    voucherApplied: true,
+    voucherCode: 'BELAJARASIK',
+    voucherDiscount: 50000,
+    paymentMethod: 'qris',
+    prices: {
+      champion: { 1: 69000, 6: 349000, 12: 539000 },
+      genius: { 1: 99000, 6: 499000, 12: 789000 }
+    }
+  };
+
+  function formatIDR(val) {
+    return 'Rp ' + Number(val).toLocaleString('id-ID');
+  }
+
+  function updateCalculations() {
+    const basePrice = state.prices[state.planTier][state.periodMonths];
+    const discount = state.voucherApplied ? state.voucherDiscount : 0;
+    const taxableSubtotal = Math.max(0, basePrice - discount);
+    const tax = Math.round(taxableSubtotal * 0.11);
+    const grandTotal = taxableSubtotal + tax;
+
+    // Update Labels in DOM
+    const periodName = state.periodMonths + ' Bulan Akses';
+    const tierName = state.planTier === 'champion' ? 'Mika Champion' : 'Genius AI Elite';
+    
+    document.getElementById('label-base-price').textContent = `Harga Paket ${tierName} (${state.periodMonths} Bln)`;
+    document.getElementById('val-base-price').textContent = formatIDR(basePrice);
+    document.getElementById('summary-period-badge').textContent = periodName;
+
+    // Discount row
+    const discountRow = document.getElementById('row-discount');
+    if (state.voucherApplied) {
+      discountRow.style.display = 'flex';
+      document.getElementById('val-discount').textContent = '-' + formatIDR(discount);
+    } else {
+      discountRow.style.display = 'none';
+    }
+
+    // Taxes & Grand Total
+    document.getElementById('val-tax').textContent = formatIDR(tax);
+    document.getElementById('val-grand-total').textContent = formatIDR(grandTotal);
+    document.getElementById('bottom-bar-total').textContent = formatIDR(grandTotal);
+    document.getElementById('bottom-period-tag').textContent = `/ ${state.periodMonths} Bln`;
+
+    // Highlight Plan Cards
+    [1, 6, 12].forEach(p => {
+      const card = document.getElementById('plan-card-' + p);
+      if (!card) return;
+      const radio = card.querySelector('.plan-radio');
+      const dot = card.querySelector('.plan-dot');
+      
+      if (p === state.periodMonths) {
+        card.classList.add('shadow-md');
+        radio.classList.remove('bg-surface-container');
+        radio.classList.add('bg-primary');
+        dot.classList.remove('bg-transparent');
+        dot.classList.add('bg-surface');
+      } else {
+        card.classList.remove('shadow-md');
+        radio.classList.add('bg-surface-container');
+        radio.classList.remove('bg-primary');
+        dot.classList.add('bg-transparent');
+        dot.classList.remove('bg-surface');
+      }
+    });
+  }
+
+  function selectPlanPeriod(months) {
+    state.periodMonths = months;
+    updateCalculations();
+  }
+
+  function switchPlanTier(tier) {
+    state.planTier = tier;
+    const tabChamp = document.getElementById('tab-champion');
+    const tabGen = document.getElementById('tab-genius');
+
+    if (tier === 'champion') {
+      tabChamp.className = 'py-2.5 px-3 rounded-lg font-label-md text-label-md transition-all flex items-center justify-center gap-1.5 bg-surface text-primary shadow-sm';
+      tabGen.className = 'py-2.5 px-3 rounded-lg font-label-md text-label-md text-text-muted transition-all flex items-center justify-center gap-1.5 hover:text-on-surface';
+    } else {
+      tabGen.className = 'py-2.5 px-3 rounded-lg font-label-md text-label-md transition-all flex items-center justify-center gap-1.5 bg-surface text-primary shadow-sm';
+      tabChamp.className = 'py-2.5 px-3 rounded-lg font-label-md text-label-md text-text-muted transition-all flex items-center justify-center gap-1.5 hover:text-on-surface';
+    }
+    updateCalculations();
+  }
+
+  function selectPayment(method) {
+    state.paymentMethod = method;
+  }
+
+  function toggleFeatures() {
+    const list = document.getElementById('features-list');
+    const chevron = document.getElementById('features-chevron');
+    if (list.classList.contains('hidden')) {
+      list.classList.remove('hidden');
+      chevron.textContent = 'expand_more';
+    } else {
+      list.classList.add('hidden');
+      chevron.textContent = 'expand_less';
+    }
+  }
+
+  function clearVoucher() {
+    state.voucherApplied = false;
+    document.getElementById('voucher-input').value = '';
+    document.getElementById('voucher-alert').classList.add('hidden');
+    updateCalculations();
+  }
+
+  function applyVoucher() {
+    const code = document.getElementById('voucher-input').value.trim().toUpperCase();
+    if (code === 'BELAJARASIK' || code === 'MIKAPINTAR') {
+      state.voucherApplied = true;
+      state.voucherCode = code;
+      document.getElementById('voucher-alert').classList.remove('hidden');
+    } else {
+      alert('Kupon tidak valid. Coba kode BELAJARASIK');
+      state.voucherApplied = false;
+      document.getElementById('voucher-alert').classList.add('hidden');
+    }
+    updateCalculations();
+  }
+
+  function toggleVoucherState() {
+    if (state.voucherApplied) {
+      clearVoucher();
+    } else {
+      document.getElementById('voucher-input').value = 'BELAJARASIK';
+      applyVoucher();
+    }
+  }
+
+  function handleCheckoutSubmission() {
+    const btn = document.getElementById('main-pay-button');
+    const label = document.getElementById('btn-label-text');
+    btn.disabled = true;
+    label.textContent = 'Mengunci Transaksi...';
+
+    setTimeout(() => {
+      btn.disabled = false;
+      label.textContent = 'Lanjutkan ke Pembayaran Aman';
+      document.getElementById('success-modal').classList.remove('hidden');
+    }, 900);
+  }
+
+  function closeSuccessModal() {
+    document.getElementById('success-modal').classList.add('hidden');
+  }
+
+  function openWhatsAppCS() {
+    alert('Menghubungkan ke Tim Support Mika WhatsApp (Nomor Resmi: +62 812-HEY-MIKA)...');
+  }
+
+  // Initial Calculation Run
+  document.addEventListener('DOMContentLoaded', () => {
+    updateCalculations();
+  });
+</script></main></body></html>

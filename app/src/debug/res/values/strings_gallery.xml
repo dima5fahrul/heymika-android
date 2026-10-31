@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="gallery_app_name">HeyMika DS</string>
+    <string name="gallery_title">HeyMika Design System</string>
+    <string name="gallery_subtitle">Galeri debug: token, komponen dan status sistem P0. Tidak pernah ikut rilis.</string>
+    <string name="gallery_back">Galeri</string>
+    <string name="gallery_open_section">Buka halaman %1$s</string>
+    <string name="gallery_sections">Halaman</string>
+    <string name="gallery_simulate_offline">Simulasi offline</string>
+    <string name="gallery_simulate_offline_body">Paksa OfflineBanner dari HeyMikaRootFrame tanpa mode pesawat.</string>
+    <string name="gallery_decision_title">Keputusan visual: Strict vs Subtle</string>
+    <string name="gallery_decision_body">Strict (border ink 3dp + bayangan oranye 6dp) hanya untuk shell, hero, konten terpilih dan maksimal satu kartu unggulan per layar. Subtle (border 1,5dp + bayangan lembut) untuk semua yang berulang: daftar, feed, stat, pengaturan. Primary #0075E8 untuk isian, fokus dan status aktif; primaryText #005AB5 untuk tautan dan teks biru kecil.</string>
+    <string name="gallery_focus_hint">Tekan TAB (keyboard atau adb shell input keyevent KEYCODE_TAB) untuk melihat focus ring.</string>
+
+    <string name="gallery_section_tokens">Warna</string>
+    <string name="gallery_section_tokens_body">HeyMikaColors</string>
+    <string name="gallery_section_tones">Tone</string>
+    <string name="gallery_section_tones_body">HeyMikaTones: container, content, accent</string>
+    <string name="gallery_section_surfaces">Bentuk &amp; permukaan</string>
+    <string name="gallery_section_surfaces_body">Radius, border dan bayangan</string>
+    <string name="gallery_section_surfaces_more">Kartu, divider &amp; spasi</string>
+    <string name="gallery_section_surfaces_more_body">ComicCard, ComicDivider, SubtleDivider dan skala spasi</string>
+    <string name="gallery_section_typography">Tipografi</string>
+    <string name="gallery_section_typography_body">Skala Nunito Sans dan mono</string>
+    <string name="gallery_section_buttons">Tombol</string>
+    <string name="gallery_section_buttons_body">ComicButton Primary, Secondary, Outline dalam semua ukuran dan status</string>
+    <string name="gallery_section_buttons_more">Tombol lainnya</string>
+    <string name="gallery_section_buttons_more_body">Ghost, Danger, slot dan ComicIconButton</string>
+    <string name="gallery_section_inputs">Input</string>
+    <string name="gallery_section_inputs_body">Text field dan password dengan checklist kekuatan</string>
+    <string name="gallery_section_inputs_more">Pencarian &amp; text area</string>
+    <string name="gallery_section_inputs_more_body">SearchField dan TextAreaField</string>
+    <string name="gallery_section_selection">Pilihan</string>
+    <string name="gallery_section_selection_body">Checkbox, radio dan switch</string>
+    <string name="gallery_section_selection_more">Kartu opsi &amp; segmented</string>
+    <string name="gallery_section_selection_more_body">SelectableOptionCard dan SegmentedControl</string>
+    <string name="gallery_section_display">Tampilan</string>
+    <string name="gallery_section_display_body">Pill, tag, badge, chip, tab, accordion, avatar</string>
+    <string name="gallery_section_display_data">Data &amp; progres</string>
+    <string name="gallery_section_display_data_body">Progress, langkah, stat tile, meter, section header</string>
+    <string name="gallery_section_display_feedback">Umpan balik</string>
+    <string name="gallery_section_display_feedback_body">Alert, info note, skeleton, rich text</string>
+    <string name="gallery_section_navigation">Navigasi</string>
+    <string name="gallery_section_navigation_body">Top bar, bottom nav, action bar, input bar</string>
+    <string name="gallery_section_overlays">Overlay</string>
+    <string name="gallery_section_overlays_body">Dialog, bottom sheet, snackbar</string>
+    <string name="gallery_section_pickers">Picker &amp; timer</string>
+    <string name="gallery_section_pickers_body">Tanggal, waktu, rentang waktu, countdown</string>
+    <string name="gallery_section_mascot">Mika</string>
+    <string name="gallery_section_mascot_body">Pose dan bingkai avatar</string>
+    <string name="gallery_section_mascot_speech">Mika bicara</string>
+    <string name="gallery_section_mascot_speech_body">Speech bubble, callout, halftone, speed lines</string>
+    <string name="gallery_section_states">Status sistem</string>
+    <string name="gallery_section_states_body">Enam status katalog, layar penuh</string>
+    <string name="gallery_section_states_inline">Status inline</string>
+    <string name="gallery_section_states_inline_body">Banner offline, status katalog versi inline, memuat dan kosong</string>
+</resources>

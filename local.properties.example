@@ -1,0 +1,6 @@
+# Copy to local.properties and fill in.
+sdk.dir=/Users/<you>/Library/Android/sdk
+
+# Base URL of YOUR backend that proxies Claude. Never put an Anthropic API key here:
+# anything in the APK can be extracted. The backend holds the key.
+heymika.api.base.url=https://api.example.com/

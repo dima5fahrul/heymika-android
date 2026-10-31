@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="favorite_screen_title">Favorit</string>
+    <string name="favorite_navigate_up">Kembali</string>
+    <string name="favorite_loading">Mika sedang membuka rak favoritmu…</string>
+    <string name="favorite_empty_title">Belum ada materi favorit</string>
+    <string name="favorite_empty_body">Ketuk ikon hati pada materi agar tersimpan di sini.</string>
+</resources>

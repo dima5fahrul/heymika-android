@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- core/ui/component/display (owned by the display builder) -->
+
+    <!-- Badges and progress -->
+    <string name="display_count_overflow">%1$d+</string>
+    <string name="display_percent">%1$d%%</string>
+
+    <!-- SectionHeader -->
+    <string name="display_section_see_all">Lihat semua</string>
+    <string name="display_section_see_all_description">Lihat semua %1$s</string>
+
+    <!-- Accordion / ExpandableSection -->
+    <string name="display_accordion_expanded">Diperluas</string>
+    <string name="display_accordion_collapsed">Diciutkan</string>
+    <string name="display_accordion_expand">Perluas</string>
+    <string name="display_accordion_collapse">Ciutkan</string>
+
+    <!-- InlineAlertBanner -->
+    <string name="display_alert_info">Informasi</string>
+    <string name="display_alert_success">Berhasil</string>
+    <string name="display_alert_warning">Peringatan</string>
+    <string name="display_alert_error">Kesalahan</string>
+    <string name="display_alert_dismiss">Tutup pemberitahuan</string>
+
+    <!-- StepIndicator / TimelineStep -->
+    <string name="display_step_pending">Menunggu</string>
+    <string name="display_step_active">Berjalan</string>
+    <string name="display_step_done">Selesai</string>
+    <string name="display_step_failed">Gagal</string>
+    <string name="display_step_number">Langkah %1$d</string>
+    <string name="display_step_position">Langkah %1$d dari %2$d</string>
+
+    <!-- Skeleton -->
+    <string name="display_skeleton_loading">Memuat konten…</string>
+</resources>
